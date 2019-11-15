@@ -2,16 +2,18 @@ import os
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
+main_file = 'tsvc_new.c'
+temp_file = 'tsvc_tmp.c'
+max_unrolling = 31
+optimization = '-O0'
+number_of_times = 2
 
-MEASUREMENTS_PATH = os.path.join(PROJECT_PATH,'Measurements')
-MEASUREMENTS_TSVC_PATH = os.path.join(MEASUREMENTS_PATH,'TSVC2_original')
+TSVC_PATH = os.path.join(PROJECT_PATH, 'TSVC')
+MEASUREMENTS = os.path.join(TSVC_PATH, 'Measurements')
+BENCHMARK = os.path.join(TSVC_PATH, 'Benchmark', 'src')
+FUNCTIONS = os.path.join(BENCHMARK, 'functions.txt')
+TRANSFORMED = os.path.join(BENCHMARK, 'tsvc.database', 'Src')
 
 
 
-TSVC_FUNCTIONS_PATH  = os.path.join(PROJECT_PATH,'Benchmarks','TSVC2_original', 'src', 'functions.txt')
-TSVC_PATH =  os.path.join(PROJECT_PATH,'Benchmarks','TSVC2_original', 'src')
-TSVC_AFTER_PIPS =  os.path.join(TSVC_PATH, 'tsvc.database', 'Src')
 
-
-tscv_main_file = 'tsvc_new.c'
-tscv_temp_file = 'tsvc_tmp.c'

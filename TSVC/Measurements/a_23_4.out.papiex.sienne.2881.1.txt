@@ -1,0 +1,757 @@
+papiex version                : 1.0.3
+papiex build                  : Aug 30 2019/14:43:52
+Executable                    : /home/chermen/PycharmProjects/unrolling/TSVC/Measurements/a_23_4.out
+Arguments                     : 
+Processor                     : Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+Clockrate (MHz)               : 4600.000000
+Hostname                      : sienne
+Options                       : MULTIPLEX,MEMORY,PAPI_TOT_INS,PAPI_LST_INS,PAPI_BR_INS,PAPI_LD_INS,PAPI_SR_INS,PAPI_TOT_CYC,PAPI_RES_STL,PAPI_L1_DCM,PAPI_L1_ICM,PAPI_TLB_DM,PAPI_TLB_IM,PAPI_L2_DCM,PAPI_L2_ICM,PAPI_STL_ICY,PAPI_FUL_ICY,PAPI_BR_CN,PAPI_BR_MSP,PAPI_L2_DCA,PAPI_L2_ICA,NO_MPI_PROF,NO_IO_PROF,NO_THREADSYNC_PROF,NEXTGEN
+Domain                        : User
+Process id                    : 2881
+Session id                    : 26828
+Parent process id             : 2880
+Num. of threads               : 1
+Start                         : Thu Nov 14 10:37:53 2019
+Finish                        : Thu Nov 14 10:45:39 2019
+8284             [PROCESS] Memory resident max KB
+648              [PROCESS] Memory text (at exit) KB
+6152             [PROCESS] Memory library (at exit) KB
+3536             [PROCESS] Memory heap (at exit) KB
+456              [PROCESS] Memory stack (at exit) KB
+4580             [PROCESS] Memory shared (at exit) KB
+0                [PROCESS] Memory locked (at exit) KB
+465899239        [PROCESS] Wallclock usecs
+465898716        Real usecs
+1487159295059    Real cycles
+465897569        Virtual usecs
+2143128808200    Virtual cycles
+6596235076251    PAPI_TOT_INS
+2285787508489    PAPI_LST_INS
+47755977386      PAPI_BR_INS
+1901946527258    PAPI_LD_INS
+383840981231     PAPI_SR_INS
+2111001184038    PAPI_TOT_CYC
+377036180008     PAPI_RES_STL
+46200169706      PAPI_L1_DCM
+4952432          PAPI_L1_ICM
+203480           PAPI_TLB_DM
+1048719          PAPI_TLB_IM
+60277491175      PAPI_L2_DCM
+4132129          PAPI_L2_ICM
+636270888        PAPI_STL_ICY
+1104622979160    PAPI_FUL_ICY
+32102644349      PAPI_BR_CN
+27328726         PAPI_BR_MSP
+11101575113      PAPI_L2_DCA
+4952432          PAPI_L2_ICA
+
+1                [LABEL] s423
+1                [s423] Measurements
+45535305667      [s423] Real cycles
+257527974117     [s423] PAPI_TOT_INS
+91657169599      [s423] PAPI_LST_INS
+561631244        [s423] PAPI_BR_INS
+78306527485      [s423] PAPI_LD_INS
+13350642114      [s423] PAPI_SR_INS
+64693963692      [s423] PAPI_TOT_CYC
+131640796        [s423] PAPI_RES_STL
+1605787342       [s423] PAPI_L1_DCM
+149954           [s423] PAPI_L1_ICM
+18               [s423] PAPI_TLB_DM
+379              [s423] PAPI_TLB_IM
+1935334416       [s423] PAPI_L2_DCM
+117215           [s423] PAPI_L2_ICM
+29303661         [s423] PAPI_STL_ICY
+42893577958      [s423] PAPI_FUL_ICY
+560162697        [s423] PAPI_BR_CN
+812793           [s423] PAPI_BR_MSP
+91258586         [s423] PAPI_L2_DCA
+149954           [s423] PAPI_L2_ICA
+
+2                [LABEL] s424
+1                [s424] Measurements
+47760310950      [s424] Real cycles
+269464575164     [s424] PAPI_TOT_INS
+91929614178      [s424] PAPI_LST_INS
+560592355        [s424] PAPI_BR_INS
+78553327939      [s424] PAPI_LD_INS
+13376286239      [s424] PAPI_SR_INS
+67938417758      [s424] PAPI_TOT_CYC
+206999972        [s424] PAPI_RES_STL
+1602596318       [s424] PAPI_L1_DCM
+180144           [s424] PAPI_L1_ICM
+33               [s424] PAPI_TLB_DM
+210029           [s424] PAPI_TLB_IM
+1938599062       [s424] PAPI_L2_DCM
+142295           [s424] PAPI_L2_ICM
+17660453         [s424] PAPI_STL_ICY
+47380086698      [s424] PAPI_FUL_ICY
+558842878        [s424] PAPI_BR_CN
+787068           [s424] PAPI_BR_MSP
+1251014644       [s424] PAPI_L2_DCA
+180144           [s424] PAPI_L2_ICA
+
+3                [LABEL] s431
+1                [s431] Measurements
+118936034382     [s431] Real cycles
+674801085055     [s431] PAPI_TOT_INS
+229487715948     [s431] PAPI_LST_INS
+1406982328       [s431] PAPI_BR_INS
+196097611658     [s431] PAPI_LD_INS
+33390104290      [s431] PAPI_SR_INS
+168955784694     [s431] PAPI_TOT_CYC
+128184701        [s431] PAPI_RES_STL
+3996417084       [s431] PAPI_L1_DCM
+439365           [s431] PAPI_L1_ICM
+24               [s431] PAPI_TLB_DM
+204              [s431] PAPI_TLB_IM
+4074146826       [s431] PAPI_L2_DCM
+331369           [s431] PAPI_L2_ICM
+77487845         [s431] PAPI_STL_ICY
+109894267576     [s431] PAPI_FUL_ICY
+1397652274       [s431] PAPI_BR_CN
+3658322          [s431] PAPI_BR_MSP
+59620594         [s431] PAPI_L2_DCA
+439365           [s431] PAPI_L2_ICA
+
+4                [LABEL] s441
+1                [s441] Measurements
+25655549794      [s441] Real cycles
+139503569086     [s441] PAPI_TOT_INS
+36857261280      [s441] PAPI_LST_INS
+9728631656       [s441] PAPI_BR_INS
+33508938654      [s441] PAPI_LD_INS
+3348322626       [s441] PAPI_SR_INS
+36539659711      [s441] PAPI_TOT_CYC
+14372050         [s441] PAPI_RES_STL
+668069957        [s441] PAPI_L1_DCM
+340171           [s441] PAPI_L1_ICM
+41906            [s441] PAPI_TLB_DM
+57               [s441] PAPI_TLB_IM
+1247197186       [s441] PAPI_L2_DCM
+338175           [s441] PAPI_L2_ICM
+39549400         [s441] PAPI_STL_ICY
+23767329387      [s441] PAPI_FUL_ICY
+7562023919       [s441] PAPI_BR_CN
+1227619          [s441] PAPI_BR_MSP
+9077934          [s441] PAPI_L2_DCA
+340171           [s441] PAPI_L2_ICA
+
+5                [LABEL] s451
+1                [s451] Measurements
+11050831690      [s451] Real cycles
+41415928711      [s451] PAPI_TOT_INS
+18920801004      [s451] PAPI_LST_INS
+7752450624       [s451] PAPI_BR_INS
+15190962073      [s451] PAPI_LD_INS
+3729838931       [s451] PAPI_SR_INS
+15762207995      [s451] PAPI_TOT_CYC
+2591290919       [s451] PAPI_RES_STL
+135653557        [s451] PAPI_L1_DCM
+41129            [s451] PAPI_L1_ICM
+194              [s451] PAPI_TLB_DM
+25638            [s451] PAPI_TLB_IM
+221842187        [s451] PAPI_L2_DCM
+43717            [s451] PAPI_L2_ICM
+13462213         [s451] PAPI_STL_ICY
+8052250798       [s451] PAPI_FUL_ICY
+3907018142       [s451] PAPI_BR_CN
+87200            [s451] PAPI_BR_MSP
+108748068        [s451] PAPI_L2_DCA
+41129            [s451] PAPI_L2_ICA
+
+6                [LABEL] s452
+1                [s452] Measurements
+56542870962      [s452] Real cycles
+308236706032     [s452] PAPI_TOT_INS
+91574557614      [s452] PAPI_LST_INS
+560922005        [s452] PAPI_BR_INS
+78247032324      [s452] PAPI_LD_INS
+13327525290      [s452] PAPI_SR_INS
+80454030124      [s452] PAPI_TOT_CYC
+94910238         [s452] PAPI_RES_STL
+2388236813       [s452] PAPI_L1_DCM
+235677           [s452] PAPI_L1_ICM
+160321           [s452] PAPI_TLB_DM
+231254           [s452] PAPI_TLB_IM
+4041689073       [s452] PAPI_L2_DCM
+236350           [s452] PAPI_L2_ICM
+34719051         [s452] PAPI_STL_ICY
+53780408356      [s452] PAPI_FUL_ICY
+560232912        [s452] PAPI_BR_CN
+1390644          [s452] PAPI_BR_MSP
+1021870696       [s452] PAPI_L2_DCA
+235677           [s452] PAPI_L2_ICA
+
+7                [LABEL] s453
+1                [s453] Measurements
+44963859953      [s453] Real cycles
+109423214476     [s453] PAPI_TOT_INS
+53709523637      [s453] PAPI_LST_INS
+279677224        [s453] PAPI_BR_INS
+40437904170      [s453] PAPI_LD_INS
+13271619467      [s453] PAPI_SR_INS
+63765355113      [s453] PAPI_TOT_CYC
+30000174868      [s453] PAPI_RES_STL
+799968416        [s453] PAPI_L1_DCM
+97174            [s453] PAPI_L1_ICM
+-379             [s453] PAPI_TLB_DM
+-965             [s453] PAPI_TLB_IM
+797558453        [s453] PAPI_L2_DCM
+81330            [s453] PAPI_L2_ICM
+10053256         [s453] PAPI_STL_ICY
+19216625712      [s453] PAPI_FUL_ICY
+279635065        [s453] PAPI_BR_CN
+458964           [s453] PAPI_BR_MSP
+402223640        [s453] PAPI_L2_DCA
+97174            [s453] PAPI_L2_ICA
+
+8                [LABEL] s471
+1                [s471] Measurements
+18811273289      [s471] Real cycles
+88169478838      [s471] PAPI_TOT_INS
+30778876145      [s471] PAPI_LST_INS
+3272076046       [s471] PAPI_BR_INS
+24534527055      [s471] PAPI_LD_INS
+6244349090       [s471] PAPI_SR_INS
+26720592547      [s471] PAPI_TOT_CYC
+182266628        [s471] PAPI_RES_STL
+522007141        [s471] PAPI_L1_DCM
+82890            [s471] PAPI_L1_ICM
+427              [s471] PAPI_TLB_DM
+7653             [s471] PAPI_TLB_IM
+1071415405       [s471] PAPI_L2_DCM
+85506            [s471] PAPI_L2_ICM
+55259676         [s471] PAPI_STL_ICY
+16091730278      [s471] PAPI_FUL_ICY
+70476852         [s471] PAPI_BR_CN
+109169           [s471] PAPI_BR_MSP
+209897294        [s471] PAPI_L2_DCA
+82890            [s471] PAPI_L2_ICA
+
+9                [LABEL] s481
+1                [s481] Measurements
+19736792326      [s481] Real cycles
+116493084844     [s481] PAPI_TOT_INS
+33848480421      [s481] PAPI_LST_INS
+3326592046       [s481] PAPI_BR_INS
+30529217886      [s481] PAPI_LD_INS
+3319262535       [s481] PAPI_SR_INS
+28046684777      [s481] PAPI_TOT_CYC
+24819328         [s481] PAPI_RES_STL
+780618841        [s481] PAPI_L1_DCM
+45972            [s481] PAPI_L1_ICM
+-427             [s481] PAPI_TLB_DM
+10780            [s481] PAPI_TLB_IM
+1563952130       [s481] PAPI_L2_DCM
+21964            [s481] PAPI_L2_ICM
+4919062          [s481] PAPI_STL_ICY
+18181071932      [s481] PAPI_FUL_ICY
+3324607564       [s481] PAPI_BR_CN
+202388           [s481] PAPI_BR_MSP
+23473959         [s481] PAPI_L2_DCA
+45972            [s481] PAPI_L2_ICA
+
+10               [LABEL] s491
+1                [s491] Measurements
+17594261489      [s491] Real cycles
+94351690874      [s491] PAPI_TOT_INS
+31034838508      [s491] PAPI_LST_INS
+139867134        [s491] PAPI_BR_INS
+27702597429      [s491] PAPI_LD_INS
+3332241079       [s491] PAPI_SR_INS
+24818122574      [s491] PAPI_TOT_CYC
+174301510        [s491] PAPI_RES_STL
+1020771325       [s491] PAPI_L1_DCM
+59673            [s491] PAPI_L1_ICM
+432              [s491] PAPI_TLB_DM
+1128             [s491] PAPI_TLB_IM
+2071816159       [s491] PAPI_L2_DCM
+59465            [s491] PAPI_L2_ICM
+4471646          [s491] PAPI_STL_ICY
+16582001480      [s491] PAPI_FUL_ICY
+140970382        [s491] PAPI_BR_CN
+294932           [s491] PAPI_BR_MSP
+293278086        [s491] PAPI_L2_DCA
+59673            [s491] PAPI_L2_ICA
+
+11               [LABEL] s4112
+1                [s4112] Measurements
+14915696707      [s4112] Real cycles
+85252343380      [s4112] PAPI_TOT_INS
+30851034062      [s4112] PAPI_LST_INS
+140784185        [s4112] PAPI_BR_INS
+27518980588      [s4112] PAPI_LD_INS
+3332053474       [s4112] PAPI_SR_INS
+21295775907      [s4112] PAPI_TOT_CYC
+855707154        [s4112] PAPI_RES_STL
+576783941        [s4112] PAPI_L1_DCM
+68492            [s4112] PAPI_L1_ICM
+-428             [s4112] PAPI_TLB_DM
+-853             [s4112] PAPI_TLB_IM
+990796857        [s4112] PAPI_L2_DCM
+74637            [s4112] PAPI_L2_ICM
+5953759          [s4112] PAPI_STL_ICY
+13558934546      [s4112] PAPI_FUL_ICY
+138972170        [s4112] PAPI_BR_CN
+386066           [s4112] PAPI_BR_MSP
+210978394        [s4112] PAPI_L2_DCA
+68492            [s4112] PAPI_L2_ICA
+
+12               [LABEL] s4113
+1                [s4113] Measurements
+16875772097      [s4113] Real cycles
+87690525733      [s4113] PAPI_TOT_INS
+30978642208      [s4113] PAPI_LST_INS
+140164058        [s4113] PAPI_BR_INS
+27637926830      [s4113] PAPI_LD_INS
+3340715378       [s4113] PAPI_SR_INS
+23865049770      [s4113] PAPI_TOT_CYC
+622266067        [s4113] PAPI_RES_STL
+825158614        [s4113] PAPI_L1_DCM
+67657            [s4113] PAPI_L1_ICM
+456              [s4113] PAPI_TLB_DM
+10058            [s4113] PAPI_TLB_IM
+1601410492       [s4113] PAPI_L2_DCM
+66837            [s4113] PAPI_L2_ICM
+4451766          [s4113] PAPI_STL_ICY
+15993128942      [s4113] PAPI_FUL_ICY
+140964064        [s4113] PAPI_BR_CN
+199923           [s4113] PAPI_BR_MSP
+365895312        [s4113] PAPI_L2_DCA
+67657            [s4113] PAPI_L2_ICA
+
+13               [LABEL] s4114
+1                [s4114] Measurements
+31437999541      [s4114] Real cycles
+155859665627     [s4114] PAPI_TOT_INS
+59968342113      [s4114] PAPI_LST_INS
+140471082        [s4114] PAPI_BR_INS
+49954598256      [s4114] PAPI_LD_INS
+10013743857      [s4114] PAPI_SR_INS
+44628270977      [s4114] PAPI_TOT_CYC
+1483188134       [s4114] PAPI_RES_STL
+972260027        [s4114] PAPI_L1_DCM
+234162           [s4114] PAPI_L1_ICM
+-427             [s4114] PAPI_TLB_DM
+-1043            [s4114] PAPI_TLB_IM
+2028600037       [s4114] PAPI_L2_DCM
+238413           [s4114] PAPI_L2_ICM
+9930437          [s4114] PAPI_STL_ICY
+26761823788      [s4114] PAPI_FUL_ICY
+139478596        [s4114] PAPI_BR_CN
+386635           [s4114] PAPI_BR_MSP
+589910608        [s4114] PAPI_L2_DCA
+234162           [s4114] PAPI_L2_ICA
+
+14               [LABEL] s4115
+1                [s4115] Measurements
+20260504782      [s4115] Real cycles
+67987242062      [s4115] PAPI_TOT_INS
+24049180916      [s4115] PAPI_LST_INS
+140831439        [s4115] PAPI_BR_INS
+21021930975      [s4115] PAPI_LD_INS
+3027249941       [s4115] PAPI_SR_INS
+28841468849      [s4115] PAPI_TOT_CYC
+9032197990       [s4115] PAPI_RES_STL
+632041596        [s4115] PAPI_L1_DCM
+61640            [s4115] PAPI_L1_ICM
+427              [s4115] PAPI_TLB_DM
+1043             [s4115] PAPI_TLB_IM
+1014491888       [s4115] PAPI_L2_DCM
+62245            [s4115] PAPI_L2_ICM
+5256575          [s4115] PAPI_STL_ICY
+11283366121      [s4115] PAPI_FUL_ICY
+140906798        [s4115] PAPI_BR_CN
+213826           [s4115] PAPI_BR_MSP
+262476284        [s4115] PAPI_L2_DCA
+61640            [s4115] PAPI_L2_ICA
+
+15               [LABEL] s4116
+1                [s4116] Measurements
+16267534368      [s4116] Real cycles
+77325147438      [s4116] PAPI_TOT_INS
+31304043957      [s4116] PAPI_LST_INS
+199887432        [s4116] PAPI_BR_INS
+25913571122      [s4116] PAPI_LD_INS
+5390472835       [s4116] PAPI_SR_INS
+23150652003      [s4116] PAPI_TOT_CYC
+2873371974       [s4116] PAPI_RES_STL
+-34738871        [s4116] PAPI_L1_DCM
+45965            [s4116] PAPI_L1_ICM
+0                [s4116] PAPI_TLB_DM
+5                [s4116] PAPI_TLB_IM
+4537             [s4116] PAPI_L2_DCM
+475              [s4116] PAPI_L2_ICM
+1901173          [s4116] PAPI_STL_ICY
+14055417556      [s4116] PAPI_FUL_ICY
+159971849        [s4116] PAPI_BR_CN
+8341             [s4116] PAPI_BR_MSP
+57290            [s4116] PAPI_L2_DCA
+45965            [s4116] PAPI_L2_ICA
+
+16               [LABEL] s4117
+1                [s4117] Measurements
+16987144626      [s4117] Real cycles
+96078136563      [s4117] PAPI_TOT_INS
+26071216593      [s4117] PAPI_LST_INS
+140026200        [s4117] PAPI_BR_INS
+22741191118      [s4117] PAPI_LD_INS
+3330025475       [s4117] PAPI_SR_INS
+24102500380      [s4117] PAPI_TOT_CYC
+57975902         [s4117] PAPI_RES_STL
+700219904        [s4117] PAPI_L1_DCM
+79286            [s4117] PAPI_L1_ICM
+61               [s4117] PAPI_TLB_DM
+19               [s4117] PAPI_TLB_IM
+1301760731       [s4117] PAPI_L2_DCM
+76580            [s4117] PAPI_L2_ICM
+6065916          [s4117] PAPI_STL_ICY
+16591769062      [s4117] PAPI_FUL_ICY
+140046492        [s4117] PAPI_BR_CN
+336077           [s4117] PAPI_BR_MSP
+271670094        [s4117] PAPI_L2_DCA
+79286            [s4117] PAPI_L2_ICA
+
+17               [LABEL] s4121
+1                [s4121] Measurements
+23490226736      [s4121] Real cycles
+114605923226     [s4121] PAPI_TOT_INS
+58077579768      [s4121] PAPI_LST_INS
+6509096683       [s4121] PAPI_BR_INS
+38788526300      [s4121] PAPI_LD_INS
+19289053468      [s4121] PAPI_SR_INS
+33195970725      [s4121] PAPI_TOT_CYC
+1247936179       [s4121] PAPI_RES_STL
+634704759        [s4121] PAPI_L1_DCM
+53108            [s4121] PAPI_L1_ICM
+38               [s4121] PAPI_TLB_DM
+0                [s4121] PAPI_TLB_IM
+1019149304       [s4121] PAPI_L2_DCM
+45438            [s4121] PAPI_L2_ICM
+5547630          [s4121] PAPI_STL_ICY
+22190156544      [s4121] PAPI_FUL_ICY
+140322315        [s4121] PAPI_BR_CN
+295536           [s4121] PAPI_BR_MSP
+16635307         [s4121] PAPI_L2_DCA
+53108            [s4121] PAPI_L2_ICA
+
+18               [LABEL] va
+1                [va] Measurements
+69080014235      [va] Real cycles
+394856093203     [va] PAPI_TOT_INS
+135872426917     [va] PAPI_LST_INS
+1495867388       [va] PAPI_BR_INS
+102112966401     [va] PAPI_LD_INS
+33759460516      [va] PAPI_SR_INS
+97978807943      [va] PAPI_TOT_CYC
+407803839        [va] PAPI_RES_STL
+3966347668       [va] PAPI_L1_DCM
+49172            [va] PAPI_L1_ICM
+-427             [va] PAPI_TLB_DM
+-1043            [va] PAPI_TLB_IM
+3845056384       [va] PAPI_L2_DCM
+39948            [va] PAPI_L2_ICM
+36162292         [va] PAPI_STL_ICY
+65922662028      [va] PAPI_FUL_ICY
+1401654286       [va] PAPI_BR_CN
+2200774          [va] PAPI_BR_MSP
+2243277764       [va] PAPI_L2_DCA
+49172            [va] PAPI_L2_ICA
+
+19               [LABEL] vag
+1                [vag] Measurements
+19940035634      [vag] Real cycles
+101703075011     [vag] PAPI_TOT_INS
+36740443940      [vag] PAPI_LST_INS
+184947671        [vag] PAPI_BR_INS
+30539981829      [vag] PAPI_LD_INS
+6200462111       [vag] PAPI_SR_INS
+28267958712      [vag] PAPI_TOT_CYC
+805998578        [vag] PAPI_RES_STL
+1245741324       [vag] PAPI_L1_DCM
+57670            [vag] PAPI_L1_ICM
+436              [vag] PAPI_TLB_DM
+1285             [vag] PAPI_TLB_IM
+2039150587       [vag] PAPI_L2_DCM
+58292            [vag] PAPI_L2_ICM
+8543487          [vag] PAPI_STL_ICY
+20148456673      [vag] PAPI_FUL_ICY
+280552257        [vag] PAPI_BR_CN
+596082           [vag] PAPI_BR_MSP
+676334517        [vag] PAPI_L2_DCA
+57670            [vag] PAPI_L2_ICA
+
+20               [LABEL] vas
+1                [vas] Measurements
+19628681471      [vas] Real cycles
+117971926059     [vas] PAPI_TOT_INS
+42422909876      [vas] PAPI_LST_INS
+377260033        [vas] PAPI_BR_INS
+35246137620      [vas] PAPI_LD_INS
+7176772256       [vas] PAPI_SR_INS
+30254378291      [vas] PAPI_TOT_CYC
+188102401        [vas] PAPI_RES_STL
+1152125392       [vas] PAPI_L1_DCM
+18981            [vas] PAPI_L1_ICM
+-426             [vas] PAPI_TLB_DM
+-1043            [vas] PAPI_TLB_IM
+1898217094       [vas] PAPI_L2_DCM
+20965            [vas] PAPI_L2_ICM
+7763241          [vas] PAPI_STL_ICY
+18382405011      [vas] PAPI_FUL_ICY
+235674790        [vas] PAPI_BR_CN
+561999           [vas] PAPI_BR_MSP
+481729581        [vas] PAPI_L2_DCA
+18981            [vas] PAPI_L2_ICA
+
+21               [LABEL] vif
+1                [vif] Measurements
+11901807874      [vif] Real cycles
+58541634998      [vif] PAPI_TOT_INS
+16660895997      [vif] PAPI_LST_INS
+3245859076       [vif] PAPI_BR_INS
+13846391116      [vif] PAPI_LD_INS
+2814504881       [vif] PAPI_SR_INS
+14448062209      [vif] PAPI_TOT_CYC
+115754610        [vif] PAPI_RES_STL
+451254612        [vif] PAPI_L1_DCM
+44189            [vif] PAPI_L1_ICM
+426              [vif] PAPI_TLB_DM
+1043             [vif] PAPI_TLB_IM
+483115407        [vif] PAPI_L2_DCM
+43392            [vif] PAPI_L2_ICM
+3892352          [vif] PAPI_STL_ICY
+12783682461      [vif] PAPI_FUL_ICY
+3379194858       [vif] PAPI_BR_CN
+226634           [vif] PAPI_BR_MSP
+202389634        [vif] PAPI_L2_DCA
+44189            [vif] PAPI_L2_ICA
+
+22               [LABEL] vpv
+1                [vpv] Measurements
+107707605452     [vpv] Real cycles
+619892004026     [vpv] PAPI_TOT_INS
+200760824447     [vpv] PAPI_LST_INS
+1511477121       [vpv] PAPI_BR_INS
+166813466565     [vpv] PAPI_LD_INS
+33947357882      [vpv] PAPI_SR_INS
+155668932959     [vpv] PAPI_TOT_CYC
+-13630447        [vpv] PAPI_RES_STL
+3946167064       [vpv] PAPI_L1_DCM
+199774           [vpv] PAPI_L1_ICM
+-426             [vpv] PAPI_TLB_DM
+-1043            [vpv] PAPI_TLB_IM
+3982428748       [vpv] PAPI_L2_DCM
+122892           [vpv] PAPI_L2_ICM
+42453130         [vpv] PAPI_STL_ICY
+100355814591     [vpv] PAPI_FUL_ICY
+1346433296       [vpv] PAPI_BR_CN
+1571565          [vpv] PAPI_BR_MSP
+31103514         [vpv] PAPI_L2_DCA
+199774           [vpv] PAPI_L2_ICA
+
+23               [LABEL] vtv
+1                [vtv] Measurements
+107756217476     [vtv] Real cycles
+610695726464     [vtv] PAPI_TOT_INS
+193461542912     [vtv] PAPI_LST_INS
+1293314005       [vtv] PAPI_BR_INS
+160734449800     [vtv] PAPI_LD_INS
+32727093112      [vtv] PAPI_SR_INS
+150136385738     [vtv] PAPI_TOT_CYC
+102164457        [vtv] PAPI_RES_STL
+4067380043       [vtv] PAPI_L1_DCM
+487950           [vtv] PAPI_L1_ICM
+426              [vtv] PAPI_TLB_DM
+24214            [vtv] PAPI_TLB_IM
+4165386447       [vtv] PAPI_L2_DCM
+341236           [vtv] PAPI_L2_ICM
+58379951         [vtv] PAPI_STL_ICY
+101751324165     [vtv] PAPI_FUL_ICY
+1455272204       [vtv] PAPI_BR_CN
+3856151          [vtv] PAPI_BR_MSP
+68239915         [vtv] PAPI_L2_DCA
+487950           [vtv] PAPI_L2_ICA
+
+24               [LABEL] vpvtv
+1                [vpvtv] Measurements
+59312917339      [vpvtv] Real cycles
+332626566356     [vpvtv] PAPI_TOT_INS
+108627853233     [vpvtv] PAPI_LST_INS
+559850913        [vpvtv] PAPI_BR_INS
+94577755381      [vpvtv] PAPI_LD_INS
+14050097852      [vpvtv] PAPI_SR_INS
+84065257859      [vpvtv] PAPI_TOT_CYC
+752054980        [vpvtv] PAPI_RES_STL
+2341431704       [vpvtv] PAPI_L1_DCM
+267644           [vpvtv] PAPI_L1_ICM
+-426             [vpvtv] PAPI_TLB_DM
+-1078            [vpvtv] PAPI_TLB_IM
+3873490331       [vpvtv] PAPI_L2_DCM
+270921           [vpvtv] PAPI_L2_ICM
+23553106         [vpvtv] PAPI_STL_ICY
+53117041886      [vpvtv] PAPI_FUL_ICY
+559487443        [vpvtv] PAPI_BR_CN
+1290665          [vpvtv] PAPI_BR_MSP
+651553928        [vpvtv] PAPI_L2_DCA
+267644           [vpvtv] PAPI_L2_ICA
+
+25               [LABEL] vpvts
+1                [vpvts] Measurements
+11352111718      [vpvts] Real cycles
+64581976950      [vpvts] PAPI_TOT_INS
+22303377137      [vpvts] PAPI_LST_INS
+140750075        [vpvts] PAPI_BR_INS
+19706334838      [vpvts] PAPI_LD_INS
+2597042299       [vpvts] PAPI_SR_INS
+16171199697      [vpvts] PAPI_TOT_CYC
+16389882         [vpvts] PAPI_RES_STL
+401745426        [vpvts] PAPI_L1_DCM
+18429            [vpvts] PAPI_L1_ICM
+5                [vpvts] PAPI_TLB_DM
+218              [vpvts] PAPI_TLB_IM
+501896028        [vpvts] PAPI_L2_DCM
+28105            [vpvts] PAPI_L2_ICM
+4739510          [vpvts] PAPI_STL_ICY
+10250004409      [vpvts] PAPI_FUL_ICY
+140971654        [vpvts] PAPI_BR_CN
+261597           [vpvts] PAPI_BR_MSP
+5730994          [vpvts] PAPI_L2_DCA
+18429            [vpvts] PAPI_L2_ICA
+
+26               [LABEL] vpvpv
+1                [vpvpv] Measurements
+59491958860      [vpvpv] Real cycles
+332960757482     [vpvpv] PAPI_TOT_INS
+105280367963     [vpvpv] PAPI_LST_INS
+559919049        [vpvpv] PAPI_BR_INS
+91170200351      [vpvpv] PAPI_LD_INS
+14110167612      [vpvpv] PAPI_SR_INS
+84180916240      [vpvpv] PAPI_TOT_CYC
+865326716        [vpvpv] PAPI_RES_STL
+2403656152       [vpvpv] PAPI_L1_DCM
+204346           [vpvpv] PAPI_L1_ICM
+76               [vpvpv] PAPI_TLB_DM
+51496            [vpvpv] PAPI_TLB_IM
+3827103846       [vpvpv] PAPI_L2_DCM
+201518           [vpvpv] PAPI_L2_ICM
+12773013         [vpvpv] PAPI_STL_ICY
+52511397687      [vpvpv] PAPI_FUL_ICY
+560490091        [vpvpv] PAPI_BR_CN
+740358           [vpvpv] PAPI_BR_MSP
+648643726        [vpvpv] PAPI_L2_DCA
+204346           [vpvpv] PAPI_L2_ICA
+
+27               [LABEL] vtvtv
+1                [vtvtv] Measurements
+59130691022      [vtvtv] Real cycles
+333683299583     [vtvtv] PAPI_TOT_INS
+103899651647     [vtvtv] PAPI_LST_INS
+561065188        [vtvtv] PAPI_BR_INS
+91352353039      [vtvtv] PAPI_LD_INS
+12547298608      [vtvtv] PAPI_SR_INS
+83961453716      [vtvtv] PAPI_TOT_CYC
+537352285        [vtvtv] PAPI_RES_STL
+2400277935       [vtvtv] PAPI_L1_DCM
+178750           [vtvtv] PAPI_L1_ICM
+123              [vtvtv] PAPI_TLB_DM
+483              [vtvtv] PAPI_TLB_IM
+4124279547       [vtvtv] PAPI_L2_DCM
+184144           [vtvtv] PAPI_L2_ICM
+13842157         [vtvtv] PAPI_STL_ICY
+52310831778      [vtvtv] PAPI_FUL_ICY
+561024480        [vtvtv] PAPI_BR_CN
+820815           [vtvtv] PAPI_BR_MSP
+765617360        [vtvtv] PAPI_L2_DCA
+178750           [vtvtv] PAPI_L2_ICA
+
+28               [LABEL] vsumr
+1                [vsumr] Measurements
+202629542658     [vsumr] Real cycles
+293492099404     [vsumr] PAPI_TOT_INS
+134388062000     [vsumr] PAPI_LST_INS
+1400703614       [vsumr] PAPI_BR_INS
+100156060476     [vsumr] PAPI_LD_INS
+34232001524      [vsumr] PAPI_SR_INS
+287359988880     [vsumr] PAPI_TOT_CYC
+182015006818     [vsumr] PAPI_RES_STL
+1999248623       [vsumr] PAPI_L1_DCM
+201114           [vsumr] PAPI_L1_ICM
+232              [vsumr] PAPI_TLB_DM
+50476            [vsumr] PAPI_TLB_IM
+397854075        [vsumr] PAPI_L2_DCM
+155989           [vsumr] PAPI_L2_ICM
+36982844         [vsumr] PAPI_STL_ICY
+51657112980      [vsumr] PAPI_FUL_ICY
+1400905925       [vsumr] PAPI_BR_CN
+2365495          [vsumr] PAPI_BR_MSP
+84371955         [vsumr] PAPI_L2_DCA
+201114           [vsumr] PAPI_L2_ICA
+
+29               [LABEL] vdotr
+1                [vdotr] Measurements
+202680097159     [vdotr] Real cycles
+516505609941     [vdotr] PAPI_TOT_INS
+191752453318     [vdotr] PAPI_LST_INS
+1402033078       [vdotr] PAPI_BR_INS
+159322996902     [vdotr] PAPI_LD_INS
+32429456416      [vdotr] PAPI_SR_INS
+287864764347     [vdotr] PAPI_TOT_CYC
+137486042930     [vdotr] PAPI_RES_STL
+4095571523       [vdotr] PAPI_L1_DCM
+649280           [vdotr] PAPI_L1_ICM
+428              [vdotr] PAPI_TLB_DM
+382193           [vdotr] PAPI_TLB_IM
+4219709375       [vdotr] PAPI_L2_DCM
+630350           [vdotr] PAPI_L2_ICM
+59190651         [vdotr] PAPI_STL_ICY
+82267005134      [vdotr] PAPI_FUL_ICY
+1401710346       [vdotr] PAPI_BR_CN
+1976793          [vdotr] PAPI_BR_MSP
+54149867         [vdotr] PAPI_L2_DCA
+649280           [vdotr] PAPI_L2_ICA
+
+30               [LABEL] vbor
+1                [vbor] Measurements
+9720570426       [vbor] Real cycles
+34531378449      [vbor] PAPI_TOT_INS
+22513903138      [vbor] PAPI_LST_INS
+21792633         [vbor] PAPI_BR_INS
+19679035198      [vbor] PAPI_LD_INS
+2834867940       [vbor] PAPI_SR_INS
+13863968049      [vbor] PAPI_TOT_CYC
+4036133392       [vbor] PAPI_RES_STL
+-97338645        [vbor] PAPI_L1_DCM
+287178           [vbor] PAPI_L1_ICM
+157              [vbor] PAPI_TLB_DM
+46037            [vbor] PAPI_TLB_IM
+30652            [vbor] PAPI_L2_DCM
+6802             [vbor] PAPI_L2_ICM
+1786679          [vbor] PAPI_STL_ICY
+6891262818       [vbor] PAPI_FUL_ICY
+16978908         [vbor] PAPI_BR_CN
+4019             [vbor] PAPI_BR_MSP
+341559           [vbor] PAPI_L2_DCA
+287178           [vbor] PAPI_L2_ICA
+
+Event descriptions:
+PAPI_TOT_INS                  : Instructions completed
+PAPI_LST_INS                  : Load/store instructions completed
+PAPI_BR_INS                   : Branch instructions
+PAPI_LD_INS                   : Load instructions
+PAPI_SR_INS                   : Store instructions
+PAPI_TOT_CYC                  : Total cycles
+PAPI_RES_STL                  : Cycles stalled on any resource
+PAPI_L1_DCM                   : Level 1 data cache misses
+PAPI_L1_ICM                   : Level 1 instruction cache misses
+PAPI_TLB_DM                   : Data translation lookaside buffer misses
+PAPI_TLB_IM                   : Instruction translation lookaside buffer misses
+PAPI_L2_DCM                   : Level 2 data cache misses
+PAPI_L2_ICM                   : Level 2 instruction cache misses
+PAPI_STL_ICY                  : Cycles with no instruction issue
+PAPI_FUL_ICY                  : Cycles with maximum instruction issue
+PAPI_BR_CN                    : Conditional branch instructions
+PAPI_BR_MSP                   : Conditional branch instructions mispredicted
+PAPI_L2_DCA                   : Level 2 data cache accesses
+PAPI_L2_ICA                   : Level 2 instruction cache accesses
