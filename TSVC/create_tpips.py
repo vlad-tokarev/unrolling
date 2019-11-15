@@ -1,7 +1,5 @@
-from settings import BENCHMARK
-from settings import FUNCTIONS
+from settings import tsvc_functions_path
 from settings import main_file
-from settings import max_unrolling
 import os
 
 
@@ -27,11 +25,11 @@ def create_tpips(factor, functions_path, folder_name='tsvc'):
 
 def generate_files(max_factor, path):
     for factor in range(2, max_factor):
-        tmp_tpips = create_tpips(factor, FUNCTIONS)
+        tmp_tpips = create_tpips(factor, tsvc_functions_path)
         filename = 'factor_' + str(factor) + '.tpips'
         with open(os.path.join(path, filename), 'w') as f:
             for item in tmp_tpips:
                 f.write("%s\n" % item)
 
 
-generate_files(max_unrolling, BENCHMARK)
+

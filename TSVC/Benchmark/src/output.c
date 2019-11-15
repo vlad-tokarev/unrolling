@@ -25,7 +25,7 @@
 /*
 * file for tsvc_new.c
 */
-/* Copyright (C) 1991-2018 Free Software Foundation, Inc.
+/* Copyright (C) 1991-2016 Free Software Foundation, Inc.
 This file is part of the GNU C Library.
 
 The GNU C Library is free software; you can redistribute it and/or
@@ -59,12 +59,9 @@ specifying compiler intent are available, use them to determine
 whether the overall intent is to support these features; otherwise,
 presume an older compiler has intent to support these features and
 define these macros by default.  */
-/* wchar_t uses Unicode 10.0.0.  Version 10.0 of the Unicode Standard is
-synchronized with ISO/IEC 10646:2017, fifth edition, plus
-the following additions from Amendment 1 to the fifth edition:
-- 56 emoji characters
-- 285 hentaigana
-- 3 additional Zanabazar Square characters */
+/* wchar_t uses Unicode 8.0.0.  Version 8.0 of the Unicode Standard is
+synchronized with ISO/IEC 10646:2014, plus Amendment 1 (published
+2015-05-15).  */
 
 
 /* We do not support C11 <threads.h>.  */
@@ -5137,19 +5134,14 @@ for(nl = 0; nl <= 199999; nl += 1) {
 {
 int i;
 loop_s000:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[LU_IND0*1+0]+1;
 l99999:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+1;
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+1;
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+1;
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+1;
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+1;
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+1;
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+1;
 l99998:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -5178,19 +5170,14 @@ for(nl = 0; nl <= 199999; nl += 1) {
 {
 int i;
 loop_s111:            LU_NUB0 = 16000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*2+1] = a[LU_IND0*2+1-1]+b[LU_IND0*2+1];
 l99997:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*2+1] = a[(LU_IND0+0)*2+1-1]+b[(LU_IND0+0)*2+1];
 a[(LU_IND0+1)*2+1] = a[(LU_IND0+1)*2+1-1]+b[(LU_IND0+1)*2+1];
-a[(LU_IND0+2)*2+1] = a[(LU_IND0+2)*2+1-1]+b[(LU_IND0+2)*2+1];
-a[(LU_IND0+3)*2+1] = a[(LU_IND0+3)*2+1-1]+b[(LU_IND0+3)*2+1];
-a[(LU_IND0+4)*2+1] = a[(LU_IND0+4)*2+1-1]+b[(LU_IND0+4)*2+1];
-a[(LU_IND0+5)*2+1] = a[(LU_IND0+5)*2+1-1]+b[(LU_IND0+5)*2+1];
-a[(LU_IND0+6)*2+1] = a[(LU_IND0+6)*2+1-1]+b[(LU_IND0+6)*2+1];
 l99996:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*2;
@@ -5219,19 +5206,14 @@ for(nl = 0; nl <= 199999; nl += 1) {
 {
 int i;
 loop_s1111:            LU_NUB0 = 16000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[2*(LU_IND0*1+0)] = c[LU_IND0*1+0]*b[LU_IND0*1+0]+d[LU_IND0*1+0]*b[LU_IND0*1+0]+c[LU_IND0*1+0]*c[LU_IND0*1+0]+d[LU_IND0*1+0]*b[LU_IND0*1+0]+d[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99995:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[2*((LU_IND0+0)*1+0)] = c[(LU_IND0+0)*1+0]*b[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0]*b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0]*b[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 a[2*((LU_IND0+1)*1+0)] = c[(LU_IND0+1)*1+0]*b[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*b[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-a[2*((LU_IND0+2)*1+0)] = c[(LU_IND0+2)*1+0]*b[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*b[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-a[2*((LU_IND0+3)*1+0)] = c[(LU_IND0+3)*1+0]*b[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*b[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-a[2*((LU_IND0+4)*1+0)] = c[(LU_IND0+4)*1+0]*b[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*b[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-a[2*((LU_IND0+5)*1+0)] = c[(LU_IND0+5)*1+0]*b[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*b[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-a[2*((LU_IND0+6)*1+0)] = c[(LU_IND0+6)*1+0]*b[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*b[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99994:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -5260,19 +5242,14 @@ for(nl = 0; nl <= 299999; nl += 1) {
 {
 int i;
 loop_s112:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*(-1)+(32000-2)+1] = a[LU_IND0*(-1)+(32000-2)]+b[LU_IND0*(-1)+(32000-2)];
 l99993:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*(-1)+(32000-2)+1] = a[(LU_IND0+0)*(-1)+(32000-2)]+b[(LU_IND0+0)*(-1)+(32000-2)];
 a[(LU_IND0+1)*(-1)+(32000-2)+1] = a[(LU_IND0+1)*(-1)+(32000-2)]+b[(LU_IND0+1)*(-1)+(32000-2)];
-a[(LU_IND0+2)*(-1)+(32000-2)+1] = a[(LU_IND0+2)*(-1)+(32000-2)]+b[(LU_IND0+2)*(-1)+(32000-2)];
-a[(LU_IND0+3)*(-1)+(32000-2)+1] = a[(LU_IND0+3)*(-1)+(32000-2)]+b[(LU_IND0+3)*(-1)+(32000-2)];
-a[(LU_IND0+4)*(-1)+(32000-2)+1] = a[(LU_IND0+4)*(-1)+(32000-2)]+b[(LU_IND0+4)*(-1)+(32000-2)];
-a[(LU_IND0+5)*(-1)+(32000-2)+1] = a[(LU_IND0+5)*(-1)+(32000-2)]+b[(LU_IND0+5)*(-1)+(32000-2)];
-a[(LU_IND0+6)*(-1)+(32000-2)+1] = a[(LU_IND0+6)*(-1)+(32000-2)]+b[(LU_IND0+6)*(-1)+(32000-2)];
 l99992:               ;
 }
 i = 32000-2+MAX0(LU_NUB0, 0)*(-1);
@@ -5301,19 +5278,14 @@ for(nl = 0; nl <= 299999; nl += 1) {
 {
 int i;
 loop_s1112:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*(-1)+(32000-1)] = b[LU_IND0*(-1)+(32000-1)]+(real_t) 1.;
 l99991:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*(-1)+(32000-1)] = b[(LU_IND0+0)*(-1)+(32000-1)]+(real_t) 1.;
 a[(LU_IND0+1)*(-1)+(32000-1)] = b[(LU_IND0+1)*(-1)+(32000-1)]+(real_t) 1.;
-a[(LU_IND0+2)*(-1)+(32000-1)] = b[(LU_IND0+2)*(-1)+(32000-1)]+(real_t) 1.;
-a[(LU_IND0+3)*(-1)+(32000-1)] = b[(LU_IND0+3)*(-1)+(32000-1)]+(real_t) 1.;
-a[(LU_IND0+4)*(-1)+(32000-1)] = b[(LU_IND0+4)*(-1)+(32000-1)]+(real_t) 1.;
-a[(LU_IND0+5)*(-1)+(32000-1)] = b[(LU_IND0+5)*(-1)+(32000-1)]+(real_t) 1.;
-a[(LU_IND0+6)*(-1)+(32000-1)] = b[(LU_IND0+6)*(-1)+(32000-1)]+(real_t) 1.;
 l99990:               ;
 }
 i = 32000-1+MAX0(LU_NUB0, 0)*(-1);
@@ -5342,19 +5314,14 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s113:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] = a[0]+b[LU_IND0*1+1];
 l99989:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] = a[0]+b[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] = a[0]+b[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] = a[0]+b[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] = a[0]+b[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] = a[0]+b[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] = a[0]+b[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] = a[0]+b[(LU_IND0+6)*1+1];
 l99988:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -5383,19 +5350,14 @@ for(nl = 0; nl <= 199999; nl += 1) {
 {
 int i;
 loop_s1113:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = a[32000/2]+b[LU_IND0*1+0];
 l99987:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = a[32000/2]+b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = a[32000/2]+b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = a[32000/2]+b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = a[32000/2]+b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = a[32000/2]+b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = a[32000/2]+b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = a[32000/2]+b[(LU_IND0+6)*1+0];
 l99986:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -5427,19 +5389,14 @@ int i;
 for(i = 0; i <= 255; i += 1) {
 int j;
 loop_s114:               LU_NUB0 = (i-1-0+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[i][LU_IND0*1+0] = aa[LU_IND0*1+0][i]+bb[i][LU_IND0*1+0];
 l99985:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[i][(LU_IND0+0)*1+0] = aa[(LU_IND0+0)*1+0][i]+bb[i][(LU_IND0+0)*1+0];
 aa[i][(LU_IND0+1)*1+0] = aa[(LU_IND0+1)*1+0][i]+bb[i][(LU_IND0+1)*1+0];
-aa[i][(LU_IND0+2)*1+0] = aa[(LU_IND0+2)*1+0][i]+bb[i][(LU_IND0+2)*1+0];
-aa[i][(LU_IND0+3)*1+0] = aa[(LU_IND0+3)*1+0][i]+bb[i][(LU_IND0+3)*1+0];
-aa[i][(LU_IND0+4)*1+0] = aa[(LU_IND0+4)*1+0][i]+bb[i][(LU_IND0+4)*1+0];
-aa[i][(LU_IND0+5)*1+0] = aa[(LU_IND0+5)*1+0][i]+bb[i][(LU_IND0+5)*1+0];
-aa[i][(LU_IND0+6)*1+0] = aa[(LU_IND0+6)*1+0][i]+bb[i][(LU_IND0+6)*1+0];
 l99984:                  ;
 }
 j = 0+MAX0(LU_NUB0, 0)*1;
@@ -5471,19 +5428,14 @@ int j;
 for(j = 0; j <= 255; j += 1) {
 int i;
 loop_s115:               LU_NUB0 = (255-(j+1)+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+(j+1)] -= aa[j][LU_IND0*1+(j+1)]*a[j];
 l99983:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+(j+1)] -= aa[j][(LU_IND0+0)*1+(j+1)]*a[j];
 a[(LU_IND0+1)*1+(j+1)] -= aa[j][(LU_IND0+1)*1+(j+1)]*a[j];
-a[(LU_IND0+2)*1+(j+1)] -= aa[j][(LU_IND0+2)*1+(j+1)]*a[j];
-a[(LU_IND0+3)*1+(j+1)] -= aa[j][(LU_IND0+3)*1+(j+1)]*a[j];
-a[(LU_IND0+4)*1+(j+1)] -= aa[j][(LU_IND0+4)*1+(j+1)]*a[j];
-a[(LU_IND0+5)*1+(j+1)] -= aa[j][(LU_IND0+5)*1+(j+1)]*a[j];
-a[(LU_IND0+6)*1+(j+1)] -= aa[j][(LU_IND0+6)*1+(j+1)]*a[j];
 l99982:                  ;
 }
 i = j+1+MAX0(LU_NUB0, 0)*1;
@@ -5515,19 +5467,14 @@ int i;
 for(i = 0; i <= 255; i += 1) {
 int j;
 loop_s1115:               LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[i][LU_IND0*1+0] = aa[i][LU_IND0*1+0]*cc[LU_IND0*1+0][i]+bb[i][LU_IND0*1+0];
 l99981:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[i][(LU_IND0+0)*1+0] = aa[i][(LU_IND0+0)*1+0]*cc[(LU_IND0+0)*1+0][i]+bb[i][(LU_IND0+0)*1+0];
 aa[i][(LU_IND0+1)*1+0] = aa[i][(LU_IND0+1)*1+0]*cc[(LU_IND0+1)*1+0][i]+bb[i][(LU_IND0+1)*1+0];
-aa[i][(LU_IND0+2)*1+0] = aa[i][(LU_IND0+2)*1+0]*cc[(LU_IND0+2)*1+0][i]+bb[i][(LU_IND0+2)*1+0];
-aa[i][(LU_IND0+3)*1+0] = aa[i][(LU_IND0+3)*1+0]*cc[(LU_IND0+3)*1+0][i]+bb[i][(LU_IND0+3)*1+0];
-aa[i][(LU_IND0+4)*1+0] = aa[i][(LU_IND0+4)*1+0]*cc[(LU_IND0+4)*1+0][i]+bb[i][(LU_IND0+4)*1+0];
-aa[i][(LU_IND0+5)*1+0] = aa[i][(LU_IND0+5)*1+0]*cc[(LU_IND0+5)*1+0][i]+bb[i][(LU_IND0+5)*1+0];
-aa[i][(LU_IND0+6)*1+0] = aa[i][(LU_IND0+6)*1+0]*cc[(LU_IND0+6)*1+0][i]+bb[i][(LU_IND0+6)*1+0];
 l99980:                  ;
 }
 j = 0+MAX0(LU_NUB0, 0)*1;
@@ -5565,7 +5512,7 @@ a[LU_IND0*5+0+3] = a[LU_IND0*5+0+4]*a[LU_IND0*5+0+3];
 a[LU_IND0*5+0+4] = a[LU_IND0*5+0+5]*a[LU_IND0*5+0+4];
 l99979:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*5+0] = a[(LU_IND0+0)*5+0+1]*a[(LU_IND0+0)*5+0];
 a[(LU_IND0+0)*5+0+1] = a[(LU_IND0+0)*5+0+2]*a[(LU_IND0+0)*5+0+1];
 a[(LU_IND0+0)*5+0+2] = a[(LU_IND0+0)*5+0+3]*a[(LU_IND0+0)*5+0+2];
@@ -5576,31 +5523,6 @@ a[(LU_IND0+1)*5+0+1] = a[(LU_IND0+1)*5+0+2]*a[(LU_IND0+1)*5+0+1];
 a[(LU_IND0+1)*5+0+2] = a[(LU_IND0+1)*5+0+3]*a[(LU_IND0+1)*5+0+2];
 a[(LU_IND0+1)*5+0+3] = a[(LU_IND0+1)*5+0+4]*a[(LU_IND0+1)*5+0+3];
 a[(LU_IND0+1)*5+0+4] = a[(LU_IND0+1)*5+0+5]*a[(LU_IND0+1)*5+0+4];
-a[(LU_IND0+2)*5+0] = a[(LU_IND0+2)*5+0+1]*a[(LU_IND0+2)*5+0];
-a[(LU_IND0+2)*5+0+1] = a[(LU_IND0+2)*5+0+2]*a[(LU_IND0+2)*5+0+1];
-a[(LU_IND0+2)*5+0+2] = a[(LU_IND0+2)*5+0+3]*a[(LU_IND0+2)*5+0+2];
-a[(LU_IND0+2)*5+0+3] = a[(LU_IND0+2)*5+0+4]*a[(LU_IND0+2)*5+0+3];
-a[(LU_IND0+2)*5+0+4] = a[(LU_IND0+2)*5+0+5]*a[(LU_IND0+2)*5+0+4];
-a[(LU_IND0+3)*5+0] = a[(LU_IND0+3)*5+0+1]*a[(LU_IND0+3)*5+0];
-a[(LU_IND0+3)*5+0+1] = a[(LU_IND0+3)*5+0+2]*a[(LU_IND0+3)*5+0+1];
-a[(LU_IND0+3)*5+0+2] = a[(LU_IND0+3)*5+0+3]*a[(LU_IND0+3)*5+0+2];
-a[(LU_IND0+3)*5+0+3] = a[(LU_IND0+3)*5+0+4]*a[(LU_IND0+3)*5+0+3];
-a[(LU_IND0+3)*5+0+4] = a[(LU_IND0+3)*5+0+5]*a[(LU_IND0+3)*5+0+4];
-a[(LU_IND0+4)*5+0] = a[(LU_IND0+4)*5+0+1]*a[(LU_IND0+4)*5+0];
-a[(LU_IND0+4)*5+0+1] = a[(LU_IND0+4)*5+0+2]*a[(LU_IND0+4)*5+0+1];
-a[(LU_IND0+4)*5+0+2] = a[(LU_IND0+4)*5+0+3]*a[(LU_IND0+4)*5+0+2];
-a[(LU_IND0+4)*5+0+3] = a[(LU_IND0+4)*5+0+4]*a[(LU_IND0+4)*5+0+3];
-a[(LU_IND0+4)*5+0+4] = a[(LU_IND0+4)*5+0+5]*a[(LU_IND0+4)*5+0+4];
-a[(LU_IND0+5)*5+0] = a[(LU_IND0+5)*5+0+1]*a[(LU_IND0+5)*5+0];
-a[(LU_IND0+5)*5+0+1] = a[(LU_IND0+5)*5+0+2]*a[(LU_IND0+5)*5+0+1];
-a[(LU_IND0+5)*5+0+2] = a[(LU_IND0+5)*5+0+3]*a[(LU_IND0+5)*5+0+2];
-a[(LU_IND0+5)*5+0+3] = a[(LU_IND0+5)*5+0+4]*a[(LU_IND0+5)*5+0+3];
-a[(LU_IND0+5)*5+0+4] = a[(LU_IND0+5)*5+0+5]*a[(LU_IND0+5)*5+0+4];
-a[(LU_IND0+6)*5+0] = a[(LU_IND0+6)*5+0+1]*a[(LU_IND0+6)*5+0];
-a[(LU_IND0+6)*5+0+1] = a[(LU_IND0+6)*5+0+2]*a[(LU_IND0+6)*5+0+1];
-a[(LU_IND0+6)*5+0+2] = a[(LU_IND0+6)*5+0+3]*a[(LU_IND0+6)*5+0+2];
-a[(LU_IND0+6)*5+0+3] = a[(LU_IND0+6)*5+0+4]*a[(LU_IND0+6)*5+0+3];
-a[(LU_IND0+6)*5+0+4] = a[(LU_IND0+6)*5+0+5]*a[(LU_IND0+6)*5+0+4];
 l99978:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*5;
@@ -5631,19 +5553,14 @@ int i;
 for(i = 1; i <= 255; i += 1) {
 int j;
 loop_s118:               LU_NUB0 = (i-1-0+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[i] += bb[LU_IND0*1+0][i]*a[i-(LU_IND0*1+0)-1];
 l99977:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[i] += bb[(LU_IND0+0)*1+0][i]*a[i-((LU_IND0+0)*1+0)-1];
 a[i] += bb[(LU_IND0+1)*1+0][i]*a[i-((LU_IND0+1)*1+0)-1];
-a[i] += bb[(LU_IND0+2)*1+0][i]*a[i-((LU_IND0+2)*1+0)-1];
-a[i] += bb[(LU_IND0+3)*1+0][i]*a[i-((LU_IND0+3)*1+0)-1];
-a[i] += bb[(LU_IND0+4)*1+0][i]*a[i-((LU_IND0+4)*1+0)-1];
-a[i] += bb[(LU_IND0+5)*1+0][i]*a[i-((LU_IND0+5)*1+0)-1];
-a[i] += bb[(LU_IND0+6)*1+0][i]*a[i-((LU_IND0+6)*1+0)-1];
 l99976:                  ;
 }
 j = 0+MAX0(LU_NUB0, 0)*1;
@@ -5675,19 +5592,14 @@ int i;
 for(i = 1; i <= 255; i += 1) {
 int j;
 loop_s119:               LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[i][LU_IND0*1+1] = aa[i-1][LU_IND0*1+1-1]+bb[i][LU_IND0*1+1];
 l99975:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[i][(LU_IND0+0)*1+1] = aa[i-1][(LU_IND0+0)*1+1-1]+bb[i][(LU_IND0+0)*1+1];
 aa[i][(LU_IND0+1)*1+1] = aa[i-1][(LU_IND0+1)*1+1-1]+bb[i][(LU_IND0+1)*1+1];
-aa[i][(LU_IND0+2)*1+1] = aa[i-1][(LU_IND0+2)*1+1-1]+bb[i][(LU_IND0+2)*1+1];
-aa[i][(LU_IND0+3)*1+1] = aa[i-1][(LU_IND0+3)*1+1-1]+bb[i][(LU_IND0+3)*1+1];
-aa[i][(LU_IND0+4)*1+1] = aa[i-1][(LU_IND0+4)*1+1-1]+bb[i][(LU_IND0+4)*1+1];
-aa[i][(LU_IND0+5)*1+1] = aa[i-1][(LU_IND0+5)*1+1-1]+bb[i][(LU_IND0+5)*1+1];
-aa[i][(LU_IND0+6)*1+1] = aa[i-1][(LU_IND0+6)*1+1-1]+bb[i][(LU_IND0+6)*1+1];
 l99974:                  ;
 }
 j = 1+MAX0(LU_NUB0, 0)*1;
@@ -5719,19 +5631,14 @@ int i;
 for(i = 1; i <= 255; i += 1) {
 int j;
 loop_s1119:               LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[i][LU_IND0*1+0] = aa[i-1][LU_IND0*1+0]+bb[i][LU_IND0*1+0];
 l99973:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[i][(LU_IND0+0)*1+0] = aa[i-1][(LU_IND0+0)*1+0]+bb[i][(LU_IND0+0)*1+0];
 aa[i][(LU_IND0+1)*1+0] = aa[i-1][(LU_IND0+1)*1+0]+bb[i][(LU_IND0+1)*1+0];
-aa[i][(LU_IND0+2)*1+0] = aa[i-1][(LU_IND0+2)*1+0]+bb[i][(LU_IND0+2)*1+0];
-aa[i][(LU_IND0+3)*1+0] = aa[i-1][(LU_IND0+3)*1+0]+bb[i][(LU_IND0+3)*1+0];
-aa[i][(LU_IND0+4)*1+0] = aa[i-1][(LU_IND0+4)*1+0]+bb[i][(LU_IND0+4)*1+0];
-aa[i][(LU_IND0+5)*1+0] = aa[i-1][(LU_IND0+5)*1+0]+bb[i][(LU_IND0+5)*1+0];
-aa[i][(LU_IND0+6)*1+0] = aa[i-1][(LU_IND0+6)*1+0]+bb[i][(LU_IND0+6)*1+0];
 l99972:                  ;
 }
 j = 0+MAX0(LU_NUB0, 0)*1;
@@ -5762,27 +5669,17 @@ for(nl = 0; nl <= 299999; nl += 1) {
 {
 int i;
 loop_s121:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 j = LU_IND0*1+0+1;
 a[LU_IND0*1+0] = a[j]+b[LU_IND0*1+0];
 l99971:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 j = (LU_IND0+0)*1+0+1;
 a[(LU_IND0+0)*1+0] = a[j]+b[(LU_IND0+0)*1+0];
 j = (LU_IND0+1)*1+0+1;
 a[(LU_IND0+1)*1+0] = a[j]+b[(LU_IND0+1)*1+0];
-j = (LU_IND0+2)*1+0+1;
-a[(LU_IND0+2)*1+0] = a[j]+b[(LU_IND0+2)*1+0];
-j = (LU_IND0+3)*1+0+1;
-a[(LU_IND0+3)*1+0] = a[j]+b[(LU_IND0+3)*1+0];
-j = (LU_IND0+4)*1+0+1;
-a[(LU_IND0+4)*1+0] = a[j]+b[(LU_IND0+4)*1+0];
-j = (LU_IND0+5)*1+0+1;
-a[(LU_IND0+5)*1+0] = a[j]+b[(LU_IND0+5)*1+0];
-j = (LU_IND0+6)*1+0+1;
-a[(LU_IND0+6)*1+0] = a[j]+b[(LU_IND0+6)*1+0];
 l99970:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -5808,7 +5705,7 @@ int b;
 int n1 = x->a;
 int n3 = x->b;
 //PIPS generated variable
-int LU_NUB0, LU_IB0, LU_IND0, i0, i1, i2, i3, i4, i5, i6, i7;
+int LU_NUB0, LU_IB0, LU_IND0, i0, i1, i2;
 
 initialise_arrays(__func__);
 gettimeofday(&func_args->t1, (void *) 0);
@@ -5817,7 +5714,7 @@ int j, k;
 {
 int nl;
 loop_s122:      LU_NUB0 = 100000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 j = 1;
 k = 0;
@@ -5831,57 +5728,7 @@ i0 += n3;
 dummy(a, b, c, d, e, aa, bb, cc, 0.);
 l99969:         ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
-j = 1;
-k = 0;
-
-i7 = n1-1;
-while (i7<32000) {
-k += j;
-a[i7] += b[32000-k];
-i7 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-j = 1;
-k = 0;
-
-i6 = n1-1;
-while (i6<32000) {
-k += j;
-a[i6] += b[32000-k];
-i6 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-j = 1;
-k = 0;
-
-i5 = n1-1;
-while (i5<32000) {
-k += j;
-a[i5] += b[32000-k];
-i5 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-j = 1;
-k = 0;
-
-i4 = n1-1;
-while (i4<32000) {
-k += j;
-a[i4] += b[32000-k];
-i4 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-j = 1;
-k = 0;
-
-i3 = n1-1;
-while (i3<32000) {
-k += j;
-a[i3] += b[32000-k];
-i3 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 j = 1;
 k = 0;
 
@@ -5930,7 +5777,7 @@ j = -1;
 {
 int i;
 loop_s123:            LU_NUB0 = 16000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 j++;
 a[j] = b[LU_IND0*1+0]+d[LU_IND0*1+0]*e[LU_IND0*1+0];
@@ -5940,7 +5787,7 @@ a[j] = c[LU_IND0*1+0]+d[LU_IND0*1+0]*e[LU_IND0*1+0];
 }
 l99967:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 j++;
 a[j] = b[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
 if (c[(LU_IND0+0)*1+0]>(real_t) 0.) {
@@ -5952,36 +5799,6 @@ a[j] = b[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
 if (c[(LU_IND0+1)*1+0]>(real_t) 0.) {
 j++;
 a[j] = c[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
-}
-j++;
-a[j] = b[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-if (c[(LU_IND0+2)*1+0]>(real_t) 0.) {
-j++;
-a[j] = c[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-}
-j++;
-a[j] = b[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-if (c[(LU_IND0+3)*1+0]>(real_t) 0.) {
-j++;
-a[j] = c[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-}
-j++;
-a[j] = b[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-if (c[(LU_IND0+4)*1+0]>(real_t) 0.) {
-j++;
-a[j] = c[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-}
-j++;
-a[j] = b[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-if (c[(LU_IND0+5)*1+0]>(real_t) 0.) {
-j++;
-a[j] = c[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-}
-j++;
-a[j] = b[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
-if (c[(LU_IND0+6)*1+0]>(real_t) 0.) {
-j++;
-a[j] = c[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
 }
 l99966:               ;
 }
@@ -6013,7 +5830,7 @@ j = -1;
 {
 int i;
 loop_s124:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (b[LU_IND0*1+0]>(real_t) 0.) {
 j++;
@@ -6025,7 +5842,7 @@ a[j] = c[LU_IND0*1+0]+d[LU_IND0*1+0]*e[LU_IND0*1+0];
 }
 l99965:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (b[(LU_IND0+0)*1+0]>(real_t) 0.) {
 j++;
 a[j] = b[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
@@ -6041,46 +5858,6 @@ a[j] = b[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
 else {
 j++;
 a[j] = c[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
-}
-if (b[(LU_IND0+2)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-}
-else {
-j++;
-a[j] = c[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-}
-if (b[(LU_IND0+3)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-}
-else {
-j++;
-a[j] = c[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-}
-if (b[(LU_IND0+4)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-}
-else {
-j++;
-a[j] = c[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-}
-if (b[(LU_IND0+5)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-}
-else {
-j++;
-a[j] = c[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-}
-if (b[(LU_IND0+6)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
-}
-else {
-j++;
-a[j] = c[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
 }
 l99964:               ;
 }
@@ -6114,27 +5891,17 @@ int i;
 for(i = 0; i <= 255; i += 1) {
 int j;
 loop_s125:               LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 k++;
 flat_2d_array[k] = aa[i][LU_IND0*1+0]+bb[i][LU_IND0*1+0]*cc[i][LU_IND0*1+0];
 l99963:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 k++;
 flat_2d_array[k] = aa[i][(LU_IND0+0)*1+0]+bb[i][(LU_IND0+0)*1+0]*cc[i][(LU_IND0+0)*1+0];
 k++;
 flat_2d_array[k] = aa[i][(LU_IND0+1)*1+0]+bb[i][(LU_IND0+1)*1+0]*cc[i][(LU_IND0+1)*1+0];
-k++;
-flat_2d_array[k] = aa[i][(LU_IND0+2)*1+0]+bb[i][(LU_IND0+2)*1+0]*cc[i][(LU_IND0+2)*1+0];
-k++;
-flat_2d_array[k] = aa[i][(LU_IND0+3)*1+0]+bb[i][(LU_IND0+3)*1+0]*cc[i][(LU_IND0+3)*1+0];
-k++;
-flat_2d_array[k] = aa[i][(LU_IND0+4)*1+0]+bb[i][(LU_IND0+4)*1+0]*cc[i][(LU_IND0+4)*1+0];
-k++;
-flat_2d_array[k] = aa[i][(LU_IND0+5)*1+0]+bb[i][(LU_IND0+5)*1+0]*cc[i][(LU_IND0+5)*1+0];
-k++;
-flat_2d_array[k] = aa[i][(LU_IND0+6)*1+0]+bb[i][(LU_IND0+6)*1+0]*cc[i][(LU_IND0+6)*1+0];
 l99962:                  ;
 }
 j = 0+MAX0(LU_NUB0, 0)*1;
@@ -6169,26 +5936,16 @@ for(i = 0; i <= 255; i += 1) {
 {
 int j;
 loop_s126:                  LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 bb[LU_IND0*1+1][i] = bb[LU_IND0*1+1-1][i]+flat_2d_array[k-1]*cc[LU_IND0*1+1][i];
 ++k;
 l99961:                     ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 bb[(LU_IND0+0)*1+1][i] = bb[(LU_IND0+0)*1+1-1][i]+flat_2d_array[k-1]*cc[(LU_IND0+0)*1+1][i];
 ++k;
 bb[(LU_IND0+1)*1+1][i] = bb[(LU_IND0+1)*1+1-1][i]+flat_2d_array[k-1]*cc[(LU_IND0+1)*1+1][i];
-++k;
-bb[(LU_IND0+2)*1+1][i] = bb[(LU_IND0+2)*1+1-1][i]+flat_2d_array[k-1]*cc[(LU_IND0+2)*1+1][i];
-++k;
-bb[(LU_IND0+3)*1+1][i] = bb[(LU_IND0+3)*1+1-1][i]+flat_2d_array[k-1]*cc[(LU_IND0+3)*1+1][i];
-++k;
-bb[(LU_IND0+4)*1+1][i] = bb[(LU_IND0+4)*1+1-1][i]+flat_2d_array[k-1]*cc[(LU_IND0+4)*1+1][i];
-++k;
-bb[(LU_IND0+5)*1+1][i] = bb[(LU_IND0+5)*1+1-1][i]+flat_2d_array[k-1]*cc[(LU_IND0+5)*1+1][i];
-++k;
-bb[(LU_IND0+6)*1+1][i] = bb[(LU_IND0+6)*1+1-1][i]+flat_2d_array[k-1]*cc[(LU_IND0+6)*1+1][i];
 ++k;
 l99960:                     ;
 }
@@ -6223,7 +5980,7 @@ j = -1;
 {
 int i;
 loop_s127:            LU_NUB0 = 16000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 j++;
 a[j] = b[LU_IND0*1+0]+c[LU_IND0*1+0]*d[LU_IND0*1+0];
@@ -6231,7 +5988,7 @@ j++;
 a[j] = b[LU_IND0*1+0]+d[LU_IND0*1+0]*e[LU_IND0*1+0];
 l99959:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 j++;
 a[j] = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 j++;
@@ -6240,26 +5997,6 @@ j++;
 a[j] = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 j++;
 a[j] = b[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
-j++;
-a[j] = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-j++;
-a[j] = b[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-j++;
-a[j] = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-j++;
-a[j] = b[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-j++;
-a[j] = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-j++;
-a[j] = b[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-j++;
-a[j] = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-j++;
-a[j] = b[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-j++;
-a[j] = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-j++;
-a[j] = b[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
 l99958:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -6291,7 +6028,7 @@ j = -1;
 {
 int i;
 loop_s128:            LU_NUB0 = 16000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 k = j+1;
 a[LU_IND0*1+0] = b[k]-d[LU_IND0*1+0];
@@ -6299,7 +6036,7 @@ j = k+1;
 b[k] = a[LU_IND0*1+0]+c[k];
 l99957:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 k = j+1;
 a[(LU_IND0+0)*1+0] = b[k]-d[(LU_IND0+0)*1+0];
 j = k+1;
@@ -6308,26 +6045,6 @@ k = j+1;
 a[(LU_IND0+1)*1+0] = b[k]-d[(LU_IND0+1)*1+0];
 j = k+1;
 b[k] = a[(LU_IND0+1)*1+0]+c[k];
-k = j+1;
-a[(LU_IND0+2)*1+0] = b[k]-d[(LU_IND0+2)*1+0];
-j = k+1;
-b[k] = a[(LU_IND0+2)*1+0]+c[k];
-k = j+1;
-a[(LU_IND0+3)*1+0] = b[k]-d[(LU_IND0+3)*1+0];
-j = k+1;
-b[k] = a[(LU_IND0+3)*1+0]+c[k];
-k = j+1;
-a[(LU_IND0+4)*1+0] = b[k]-d[(LU_IND0+4)*1+0];
-j = k+1;
-b[k] = a[(LU_IND0+4)*1+0]+c[k];
-k = j+1;
-a[(LU_IND0+5)*1+0] = b[k]-d[(LU_IND0+5)*1+0];
-j = k+1;
-b[k] = a[(LU_IND0+5)*1+0]+c[k];
-k = j+1;
-a[(LU_IND0+6)*1+0] = b[k]-d[(LU_IND0+6)*1+0];
-j = k+1;
-b[k] = a[(LU_IND0+6)*1+0]+c[k];
 l99956:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -6356,19 +6073,14 @@ for(nl = 0; nl <= 499999; nl += 1) {
 {
 int i;
 loop_s131:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = a[LU_IND0*1+0+m]+b[LU_IND0*1+0];
 l99955:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0+m]+b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0+m]+b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0+m]+b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0+m]+b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0+m]+b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0+m]+b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0+m]+b[(LU_IND0+6)*1+0];
 l99954:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -6399,19 +6111,14 @@ for(nl = 0; nl <= 39999999; nl += 1) {
 {
 int i;
 loop_s132:            LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[j][LU_IND0*1+1] = aa[k][LU_IND0*1+1-1]+b[LU_IND0*1+1]*c[1];
 l99953:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[j][(LU_IND0+0)*1+1] = aa[k][(LU_IND0+0)*1+1-1]+b[(LU_IND0+0)*1+1]*c[1];
 aa[j][(LU_IND0+1)*1+1] = aa[k][(LU_IND0+1)*1+1-1]+b[(LU_IND0+1)*1+1]*c[1];
-aa[j][(LU_IND0+2)*1+1] = aa[k][(LU_IND0+2)*1+1-1]+b[(LU_IND0+2)*1+1]*c[1];
-aa[j][(LU_IND0+3)*1+1] = aa[k][(LU_IND0+3)*1+1-1]+b[(LU_IND0+3)*1+1]*c[1];
-aa[j][(LU_IND0+4)*1+1] = aa[k][(LU_IND0+4)*1+1-1]+b[(LU_IND0+4)*1+1]*c[1];
-aa[j][(LU_IND0+5)*1+1] = aa[k][(LU_IND0+5)*1+1-1]+b[(LU_IND0+5)*1+1]*c[1];
-aa[j][(LU_IND0+6)*1+1] = aa[k][(LU_IND0+6)*1+1-1]+b[(LU_IND0+6)*1+1]*c[1];
 l99952:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -6446,27 +6153,17 @@ k = (i+1)*(i+1-1)/2+(i+1)-1;
 {
 int j;
 loop_s141:                  LU_NUB0 = (255-i+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 flat_2d_array[k] += bb[LU_IND0*1+i][i];
 k += LU_IND0*1+i+1;
 l99951:                     ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 flat_2d_array[k] += bb[(LU_IND0+0)*1+i][i];
 k += (LU_IND0+0)*1+i+1;
 flat_2d_array[k] += bb[(LU_IND0+1)*1+i][i];
 k += (LU_IND0+1)*1+i+1;
-flat_2d_array[k] += bb[(LU_IND0+2)*1+i][i];
-k += (LU_IND0+2)*1+i+1;
-flat_2d_array[k] += bb[(LU_IND0+3)*1+i][i];
-k += (LU_IND0+3)*1+i+1;
-flat_2d_array[k] += bb[(LU_IND0+4)*1+i][i];
-k += (LU_IND0+4)*1+i+1;
-flat_2d_array[k] += bb[(LU_IND0+5)*1+i][i];
-k += (LU_IND0+5)*1+i+1;
-flat_2d_array[k] += bb[(LU_IND0+6)*1+i][i];
-k += (LU_IND0+6)*1+i+1;
 l99950:                     ;
 }
 j = i+MAX0(LU_NUB0, 0)*1;
@@ -6501,23 +6198,13 @@ int nl;
 
 
 loop_s151:      LU_NUB0 = 500000;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 s151s(a, b, 1);
 dummy(a, b, c, d, e, aa, bb, cc, 0.);
 l99949:         ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
-s151s(a, b, 1);
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-s151s(a, b, 1);
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-s151s(a, b, 1);
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-s151s(a, b, 1);
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-s151s(a, b, 1);
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 s151s(a, b, 1);
 dummy(a, b, c, d, e, aa, bb, cc, 0.);
 s151s(a, b, 1);
@@ -6551,27 +6238,17 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s152:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 b[LU_IND0*1+0] = d[LU_IND0*1+0]*e[LU_IND0*1+0];
 s152s(a, b, c, LU_IND0*1+0);
 l99947:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 b[(LU_IND0+0)*1+0] = d[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
 s152s(a, b, c, (LU_IND0+0)*1+0);
 b[(LU_IND0+1)*1+0] = d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
 s152s(a, b, c, (LU_IND0+1)*1+0);
-b[(LU_IND0+2)*1+0] = d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-s152s(a, b, c, (LU_IND0+2)*1+0);
-b[(LU_IND0+3)*1+0] = d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-s152s(a, b, c, (LU_IND0+3)*1+0);
-b[(LU_IND0+4)*1+0] = d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-s152s(a, b, c, (LU_IND0+4)*1+0);
-b[(LU_IND0+5)*1+0] = d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-s152s(a, b, c, (LU_IND0+5)*1+0);
-b[(LU_IND0+6)*1+0] = d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
-s152s(a, b, c, (LU_IND0+6)*1+0);
 l99946:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -6663,19 +6340,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 if (k>0) {
 int i;
 loop_s162:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = a[LU_IND0*1+0+k]+b[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99945:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0+k]+b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0+k]+b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0+k]+b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0+k]+b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0+k]+b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0+k]+b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0+k]+b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99944:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -6706,19 +6378,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s171:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[(LU_IND0*1+0)*inc] += b[LU_IND0*1+0];
 l99943:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[((LU_IND0+0)*1+0)*inc] += b[(LU_IND0+0)*1+0];
 a[((LU_IND0+1)*1+0)*inc] += b[(LU_IND0+1)*1+0];
-a[((LU_IND0+2)*1+0)*inc] += b[(LU_IND0+2)*1+0];
-a[((LU_IND0+3)*1+0)*inc] += b[(LU_IND0+3)*1+0];
-a[((LU_IND0+4)*1+0)*inc] += b[(LU_IND0+4)*1+0];
-a[((LU_IND0+5)*1+0)*inc] += b[(LU_IND0+5)*1+0];
-a[((LU_IND0+6)*1+0)*inc] += b[(LU_IND0+6)*1+0];
 l99942:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -6742,7 +6409,7 @@ int b;
 int n1 = x->a;
 int n3 = x->b;
 //PIPS generated variable
-int LU_NUB0, LU_IB0, LU_IND0, i0, i1, i2, i3, i4, i5, i6, i7;
+int LU_NUB0, LU_IB0, LU_IND0, i0, i1, i2;
 
 initialise_arrays(__func__);
 gettimeofday(&func_args->t1, (void *) 0);
@@ -6751,7 +6418,7 @@ int nl;
 
 
 loop_s172:      LU_NUB0 = 100000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 
 i0 = n1-1;
@@ -6762,42 +6429,7 @@ i0 += n3;
 dummy(a, b, c, d, e, aa, bb, cc, 0.);
 l99941:         ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
-
-i7 = n1-1;
-while (i7<32000) {
-a[i7] += b[i7];
-i7 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-
-i6 = n1-1;
-while (i6<32000) {
-a[i6] += b[i6];
-i6 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-
-i5 = n1-1;
-while (i5<32000) {
-a[i5] += b[i5];
-i5 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-
-i4 = n1-1;
-while (i4<32000) {
-a[i4] += b[i4];
-i4 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-
-i3 = n1-1;
-while (i3<32000) {
-a[i3] += b[i3];
-i3 += n3;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 
 i2 = n1-1;
 while (i2<32000) {
@@ -6837,19 +6469,14 @@ for(nl = 0; nl <= 999999; nl += 1) {
 {
 int i;
 loop_s173:            LU_NUB0 = 16000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0+k] = a[LU_IND0*1+0]+b[LU_IND0*1+0];
 l99939:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0+k] = a[(LU_IND0+0)*1+0]+b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0+k] = a[(LU_IND0+1)*1+0]+b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0+k] = a[(LU_IND0+2)*1+0]+b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0+k] = a[(LU_IND0+3)*1+0]+b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0+k] = a[(LU_IND0+4)*1+0]+b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0+k] = a[(LU_IND0+5)*1+0]+b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0+k] = a[(LU_IND0+6)*1+0]+b[(LU_IND0+6)*1+0];
 l99938:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -6880,19 +6507,14 @@ for(nl = 0; nl <= 999999; nl += 1) {
 {
 int i;
 loop_s174:            LU_NUB0 = (M-1-0+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0+M] = a[LU_IND0*1+0]+b[LU_IND0*1+0];
 l99937:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0+M] = a[(LU_IND0+0)*1+0]+b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0+M] = a[(LU_IND0+1)*1+0]+b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0+M] = a[(LU_IND0+2)*1+0]+b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0+M] = a[(LU_IND0+3)*1+0]+b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0+M] = a[(LU_IND0+4)*1+0]+b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0+M] = a[(LU_IND0+5)*1+0]+b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0+M] = a[(LU_IND0+6)*1+0]+b[(LU_IND0+6)*1+0];
 l99936:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -6912,7 +6534,7 @@ real_t s175(struct args_t *func_args)
 
 int inc = *((int *) func_args->arg_info);
 //PIPS generated variable
-int LU_NUB0, LU_IB0, LU_IND0, i0, i1, i2, i3, i4, i5, i6, i7;
+int LU_NUB0, LU_IB0, LU_IND0, i0, i1, i2;
 
 initialise_arrays(__func__);
 gettimeofday(&func_args->t1, (void *) 0);
@@ -6921,7 +6543,7 @@ int nl;
 
 
 loop_s175:      LU_NUB0 = 100000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 
 i0 = 0;
@@ -6932,42 +6554,7 @@ i0 += inc;
 dummy(a, b, c, d, e, aa, bb, cc, 0.);
 l99935:         ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
-
-i7 = 0;
-while (i7<32000-1) {
-a[i7] = a[i7+inc]+b[i7];
-i7 += inc;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-
-i6 = 0;
-while (i6<32000-1) {
-a[i6] = a[i6+inc]+b[i6];
-i6 += inc;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-
-i5 = 0;
-while (i5<32000-1) {
-a[i5] = a[i5+inc]+b[i5];
-i5 += inc;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-
-i4 = 0;
-while (i4<32000-1) {
-a[i4] = a[i4+inc]+b[i4];
-i4 += inc;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
-
-i3 = 0;
-while (i3<32000-1) {
-a[i3] = a[i3+inc]+b[i3];
-i3 += inc;
-}
-dummy(a, b, c, d, e, aa, bb, cc, 0.);
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 
 i2 = 0;
 while (i2<32000-1) {
@@ -7010,19 +6597,14 @@ int j;
 for(j = 0; j <= 15999; j += 1) {
 int i;
 loop_s176:               LU_NUB0 = (m-1-0+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] += b[LU_IND0*1+0+m-j-1]*c[j];
 l99933:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0+m-j-1]*c[j];
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0+m-j-1]*c[j];
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0+m-j-1]*c[j];
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0+m-j-1]*c[j];
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0+m-j-1]*c[j];
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0+m-j-1]*c[j];
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0+m-j-1]*c[j];
 l99932:                  ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -7052,27 +6634,17 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s211:            LU_NUB0 = 31998;
-LU_IB0 = 1;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] = b[LU_IND0*1+1-1]+c[LU_IND0*1+1]*d[LU_IND0*1+1];
 b[LU_IND0*1+1] = b[LU_IND0*1+1+1]-e[LU_IND0*1+1]*d[LU_IND0*1+1];
 l99931:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] = b[(LU_IND0+0)*1+1-1]+c[(LU_IND0+0)*1+1]*d[(LU_IND0+0)*1+1];
 b[(LU_IND0+0)*1+1] = b[(LU_IND0+0)*1+1+1]-e[(LU_IND0+0)*1+1]*d[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] = b[(LU_IND0+1)*1+1-1]+c[(LU_IND0+1)*1+1]*d[(LU_IND0+1)*1+1];
 b[(LU_IND0+1)*1+1] = b[(LU_IND0+1)*1+1+1]-e[(LU_IND0+1)*1+1]*d[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] = b[(LU_IND0+2)*1+1-1]+c[(LU_IND0+2)*1+1]*d[(LU_IND0+2)*1+1];
-b[(LU_IND0+2)*1+1] = b[(LU_IND0+2)*1+1+1]-e[(LU_IND0+2)*1+1]*d[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] = b[(LU_IND0+3)*1+1-1]+c[(LU_IND0+3)*1+1]*d[(LU_IND0+3)*1+1];
-b[(LU_IND0+3)*1+1] = b[(LU_IND0+3)*1+1+1]-e[(LU_IND0+3)*1+1]*d[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] = b[(LU_IND0+4)*1+1-1]+c[(LU_IND0+4)*1+1]*d[(LU_IND0+4)*1+1];
-b[(LU_IND0+4)*1+1] = b[(LU_IND0+4)*1+1+1]-e[(LU_IND0+4)*1+1]*d[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] = b[(LU_IND0+5)*1+1-1]+c[(LU_IND0+5)*1+1]*d[(LU_IND0+5)*1+1];
-b[(LU_IND0+5)*1+1] = b[(LU_IND0+5)*1+1+1]-e[(LU_IND0+5)*1+1]*d[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] = b[(LU_IND0+6)*1+1-1]+c[(LU_IND0+6)*1+1]*d[(LU_IND0+6)*1+1];
-b[(LU_IND0+6)*1+1] = b[(LU_IND0+6)*1+1+1]-e[(LU_IND0+6)*1+1]*d[(LU_IND0+6)*1+1];
 l99930:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -7101,27 +6673,17 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s212:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] *= c[LU_IND0*1+0];
 b[LU_IND0*1+0] += a[LU_IND0*1+0+1]*d[LU_IND0*1+0];
 l99929:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] *= c[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] += a[(LU_IND0+0)*1+0+1]*d[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] *= c[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] += a[(LU_IND0+1)*1+0+1]*d[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] *= c[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] += a[(LU_IND0+2)*1+0+1]*d[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] *= c[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] += a[(LU_IND0+3)*1+0+1]*d[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] *= c[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] += a[(LU_IND0+4)*1+0+1]*d[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] *= c[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] += a[(LU_IND0+5)*1+0+1]*d[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] *= c[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] += a[(LU_IND0+6)*1+0+1]*d[(LU_IND0+6)*1+0];
 l99928:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -7150,27 +6712,17 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s1213:            LU_NUB0 = 31998;
-LU_IB0 = 1;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] = b[LU_IND0*1+1-1]+c[LU_IND0*1+1];
 b[LU_IND0*1+1] = a[LU_IND0*1+1+1]*d[LU_IND0*1+1];
 l99927:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] = b[(LU_IND0+0)*1+1-1]+c[(LU_IND0+0)*1+1];
 b[(LU_IND0+0)*1+1] = a[(LU_IND0+0)*1+1+1]*d[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] = b[(LU_IND0+1)*1+1-1]+c[(LU_IND0+1)*1+1];
 b[(LU_IND0+1)*1+1] = a[(LU_IND0+1)*1+1+1]*d[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] = b[(LU_IND0+2)*1+1-1]+c[(LU_IND0+2)*1+1];
-b[(LU_IND0+2)*1+1] = a[(LU_IND0+2)*1+1+1]*d[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] = b[(LU_IND0+3)*1+1-1]+c[(LU_IND0+3)*1+1];
-b[(LU_IND0+3)*1+1] = a[(LU_IND0+3)*1+1+1]*d[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] = b[(LU_IND0+4)*1+1-1]+c[(LU_IND0+4)*1+1];
-b[(LU_IND0+4)*1+1] = a[(LU_IND0+4)*1+1+1]*d[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] = b[(LU_IND0+5)*1+1-1]+c[(LU_IND0+5)*1+1];
-b[(LU_IND0+5)*1+1] = a[(LU_IND0+5)*1+1+1]*d[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] = b[(LU_IND0+6)*1+1-1]+c[(LU_IND0+6)*1+1];
-b[(LU_IND0+6)*1+1] = a[(LU_IND0+6)*1+1+1]*d[(LU_IND0+6)*1+1];
 l99926:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -7199,27 +6751,17 @@ for(nl = 0; nl <= 49999; nl += 1) {
 {
 int i;
 loop_s221:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] += c[LU_IND0*1+1]*d[LU_IND0*1+1];
 b[LU_IND0*1+1] = b[LU_IND0*1+1-1]+a[LU_IND0*1+1]+d[LU_IND0*1+1];
 l99925:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] += c[(LU_IND0+0)*1+1]*d[(LU_IND0+0)*1+1];
 b[(LU_IND0+0)*1+1] = b[(LU_IND0+0)*1+1-1]+a[(LU_IND0+0)*1+1]+d[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] += c[(LU_IND0+1)*1+1]*d[(LU_IND0+1)*1+1];
 b[(LU_IND0+1)*1+1] = b[(LU_IND0+1)*1+1-1]+a[(LU_IND0+1)*1+1]+d[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] += c[(LU_IND0+2)*1+1]*d[(LU_IND0+2)*1+1];
-b[(LU_IND0+2)*1+1] = b[(LU_IND0+2)*1+1-1]+a[(LU_IND0+2)*1+1]+d[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] += c[(LU_IND0+3)*1+1]*d[(LU_IND0+3)*1+1];
-b[(LU_IND0+3)*1+1] = b[(LU_IND0+3)*1+1-1]+a[(LU_IND0+3)*1+1]+d[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] += c[(LU_IND0+4)*1+1]*d[(LU_IND0+4)*1+1];
-b[(LU_IND0+4)*1+1] = b[(LU_IND0+4)*1+1-1]+a[(LU_IND0+4)*1+1]+d[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] += c[(LU_IND0+5)*1+1]*d[(LU_IND0+5)*1+1];
-b[(LU_IND0+5)*1+1] = b[(LU_IND0+5)*1+1-1]+a[(LU_IND0+5)*1+1]+d[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] += c[(LU_IND0+6)*1+1]*d[(LU_IND0+6)*1+1];
-b[(LU_IND0+6)*1+1] = b[(LU_IND0+6)*1+1-1]+a[(LU_IND0+6)*1+1]+d[(LU_IND0+6)*1+1];
 l99924:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -7247,19 +6789,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s1221:            LU_NUB0 = 31996;
-LU_IB0 = 6;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 b[LU_IND0*1+4] = b[LU_IND0*1+4-4]+a[LU_IND0*1+4];
 l99923:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 b[(LU_IND0+0)*1+4] = b[(LU_IND0+0)*1+4-4]+a[(LU_IND0+0)*1+4];
 b[(LU_IND0+1)*1+4] = b[(LU_IND0+1)*1+4-4]+a[(LU_IND0+1)*1+4];
-b[(LU_IND0+2)*1+4] = b[(LU_IND0+2)*1+4-4]+a[(LU_IND0+2)*1+4];
-b[(LU_IND0+3)*1+4] = b[(LU_IND0+3)*1+4-4]+a[(LU_IND0+3)*1+4];
-b[(LU_IND0+4)*1+4] = b[(LU_IND0+4)*1+4-4]+a[(LU_IND0+4)*1+4];
-b[(LU_IND0+5)*1+4] = b[(LU_IND0+5)*1+4-4]+a[(LU_IND0+5)*1+4];
-b[(LU_IND0+6)*1+4] = b[(LU_IND0+6)*1+4-4]+a[(LU_IND0+6)*1+4];
 l99922:               ;
 }
 i = 4+MAX0(LU_NUB0, 0)*1;
@@ -7288,35 +6825,20 @@ for(nl = 0; nl <= 49999; nl += 1) {
 {
 int i;
 loop_s222:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] += b[LU_IND0*1+1]*c[LU_IND0*1+1];
 e[LU_IND0*1+1] = e[LU_IND0*1+1-1]*e[LU_IND0*1+1-1];
 a[LU_IND0*1+1] -= b[LU_IND0*1+1]*c[LU_IND0*1+1];
 l99921:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] += b[(LU_IND0+0)*1+1]*c[(LU_IND0+0)*1+1];
 e[(LU_IND0+0)*1+1] = e[(LU_IND0+0)*1+1-1]*e[(LU_IND0+0)*1+1-1];
 a[(LU_IND0+0)*1+1] -= b[(LU_IND0+0)*1+1]*c[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] += b[(LU_IND0+1)*1+1]*c[(LU_IND0+1)*1+1];
 e[(LU_IND0+1)*1+1] = e[(LU_IND0+1)*1+1-1]*e[(LU_IND0+1)*1+1-1];
 a[(LU_IND0+1)*1+1] -= b[(LU_IND0+1)*1+1]*c[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] += b[(LU_IND0+2)*1+1]*c[(LU_IND0+2)*1+1];
-e[(LU_IND0+2)*1+1] = e[(LU_IND0+2)*1+1-1]*e[(LU_IND0+2)*1+1-1];
-a[(LU_IND0+2)*1+1] -= b[(LU_IND0+2)*1+1]*c[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] += b[(LU_IND0+3)*1+1]*c[(LU_IND0+3)*1+1];
-e[(LU_IND0+3)*1+1] = e[(LU_IND0+3)*1+1-1]*e[(LU_IND0+3)*1+1-1];
-a[(LU_IND0+3)*1+1] -= b[(LU_IND0+3)*1+1]*c[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] += b[(LU_IND0+4)*1+1]*c[(LU_IND0+4)*1+1];
-e[(LU_IND0+4)*1+1] = e[(LU_IND0+4)*1+1-1]*e[(LU_IND0+4)*1+1-1];
-a[(LU_IND0+4)*1+1] -= b[(LU_IND0+4)*1+1]*c[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] += b[(LU_IND0+5)*1+1]*c[(LU_IND0+5)*1+1];
-e[(LU_IND0+5)*1+1] = e[(LU_IND0+5)*1+1-1]*e[(LU_IND0+5)*1+1-1];
-a[(LU_IND0+5)*1+1] -= b[(LU_IND0+5)*1+1]*c[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] += b[(LU_IND0+6)*1+1]*c[(LU_IND0+6)*1+1];
-e[(LU_IND0+6)*1+1] = e[(LU_IND0+6)*1+1-1]*e[(LU_IND0+6)*1+1-1];
-a[(LU_IND0+6)*1+1] -= b[(LU_IND0+6)*1+1]*c[(LU_IND0+6)*1+1];
 l99920:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -7346,19 +6868,14 @@ int i;
 for(i = 0; i <= 255; i += 1) {
 int j;
 loop_s231:               LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[LU_IND0*1+1][i] = aa[LU_IND0*1+1-1][i]+bb[LU_IND0*1+1][i];
 l99919:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[(LU_IND0+0)*1+1][i] = aa[(LU_IND0+0)*1+1-1][i]+bb[(LU_IND0+0)*1+1][i];
 aa[(LU_IND0+1)*1+1][i] = aa[(LU_IND0+1)*1+1-1][i]+bb[(LU_IND0+1)*1+1][i];
-aa[(LU_IND0+2)*1+1][i] = aa[(LU_IND0+2)*1+1-1][i]+bb[(LU_IND0+2)*1+1][i];
-aa[(LU_IND0+3)*1+1][i] = aa[(LU_IND0+3)*1+1-1][i]+bb[(LU_IND0+3)*1+1][i];
-aa[(LU_IND0+4)*1+1][i] = aa[(LU_IND0+4)*1+1-1][i]+bb[(LU_IND0+4)*1+1][i];
-aa[(LU_IND0+5)*1+1][i] = aa[(LU_IND0+5)*1+1-1][i]+bb[(LU_IND0+5)*1+1][i];
-aa[(LU_IND0+6)*1+1][i] = aa[(LU_IND0+6)*1+1-1][i]+bb[(LU_IND0+6)*1+1][i];
 l99918:                  ;
 }
 j = 1+MAX0(LU_NUB0, 0)*1;
@@ -7390,19 +6907,14 @@ int j;
 for(j = 1; j <= 255; j += 1) {
 int i;
 loop_s232:               LU_NUB0 = (j-1+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[j][LU_IND0*1+1] = aa[j][LU_IND0*1+1-1]*aa[j][LU_IND0*1+1-1]+bb[j][LU_IND0*1+1];
 l99917:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[j][(LU_IND0+0)*1+1] = aa[j][(LU_IND0+0)*1+1-1]*aa[j][(LU_IND0+0)*1+1-1]+bb[j][(LU_IND0+0)*1+1];
 aa[j][(LU_IND0+1)*1+1] = aa[j][(LU_IND0+1)*1+1-1]*aa[j][(LU_IND0+1)*1+1-1]+bb[j][(LU_IND0+1)*1+1];
-aa[j][(LU_IND0+2)*1+1] = aa[j][(LU_IND0+2)*1+1-1]*aa[j][(LU_IND0+2)*1+1-1]+bb[j][(LU_IND0+2)*1+1];
-aa[j][(LU_IND0+3)*1+1] = aa[j][(LU_IND0+3)*1+1-1]*aa[j][(LU_IND0+3)*1+1-1]+bb[j][(LU_IND0+3)*1+1];
-aa[j][(LU_IND0+4)*1+1] = aa[j][(LU_IND0+4)*1+1-1]*aa[j][(LU_IND0+4)*1+1-1]+bb[j][(LU_IND0+4)*1+1];
-aa[j][(LU_IND0+5)*1+1] = aa[j][(LU_IND0+5)*1+1-1]*aa[j][(LU_IND0+5)*1+1-1]+bb[j][(LU_IND0+5)*1+1];
-aa[j][(LU_IND0+6)*1+1] = aa[j][(LU_IND0+6)*1+1-1]*aa[j][(LU_IND0+6)*1+1-1]+bb[j][(LU_IND0+6)*1+1];
 l99916:                  ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -7434,19 +6946,14 @@ int j;
 for(j = 0; j <= 255; j += 1) {
 int i;
 loop_s1232:               LU_NUB0 = (255-j+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[LU_IND0*1+j][j] = bb[LU_IND0*1+j][j]+cc[LU_IND0*1+j][j];
 l99915:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[(LU_IND0+0)*1+j][j] = bb[(LU_IND0+0)*1+j][j]+cc[(LU_IND0+0)*1+j][j];
 aa[(LU_IND0+1)*1+j][j] = bb[(LU_IND0+1)*1+j][j]+cc[(LU_IND0+1)*1+j][j];
-aa[(LU_IND0+2)*1+j][j] = bb[(LU_IND0+2)*1+j][j]+cc[(LU_IND0+2)*1+j][j];
-aa[(LU_IND0+3)*1+j][j] = bb[(LU_IND0+3)*1+j][j]+cc[(LU_IND0+3)*1+j][j];
-aa[(LU_IND0+4)*1+j][j] = bb[(LU_IND0+4)*1+j][j]+cc[(LU_IND0+4)*1+j][j];
-aa[(LU_IND0+5)*1+j][j] = bb[(LU_IND0+5)*1+j][j]+cc[(LU_IND0+5)*1+j][j];
-aa[(LU_IND0+6)*1+j][j] = bb[(LU_IND0+6)*1+j][j]+cc[(LU_IND0+6)*1+j][j];
 l99914:                  ;
 }
 i = j+MAX0(LU_NUB0, 0)*1;
@@ -7484,19 +6991,14 @@ aa[j][i] = aa[j-1][i]+cc[j][i];
 {
 int j;
 loop_s233:                  LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 bb[LU_IND0*1+1][i] = bb[LU_IND0*1+1][i-1]+cc[LU_IND0*1+1][i];
 l99913:                     ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 bb[(LU_IND0+0)*1+1][i] = bb[(LU_IND0+0)*1+1][i-1]+cc[(LU_IND0+0)*1+1][i];
 bb[(LU_IND0+1)*1+1][i] = bb[(LU_IND0+1)*1+1][i-1]+cc[(LU_IND0+1)*1+1][i];
-bb[(LU_IND0+2)*1+1][i] = bb[(LU_IND0+2)*1+1][i-1]+cc[(LU_IND0+2)*1+1][i];
-bb[(LU_IND0+3)*1+1][i] = bb[(LU_IND0+3)*1+1][i-1]+cc[(LU_IND0+3)*1+1][i];
-bb[(LU_IND0+4)*1+1][i] = bb[(LU_IND0+4)*1+1][i-1]+cc[(LU_IND0+4)*1+1][i];
-bb[(LU_IND0+5)*1+1][i] = bb[(LU_IND0+5)*1+1][i-1]+cc[(LU_IND0+5)*1+1][i];
-bb[(LU_IND0+6)*1+1][i] = bb[(LU_IND0+6)*1+1][i-1]+cc[(LU_IND0+6)*1+1][i];
 l99912:                     ;
 }
 j = 1+MAX0(LU_NUB0, 0)*1;
@@ -7535,19 +7037,14 @@ aa[j][i] = aa[j-1][i]+cc[j][i];
 {
 int j;
 loop_s2233:                  LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 bb[i][LU_IND0*1+1] = bb[i-1][LU_IND0*1+1]+cc[i][LU_IND0*1+1];
 l99911:                     ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 bb[i][(LU_IND0+0)*1+1] = bb[i-1][(LU_IND0+0)*1+1]+cc[i][(LU_IND0+0)*1+1];
 bb[i][(LU_IND0+1)*1+1] = bb[i-1][(LU_IND0+1)*1+1]+cc[i][(LU_IND0+1)*1+1];
-bb[i][(LU_IND0+2)*1+1] = bb[i-1][(LU_IND0+2)*1+1]+cc[i][(LU_IND0+2)*1+1];
-bb[i][(LU_IND0+3)*1+1] = bb[i-1][(LU_IND0+3)*1+1]+cc[i][(LU_IND0+3)*1+1];
-bb[i][(LU_IND0+4)*1+1] = bb[i-1][(LU_IND0+4)*1+1]+cc[i][(LU_IND0+4)*1+1];
-bb[i][(LU_IND0+5)*1+1] = bb[i-1][(LU_IND0+5)*1+1]+cc[i][(LU_IND0+5)*1+1];
-bb[i][(LU_IND0+6)*1+1] = bb[i-1][(LU_IND0+6)*1+1]+cc[i][(LU_IND0+6)*1+1];
 l99910:                     ;
 }
 j = 1+MAX0(LU_NUB0, 0)*1;
@@ -7582,19 +7079,14 @@ a[i] += b[i]*c[i];
 {
 int j;
 loop_s235:                  LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[LU_IND0*1+1][i] = aa[LU_IND0*1+1-1][i]+bb[LU_IND0*1+1][i]*a[i];
 l99909:                     ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[(LU_IND0+0)*1+1][i] = aa[(LU_IND0+0)*1+1-1][i]+bb[(LU_IND0+0)*1+1][i]*a[i];
 aa[(LU_IND0+1)*1+1][i] = aa[(LU_IND0+1)*1+1-1][i]+bb[(LU_IND0+1)*1+1][i]*a[i];
-aa[(LU_IND0+2)*1+1][i] = aa[(LU_IND0+2)*1+1-1][i]+bb[(LU_IND0+2)*1+1][i]*a[i];
-aa[(LU_IND0+3)*1+1][i] = aa[(LU_IND0+3)*1+1-1][i]+bb[(LU_IND0+3)*1+1][i]*a[i];
-aa[(LU_IND0+4)*1+1][i] = aa[(LU_IND0+4)*1+1-1][i]+bb[(LU_IND0+4)*1+1][i]*a[i];
-aa[(LU_IND0+5)*1+1][i] = aa[(LU_IND0+5)*1+1-1][i]+bb[(LU_IND0+5)*1+1][i]*a[i];
-aa[(LU_IND0+6)*1+1][i] = aa[(LU_IND0+6)*1+1-1][i]+bb[(LU_IND0+6)*1+1][i]*a[i];
 l99908:                     ;
 }
 j = 1+MAX0(LU_NUB0, 0)*1;
@@ -7625,27 +7117,17 @@ for(nl = 0; nl <= 199999; nl += 1) {
 {
 int i;
 loop_s241:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[LU_IND0*1+0]*c[LU_IND0*1+0]*d[LU_IND0*1+0];
 b[LU_IND0*1+0] = a[LU_IND0*1+0]*a[LU_IND0*1+0+1]*d[LU_IND0*1+0];
 l99907:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0]*a[(LU_IND0+0)*1+0+1]*d[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]*a[(LU_IND0+1)*1+0+1]*d[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]*a[(LU_IND0+2)*1+0+1]*d[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]*a[(LU_IND0+3)*1+0+1]*d[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]*a[(LU_IND0+4)*1+0+1]*d[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]*a[(LU_IND0+5)*1+0+1]*d[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]*a[(LU_IND0+6)*1+0+1]*d[(LU_IND0+6)*1+0];
 l99906:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -7680,19 +7162,14 @@ for(nl = 0; nl <= 19999; nl += 1) {
 {
 int i;
 loop_s242:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] = a[LU_IND0*1+1-1]+s1+s2+b[LU_IND0*1+1]+c[LU_IND0*1+1]+d[LU_IND0*1+1];
 l99905:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] = a[(LU_IND0+0)*1+1-1]+s1+s2+b[(LU_IND0+0)*1+1]+c[(LU_IND0+0)*1+1]+d[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] = a[(LU_IND0+1)*1+1-1]+s1+s2+b[(LU_IND0+1)*1+1]+c[(LU_IND0+1)*1+1]+d[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] = a[(LU_IND0+2)*1+1-1]+s1+s2+b[(LU_IND0+2)*1+1]+c[(LU_IND0+2)*1+1]+d[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] = a[(LU_IND0+3)*1+1-1]+s1+s2+b[(LU_IND0+3)*1+1]+c[(LU_IND0+3)*1+1]+d[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] = a[(LU_IND0+4)*1+1-1]+s1+s2+b[(LU_IND0+4)*1+1]+c[(LU_IND0+4)*1+1]+d[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] = a[(LU_IND0+5)*1+1-1]+s1+s2+b[(LU_IND0+5)*1+1]+c[(LU_IND0+5)*1+1]+d[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] = a[(LU_IND0+6)*1+1-1]+s1+s2+b[(LU_IND0+6)*1+1]+c[(LU_IND0+6)*1+1]+d[(LU_IND0+6)*1+1];
 l99904:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -7721,35 +7198,20 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s243:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[LU_IND0*1+0]+c[LU_IND0*1+0]*d[LU_IND0*1+0];
 b[LU_IND0*1+0] = a[LU_IND0*1+0]+d[LU_IND0*1+0]*e[LU_IND0*1+0];
 a[LU_IND0*1+0] = b[LU_IND0*1+0]+a[LU_IND0*1+0+1]*d[LU_IND0*1+0];
 l99903:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+a[(LU_IND0+0)*1+0+1]*d[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+a[(LU_IND0+1)*1+0+1]*d[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+a[(LU_IND0+2)*1+0+1]*d[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+a[(LU_IND0+3)*1+0+1]*d[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+a[(LU_IND0+4)*1+0+1]*d[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+a[(LU_IND0+5)*1+0+1]*d[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+a[(LU_IND0+6)*1+0+1]*d[(LU_IND0+6)*1+0];
 l99902:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -7778,35 +7240,20 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s244:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[LU_IND0*1+0]+c[LU_IND0*1+0]*d[LU_IND0*1+0];
 b[LU_IND0*1+0] = c[LU_IND0*1+0]+b[LU_IND0*1+0];
 a[LU_IND0*1+0+1] = b[LU_IND0*1+0]+a[LU_IND0*1+0+1]*d[LU_IND0*1+0];
 l99901:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = c[(LU_IND0+0)*1+0]+b[(LU_IND0+0)*1+0];
 a[(LU_IND0+0)*1+0+1] = b[(LU_IND0+0)*1+0]+a[(LU_IND0+0)*1+0+1]*d[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = c[(LU_IND0+1)*1+0]+b[(LU_IND0+1)*1+0];
 a[(LU_IND0+1)*1+0+1] = b[(LU_IND0+1)*1+0]+a[(LU_IND0+1)*1+0+1]*d[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = c[(LU_IND0+2)*1+0]+b[(LU_IND0+2)*1+0];
-a[(LU_IND0+2)*1+0+1] = b[(LU_IND0+2)*1+0]+a[(LU_IND0+2)*1+0+1]*d[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = c[(LU_IND0+3)*1+0]+b[(LU_IND0+3)*1+0];
-a[(LU_IND0+3)*1+0+1] = b[(LU_IND0+3)*1+0]+a[(LU_IND0+3)*1+0+1]*d[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = c[(LU_IND0+4)*1+0]+b[(LU_IND0+4)*1+0];
-a[(LU_IND0+4)*1+0+1] = b[(LU_IND0+4)*1+0]+a[(LU_IND0+4)*1+0+1]*d[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = c[(LU_IND0+5)*1+0]+b[(LU_IND0+5)*1+0];
-a[(LU_IND0+5)*1+0+1] = b[(LU_IND0+5)*1+0]+a[(LU_IND0+5)*1+0+1]*d[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = c[(LU_IND0+6)*1+0]+b[(LU_IND0+6)*1+0];
-a[(LU_IND0+6)*1+0+1] = b[(LU_IND0+6)*1+0]+a[(LU_IND0+6)*1+0+1]*d[(LU_IND0+6)*1+0];
 l99900:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -7835,27 +7282,17 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s1244:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[LU_IND0*1+0]+c[LU_IND0*1+0]*c[LU_IND0*1+0]+b[LU_IND0*1+0]*b[LU_IND0*1+0]+c[LU_IND0*1+0];
 d[LU_IND0*1+0] = a[LU_IND0*1+0]+a[LU_IND0*1+0+1];
 l99899:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0]+b[(LU_IND0+0)*1+0]*b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0];
 d[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0]+a[(LU_IND0+0)*1+0+1];
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0]+b[(LU_IND0+1)*1+0]*b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0];
 d[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]+a[(LU_IND0+1)*1+0+1];
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0]+b[(LU_IND0+2)*1+0]*b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0];
-d[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]+a[(LU_IND0+2)*1+0+1];
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0]+b[(LU_IND0+3)*1+0]*b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0];
-d[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]+a[(LU_IND0+3)*1+0+1];
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0]+b[(LU_IND0+4)*1+0]*b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0];
-d[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]+a[(LU_IND0+4)*1+0+1];
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0]+b[(LU_IND0+5)*1+0]*b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0];
-d[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]+a[(LU_IND0+5)*1+0+1];
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0]+b[(LU_IND0+6)*1+0]*b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0];
-d[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]+a[(LU_IND0+6)*1+0+1];
 l99898:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -7884,27 +7321,17 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s2244:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0+1] = b[LU_IND0*1+0]+e[LU_IND0*1+0];
 a[LU_IND0*1+0] = b[LU_IND0*1+0]+c[LU_IND0*1+0];
 l99897:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0+1] = b[(LU_IND0+0)*1+0]+e[(LU_IND0+0)*1+0];
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0+1] = b[(LU_IND0+1)*1+0]+e[(LU_IND0+1)*1+0];
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0+1] = b[(LU_IND0+2)*1+0]+e[(LU_IND0+2)*1+0];
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0+1] = b[(LU_IND0+3)*1+0]+e[(LU_IND0+3)*1+0];
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0+1] = b[(LU_IND0+4)*1+0]+e[(LU_IND0+4)*1+0];
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0+1] = b[(LU_IND0+5)*1+0]+e[(LU_IND0+5)*1+0];
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0+1] = b[(LU_IND0+6)*1+0]+e[(LU_IND0+6)*1+0];
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0];
 l99896:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -7934,27 +7361,17 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s251:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 s = b[LU_IND0*1+0]+c[LU_IND0*1+0]*d[LU_IND0*1+0];
 a[LU_IND0*1+0] = s*s;
 l99895:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 s = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 a[(LU_IND0+0)*1+0] = s*s;
 s = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 a[(LU_IND0+1)*1+0] = s*s;
-s = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-a[(LU_IND0+2)*1+0] = s*s;
-s = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-a[(LU_IND0+3)*1+0] = s*s;
-s = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-a[(LU_IND0+4)*1+0] = s*s;
-s = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-a[(LU_IND0+5)*1+0] = s*s;
-s = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-a[(LU_IND0+6)*1+0] = s*s;
 l99894:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -7984,35 +7401,20 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s1251:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 s = b[LU_IND0*1+0]+c[LU_IND0*1+0];
 b[LU_IND0*1+0] = a[LU_IND0*1+0]+d[LU_IND0*1+0];
 a[LU_IND0*1+0] = s*e[LU_IND0*1+0];
 l99893:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 s = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0];
 a[(LU_IND0+0)*1+0] = s*e[(LU_IND0+0)*1+0];
 s = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0];
 a[(LU_IND0+1)*1+0] = s*e[(LU_IND0+1)*1+0];
-s = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0];
-a[(LU_IND0+2)*1+0] = s*e[(LU_IND0+2)*1+0];
-s = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0];
-a[(LU_IND0+3)*1+0] = s*e[(LU_IND0+3)*1+0];
-s = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0];
-a[(LU_IND0+4)*1+0] = s*e[(LU_IND0+4)*1+0];
-s = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0];
-a[(LU_IND0+5)*1+0] = s*e[(LU_IND0+5)*1+0];
-s = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0];
-a[(LU_IND0+6)*1+0] = s*e[(LU_IND0+6)*1+0];
 l99892:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8042,35 +7444,20 @@ real_t s = (real_t) 0.0;
 {
 int i;
 loop_s2251:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = s*e[LU_IND0*1+0];
 s = b[LU_IND0*1+0]+c[LU_IND0*1+0];
 b[LU_IND0*1+0] = a[LU_IND0*1+0]+d[LU_IND0*1+0];
 l99891:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = s*e[(LU_IND0+0)*1+0];
 s = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = s*e[(LU_IND0+1)*1+0];
 s = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = s*e[(LU_IND0+2)*1+0];
-s = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = s*e[(LU_IND0+3)*1+0];
-s = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = s*e[(LU_IND0+4)*1+0];
-s = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = s*e[(LU_IND0+5)*1+0];
-s = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = s*e[(LU_IND0+6)*1+0];
-s = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0];
 l99890:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8099,35 +7486,20 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s3251:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0+1] = b[LU_IND0*1+0]+c[LU_IND0*1+0];
 b[LU_IND0*1+0] = c[LU_IND0*1+0]*e[LU_IND0*1+0];
 d[LU_IND0*1+0] = a[LU_IND0*1+0]*e[LU_IND0*1+0];
 l99889:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0+1] = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = c[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
 d[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0+1] = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = c[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
 d[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0+1] = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = c[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-d[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0+1] = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = c[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-d[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0+1] = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = c[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-d[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0+1] = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = c[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-d[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0+1] = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = c[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
-d[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
 l99888:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8158,34 +7530,19 @@ t = (real_t) 0.;
 {
 int i;
 loop_s252:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 s = b[LU_IND0*1+0]*c[LU_IND0*1+0];
 a[LU_IND0*1+0] = s+t;
 t = s;
 l99887:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 s = b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 a[(LU_IND0+0)*1+0] = s+t;
 t = s;
 s = b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
 a[(LU_IND0+1)*1+0] = s+t;
-t = s;
-s = b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-a[(LU_IND0+2)*1+0] = s+t;
-t = s;
-s = b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-a[(LU_IND0+3)*1+0] = s+t;
-t = s;
-s = b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-a[(LU_IND0+4)*1+0] = s+t;
-t = s;
-s = b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-a[(LU_IND0+5)*1+0] = s+t;
-t = s;
-s = b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
-a[(LU_IND0+6)*1+0] = s+t;
 t = s;
 l99886:               ;
 }
@@ -8216,7 +7573,7 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s253:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]>b[LU_IND0*1+0]) {
 s = a[LU_IND0*1+0]-b[LU_IND0*1+0]*d[LU_IND0*1+0];
@@ -8225,7 +7582,7 @@ a[LU_IND0*1+0] = s;
 }
 l99885:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]>b[(LU_IND0+0)*1+0]) {
 s = a[(LU_IND0+0)*1+0]-b[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 c[(LU_IND0+0)*1+0] += s;
@@ -8235,31 +7592,6 @@ if (a[(LU_IND0+1)*1+0]>b[(LU_IND0+1)*1+0]) {
 s = a[(LU_IND0+1)*1+0]-b[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 c[(LU_IND0+1)*1+0] += s;
 a[(LU_IND0+1)*1+0] = s;
-}
-if (a[(LU_IND0+2)*1+0]>b[(LU_IND0+2)*1+0]) {
-s = a[(LU_IND0+2)*1+0]-b[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-c[(LU_IND0+2)*1+0] += s;
-a[(LU_IND0+2)*1+0] = s;
-}
-if (a[(LU_IND0+3)*1+0]>b[(LU_IND0+3)*1+0]) {
-s = a[(LU_IND0+3)*1+0]-b[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-c[(LU_IND0+3)*1+0] += s;
-a[(LU_IND0+3)*1+0] = s;
-}
-if (a[(LU_IND0+4)*1+0]>b[(LU_IND0+4)*1+0]) {
-s = a[(LU_IND0+4)*1+0]-b[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-c[(LU_IND0+4)*1+0] += s;
-a[(LU_IND0+4)*1+0] = s;
-}
-if (a[(LU_IND0+5)*1+0]>b[(LU_IND0+5)*1+0]) {
-s = a[(LU_IND0+5)*1+0]-b[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-c[(LU_IND0+5)*1+0] += s;
-a[(LU_IND0+5)*1+0] = s;
-}
-if (a[(LU_IND0+6)*1+0]>b[(LU_IND0+6)*1+0]) {
-s = a[(LU_IND0+6)*1+0]-b[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-c[(LU_IND0+6)*1+0] += s;
-a[(LU_IND0+6)*1+0] = s;
 }
 l99884:               ;
 }
@@ -8291,27 +7623,17 @@ x = b[32000-1];
 {
 int i;
 loop_s254:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = (b[LU_IND0*1+0]+x)*(real_t) .5;
 x = b[LU_IND0*1+0];
 l99883:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = (b[(LU_IND0+0)*1+0]+x)*(real_t) .5;
 x = b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = (b[(LU_IND0+1)*1+0]+x)*(real_t) .5;
 x = b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = (b[(LU_IND0+2)*1+0]+x)*(real_t) .5;
-x = b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = (b[(LU_IND0+3)*1+0]+x)*(real_t) .5;
-x = b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = (b[(LU_IND0+4)*1+0]+x)*(real_t) .5;
-x = b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = (b[(LU_IND0+5)*1+0]+x)*(real_t) .5;
-x = b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = (b[(LU_IND0+6)*1+0]+x)*(real_t) .5;
-x = b[(LU_IND0+6)*1+0];
 l99882:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8343,35 +7665,20 @@ y = b[32000-2];
 {
 int i;
 loop_s255:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = (b[LU_IND0*1+0]+x+y)*(real_t) .333;
 y = x;
 x = b[LU_IND0*1+0];
 l99881:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = (b[(LU_IND0+0)*1+0]+x+y)*(real_t) .333;
 y = x;
 x = b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = (b[(LU_IND0+1)*1+0]+x+y)*(real_t) .333;
 y = x;
 x = b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = (b[(LU_IND0+2)*1+0]+x+y)*(real_t) .333;
-y = x;
-x = b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = (b[(LU_IND0+3)*1+0]+x+y)*(real_t) .333;
-y = x;
-x = b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = (b[(LU_IND0+4)*1+0]+x+y)*(real_t) .333;
-y = x;
-x = b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = (b[(LU_IND0+5)*1+0]+x+y)*(real_t) .333;
-y = x;
-x = b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = (b[(LU_IND0+6)*1+0]+x+y)*(real_t) .333;
-y = x;
-x = b[(LU_IND0+6)*1+0];
 l99880:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8402,27 +7709,17 @@ int i;
 for(i = 0; i <= 255; i += 1) {
 int j;
 loop_s256:               LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] = (real_t) 1.0-a[LU_IND0*1+1-1];
 aa[LU_IND0*1+1][i] = a[LU_IND0*1+1]+bb[LU_IND0*1+1][i]*d[LU_IND0*1+1];
 l99879:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] = (real_t) 1.0-a[(LU_IND0+0)*1+1-1];
 aa[(LU_IND0+0)*1+1][i] = a[(LU_IND0+0)*1+1]+bb[(LU_IND0+0)*1+1][i]*d[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] = (real_t) 1.0-a[(LU_IND0+1)*1+1-1];
 aa[(LU_IND0+1)*1+1][i] = a[(LU_IND0+1)*1+1]+bb[(LU_IND0+1)*1+1][i]*d[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] = (real_t) 1.0-a[(LU_IND0+2)*1+1-1];
-aa[(LU_IND0+2)*1+1][i] = a[(LU_IND0+2)*1+1]+bb[(LU_IND0+2)*1+1][i]*d[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] = (real_t) 1.0-a[(LU_IND0+3)*1+1-1];
-aa[(LU_IND0+3)*1+1][i] = a[(LU_IND0+3)*1+1]+bb[(LU_IND0+3)*1+1][i]*d[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] = (real_t) 1.0-a[(LU_IND0+4)*1+1-1];
-aa[(LU_IND0+4)*1+1][i] = a[(LU_IND0+4)*1+1]+bb[(LU_IND0+4)*1+1][i]*d[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] = (real_t) 1.0-a[(LU_IND0+5)*1+1-1];
-aa[(LU_IND0+5)*1+1][i] = a[(LU_IND0+5)*1+1]+bb[(LU_IND0+5)*1+1][i]*d[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] = (real_t) 1.0-a[(LU_IND0+6)*1+1-1];
-aa[(LU_IND0+6)*1+1][i] = a[(LU_IND0+6)*1+1]+bb[(LU_IND0+6)*1+1][i]*d[(LU_IND0+6)*1+1];
 l99878:                  ;
 }
 j = 1+MAX0(LU_NUB0, 0)*1;
@@ -8454,27 +7751,17 @@ int i;
 for(i = 1; i <= 255; i += 1) {
 int j;
 loop_s257:               LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[i] = aa[LU_IND0*1+0][i]-a[i-1];
 aa[LU_IND0*1+0][i] = a[i]+bb[LU_IND0*1+0][i];
 l99877:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[i] = aa[(LU_IND0+0)*1+0][i]-a[i-1];
 aa[(LU_IND0+0)*1+0][i] = a[i]+bb[(LU_IND0+0)*1+0][i];
 a[i] = aa[(LU_IND0+1)*1+0][i]-a[i-1];
 aa[(LU_IND0+1)*1+0][i] = a[i]+bb[(LU_IND0+1)*1+0][i];
-a[i] = aa[(LU_IND0+2)*1+0][i]-a[i-1];
-aa[(LU_IND0+2)*1+0][i] = a[i]+bb[(LU_IND0+2)*1+0][i];
-a[i] = aa[(LU_IND0+3)*1+0][i]-a[i-1];
-aa[(LU_IND0+3)*1+0][i] = a[i]+bb[(LU_IND0+3)*1+0][i];
-a[i] = aa[(LU_IND0+4)*1+0][i]-a[i-1];
-aa[(LU_IND0+4)*1+0][i] = a[i]+bb[(LU_IND0+4)*1+0][i];
-a[i] = aa[(LU_IND0+5)*1+0][i]-a[i-1];
-aa[(LU_IND0+5)*1+0][i] = a[i]+bb[(LU_IND0+5)*1+0][i];
-a[i] = aa[(LU_IND0+6)*1+0][i]-a[i-1];
-aa[(LU_IND0+6)*1+0][i] = a[i]+bb[(LU_IND0+6)*1+0][i];
 l99876:                  ;
 }
 j = 0+MAX0(LU_NUB0, 0)*1;
@@ -8506,7 +7793,7 @@ s = 0.;
 {
 int i;
 loop_s258:            LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]>0.)
 s = d[LU_IND0*1+0]*d[LU_IND0*1+0];
@@ -8514,7 +7801,7 @@ b[LU_IND0*1+0] = s*c[LU_IND0*1+0]+d[LU_IND0*1+0];
 e[LU_IND0*1+0] = (s+(real_t) 1.)*aa[0][LU_IND0*1+0];
 l99875:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]>0.)
 s = d[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = s*c[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0];
@@ -8523,26 +7810,6 @@ if (a[(LU_IND0+1)*1+0]>0.)
 s = d[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = s*c[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0];
 e[(LU_IND0+1)*1+0] = (s+(real_t) 1.)*aa[0][(LU_IND0+1)*1+0];
-if (a[(LU_IND0+2)*1+0]>0.)
-s = d[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = s*c[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0];
-e[(LU_IND0+2)*1+0] = (s+(real_t) 1.)*aa[0][(LU_IND0+2)*1+0];
-if (a[(LU_IND0+3)*1+0]>0.)
-s = d[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = s*c[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0];
-e[(LU_IND0+3)*1+0] = (s+(real_t) 1.)*aa[0][(LU_IND0+3)*1+0];
-if (a[(LU_IND0+4)*1+0]>0.)
-s = d[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = s*c[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0];
-e[(LU_IND0+4)*1+0] = (s+(real_t) 1.)*aa[0][(LU_IND0+4)*1+0];
-if (a[(LU_IND0+5)*1+0]>0.)
-s = d[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = s*c[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0];
-e[(LU_IND0+5)*1+0] = (s+(real_t) 1.)*aa[0][(LU_IND0+5)*1+0];
-if (a[(LU_IND0+6)*1+0]>0.)
-s = d[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = s*c[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0];
-e[(LU_IND0+6)*1+0] = (s+(real_t) 1.)*aa[0][(LU_IND0+6)*1+0];
 l99874:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8572,7 +7839,7 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s261:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 t = a[LU_IND0*1+1]+b[LU_IND0*1+1];
 a[LU_IND0*1+1] = t+c[LU_IND0*1+1-1];
@@ -8580,7 +7847,7 @@ t = c[LU_IND0*1+1]*d[LU_IND0*1+1];
 c[LU_IND0*1+1] = t;
 l99873:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 t = a[(LU_IND0+0)*1+1]+b[(LU_IND0+0)*1+1];
 a[(LU_IND0+0)*1+1] = t+c[(LU_IND0+0)*1+1-1];
 t = c[(LU_IND0+0)*1+1]*d[(LU_IND0+0)*1+1];
@@ -8589,26 +7856,6 @@ t = a[(LU_IND0+1)*1+1]+b[(LU_IND0+1)*1+1];
 a[(LU_IND0+1)*1+1] = t+c[(LU_IND0+1)*1+1-1];
 t = c[(LU_IND0+1)*1+1]*d[(LU_IND0+1)*1+1];
 c[(LU_IND0+1)*1+1] = t;
-t = a[(LU_IND0+2)*1+1]+b[(LU_IND0+2)*1+1];
-a[(LU_IND0+2)*1+1] = t+c[(LU_IND0+2)*1+1-1];
-t = c[(LU_IND0+2)*1+1]*d[(LU_IND0+2)*1+1];
-c[(LU_IND0+2)*1+1] = t;
-t = a[(LU_IND0+3)*1+1]+b[(LU_IND0+3)*1+1];
-a[(LU_IND0+3)*1+1] = t+c[(LU_IND0+3)*1+1-1];
-t = c[(LU_IND0+3)*1+1]*d[(LU_IND0+3)*1+1];
-c[(LU_IND0+3)*1+1] = t;
-t = a[(LU_IND0+4)*1+1]+b[(LU_IND0+4)*1+1];
-a[(LU_IND0+4)*1+1] = t+c[(LU_IND0+4)*1+1-1];
-t = c[(LU_IND0+4)*1+1]*d[(LU_IND0+4)*1+1];
-c[(LU_IND0+4)*1+1] = t;
-t = a[(LU_IND0+5)*1+1]+b[(LU_IND0+5)*1+1];
-a[(LU_IND0+5)*1+1] = t+c[(LU_IND0+5)*1+1-1];
-t = c[(LU_IND0+5)*1+1]*d[(LU_IND0+5)*1+1];
-c[(LU_IND0+5)*1+1] = t;
-t = a[(LU_IND0+6)*1+1]+b[(LU_IND0+6)*1+1];
-a[(LU_IND0+6)*1+1] = t+c[(LU_IND0+6)*1+1-1];
-t = c[(LU_IND0+6)*1+1]*d[(LU_IND0+6)*1+1];
-c[(LU_IND0+6)*1+1] = t;
 l99872:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -8637,27 +7884,17 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s271:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (b[LU_IND0*1+0]>(real_t) 0.)
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99871:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (b[(LU_IND0+0)*1+0]>(real_t) 0.)
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 if (b[(LU_IND0+1)*1+0]>(real_t) 0.)
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-if (b[(LU_IND0+2)*1+0]>(real_t) 0.)
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-if (b[(LU_IND0+3)*1+0]>(real_t) 0.)
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-if (b[(LU_IND0+4)*1+0]>(real_t) 0.)
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-if (b[(LU_IND0+5)*1+0]>(real_t) 0.)
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-if (b[(LU_IND0+6)*1+0]>(real_t) 0.)
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99870:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8688,7 +7925,7 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s272:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (e[LU_IND0*1+0]>=t) {
 a[LU_IND0*1+0] += c[LU_IND0*1+0]*d[LU_IND0*1+0];
@@ -8696,7 +7933,7 @@ b[LU_IND0*1+0] += c[LU_IND0*1+0]*c[LU_IND0*1+0];
 }
 l99869:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (e[(LU_IND0+0)*1+0]>=t) {
 a[(LU_IND0+0)*1+0] += c[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] += c[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
@@ -8704,26 +7941,6 @@ b[(LU_IND0+0)*1+0] += c[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 if (e[(LU_IND0+1)*1+0]>=t) {
 a[(LU_IND0+1)*1+0] += c[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] += c[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-}
-if (e[(LU_IND0+2)*1+0]>=t) {
-a[(LU_IND0+2)*1+0] += c[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] += c[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-}
-if (e[(LU_IND0+3)*1+0]>=t) {
-a[(LU_IND0+3)*1+0] += c[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] += c[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-}
-if (e[(LU_IND0+4)*1+0]>=t) {
-a[(LU_IND0+4)*1+0] += c[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] += c[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-}
-if (e[(LU_IND0+5)*1+0]>=t) {
-a[(LU_IND0+5)*1+0] += c[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] += c[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-}
-if (e[(LU_IND0+6)*1+0]>=t) {
-a[(LU_IND0+6)*1+0] += c[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] += c[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 }
 l99868:               ;
 }
@@ -8753,7 +7970,7 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s273:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] += d[LU_IND0*1+0]*e[LU_IND0*1+0];
 if (a[LU_IND0*1+0]<(real_t) 0.)
@@ -8761,7 +7978,7 @@ b[LU_IND0*1+0] += d[LU_IND0*1+0]*e[LU_IND0*1+0];
 c[LU_IND0*1+0] += a[LU_IND0*1+0]*d[LU_IND0*1+0];
 l99867:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] += d[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
 if (a[(LU_IND0+0)*1+0]<(real_t) 0.)
 b[(LU_IND0+0)*1+0] += d[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
@@ -8770,26 +7987,6 @@ a[(LU_IND0+1)*1+0] += d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
 if (a[(LU_IND0+1)*1+0]<(real_t) 0.)
 b[(LU_IND0+1)*1+0] += d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
 c[(LU_IND0+1)*1+0] += a[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] += d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-if (a[(LU_IND0+2)*1+0]<(real_t) 0.)
-b[(LU_IND0+2)*1+0] += d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-c[(LU_IND0+2)*1+0] += a[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] += d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-if (a[(LU_IND0+3)*1+0]<(real_t) 0.)
-b[(LU_IND0+3)*1+0] += d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-c[(LU_IND0+3)*1+0] += a[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] += d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-if (a[(LU_IND0+4)*1+0]<(real_t) 0.)
-b[(LU_IND0+4)*1+0] += d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-c[(LU_IND0+4)*1+0] += a[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] += d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-if (a[(LU_IND0+5)*1+0]<(real_t) 0.)
-b[(LU_IND0+5)*1+0] += d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-c[(LU_IND0+5)*1+0] += a[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] += d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
-if (a[(LU_IND0+6)*1+0]<(real_t) 0.)
-b[(LU_IND0+6)*1+0] += d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
-c[(LU_IND0+6)*1+0] += a[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
 l99866:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8818,7 +8015,7 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s274:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = c[LU_IND0*1+0]+e[LU_IND0*1+0]*d[LU_IND0*1+0];
 if (a[LU_IND0*1+0]>(real_t) 0.)
@@ -8827,7 +8024,7 @@ else
 a[LU_IND0*1+0] = d[LU_IND0*1+0]*e[LU_IND0*1+0];
 l99865:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = c[(LU_IND0+0)*1+0]+e[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 if (a[(LU_IND0+0)*1+0]>(real_t) 0.)
 b[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0]+b[(LU_IND0+0)*1+0];
@@ -8838,31 +8035,6 @@ if (a[(LU_IND0+1)*1+0]>(real_t) 0.)
 b[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]+b[(LU_IND0+1)*1+0];
 else
 a[(LU_IND0+1)*1+0] = d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = c[(LU_IND0+2)*1+0]+e[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-if (a[(LU_IND0+2)*1+0]>(real_t) 0.)
-b[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]+b[(LU_IND0+2)*1+0];
-else
-a[(LU_IND0+2)*1+0] = d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = c[(LU_IND0+3)*1+0]+e[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-if (a[(LU_IND0+3)*1+0]>(real_t) 0.)
-b[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]+b[(LU_IND0+3)*1+0];
-else
-a[(LU_IND0+3)*1+0] = d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = c[(LU_IND0+4)*1+0]+e[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-if (a[(LU_IND0+4)*1+0]>(real_t) 0.)
-b[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]+b[(LU_IND0+4)*1+0];
-else
-a[(LU_IND0+4)*1+0] = d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = c[(LU_IND0+5)*1+0]+e[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-if (a[(LU_IND0+5)*1+0]>(real_t) 0.)
-b[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]+b[(LU_IND0+5)*1+0];
-else
-a[(LU_IND0+5)*1+0] = d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = c[(LU_IND0+6)*1+0]+e[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-if (a[(LU_IND0+6)*1+0]>(real_t) 0.)
-b[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]+b[(LU_IND0+6)*1+0];
-else
-a[(LU_IND0+6)*1+0] = d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
 l99864:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -8894,19 +8066,14 @@ for(i = 0; i <= 255; i += 1)
 if (aa[0][i]>(real_t) 0.) {
 int j;
 loop_s275:                  LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[LU_IND0*1+1][i] = aa[LU_IND0*1+1-1][i]+bb[LU_IND0*1+1][i]*cc[LU_IND0*1+1][i];
 l99863:                     ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[(LU_IND0+0)*1+1][i] = aa[(LU_IND0+0)*1+1-1][i]+bb[(LU_IND0+0)*1+1][i]*cc[(LU_IND0+0)*1+1][i];
 aa[(LU_IND0+1)*1+1][i] = aa[(LU_IND0+1)*1+1-1][i]+bb[(LU_IND0+1)*1+1][i]*cc[(LU_IND0+1)*1+1][i];
-aa[(LU_IND0+2)*1+1][i] = aa[(LU_IND0+2)*1+1-1][i]+bb[(LU_IND0+2)*1+1][i]*cc[(LU_IND0+2)*1+1][i];
-aa[(LU_IND0+3)*1+1][i] = aa[(LU_IND0+3)*1+1-1][i]+bb[(LU_IND0+3)*1+1][i]*cc[(LU_IND0+3)*1+1][i];
-aa[(LU_IND0+4)*1+1][i] = aa[(LU_IND0+4)*1+1-1][i]+bb[(LU_IND0+4)*1+1][i]*cc[(LU_IND0+4)*1+1][i];
-aa[(LU_IND0+5)*1+1][i] = aa[(LU_IND0+5)*1+1-1][i]+bb[(LU_IND0+5)*1+1][i]*cc[(LU_IND0+5)*1+1][i];
-aa[(LU_IND0+6)*1+1][i] = aa[(LU_IND0+6)*1+1-1][i]+bb[(LU_IND0+6)*1+1][i]*cc[(LU_IND0+6)*1+1][i];
 l99862:                     ;
 }
 j = 1+MAX0(LU_NUB0, 0)*1;
@@ -8938,19 +8105,14 @@ for(i = 0; i <= 255; i += 1) {
 {
 int j;
 loop_s2275:                  LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[LU_IND0*1+0][i] = aa[LU_IND0*1+0][i]+bb[LU_IND0*1+0][i]*cc[LU_IND0*1+0][i];
 l99861:                     ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[(LU_IND0+0)*1+0][i] = aa[(LU_IND0+0)*1+0][i]+bb[(LU_IND0+0)*1+0][i]*cc[(LU_IND0+0)*1+0][i];
 aa[(LU_IND0+1)*1+0][i] = aa[(LU_IND0+1)*1+0][i]+bb[(LU_IND0+1)*1+0][i]*cc[(LU_IND0+1)*1+0][i];
-aa[(LU_IND0+2)*1+0][i] = aa[(LU_IND0+2)*1+0][i]+bb[(LU_IND0+2)*1+0][i]*cc[(LU_IND0+2)*1+0][i];
-aa[(LU_IND0+3)*1+0][i] = aa[(LU_IND0+3)*1+0][i]+bb[(LU_IND0+3)*1+0][i]*cc[(LU_IND0+3)*1+0][i];
-aa[(LU_IND0+4)*1+0][i] = aa[(LU_IND0+4)*1+0][i]+bb[(LU_IND0+4)*1+0][i]*cc[(LU_IND0+4)*1+0][i];
-aa[(LU_IND0+5)*1+0][i] = aa[(LU_IND0+5)*1+0][i]+bb[(LU_IND0+5)*1+0][i]*cc[(LU_IND0+5)*1+0][i];
-aa[(LU_IND0+6)*1+0][i] = aa[(LU_IND0+6)*1+0][i]+bb[(LU_IND0+6)*1+0][i]*cc[(LU_IND0+6)*1+0][i];
 l99860:                     ;
 }
 j = 0+MAX0(LU_NUB0, 0)*1;
@@ -8983,7 +8145,7 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s276:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (LU_IND0*1+0+1<mid)
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*c[LU_IND0*1+0];
@@ -8991,7 +8153,7 @@ else
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*d[LU_IND0*1+0];
 l99859:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if ((LU_IND0+0)*1+0+1<mid)
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 else
@@ -9000,26 +8162,6 @@ if ((LU_IND0+1)*1+0+1<mid)
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
 else
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
-if ((LU_IND0+2)*1+0+1<mid)
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-else
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-if ((LU_IND0+3)*1+0+1<mid)
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-else
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-if ((LU_IND0+4)*1+0+1<mid)
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-else
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-if ((LU_IND0+5)*1+0+1<mid)
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-else
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-if ((LU_IND0+6)*1+0+1<mid)
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
-else
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
 l99858:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9142,35 +8284,20 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s1279:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]<(real_t) 0.)
 if (b[LU_IND0*1+0]>a[LU_IND0*1+0])
 c[LU_IND0*1+0] += d[LU_IND0*1+0]*e[LU_IND0*1+0];
 l99857:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]<(real_t) 0.)
 if (b[(LU_IND0+0)*1+0]>a[(LU_IND0+0)*1+0])
 c[(LU_IND0+0)*1+0] += d[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
 if (a[(LU_IND0+1)*1+0]<(real_t) 0.)
 if (b[(LU_IND0+1)*1+0]>a[(LU_IND0+1)*1+0])
 c[(LU_IND0+1)*1+0] += d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
-if (a[(LU_IND0+2)*1+0]<(real_t) 0.)
-if (b[(LU_IND0+2)*1+0]>a[(LU_IND0+2)*1+0])
-c[(LU_IND0+2)*1+0] += d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-if (a[(LU_IND0+3)*1+0]<(real_t) 0.)
-if (b[(LU_IND0+3)*1+0]>a[(LU_IND0+3)*1+0])
-c[(LU_IND0+3)*1+0] += d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-if (a[(LU_IND0+4)*1+0]<(real_t) 0.)
-if (b[(LU_IND0+4)*1+0]>a[(LU_IND0+4)*1+0])
-c[(LU_IND0+4)*1+0] += d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-if (a[(LU_IND0+5)*1+0]<(real_t) 0.)
-if (b[(LU_IND0+5)*1+0]>a[(LU_IND0+5)*1+0])
-c[(LU_IND0+5)*1+0] += d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-if (a[(LU_IND0+6)*1+0]<(real_t) 0.)
-if (b[(LU_IND0+6)*1+0]>a[(LU_IND0+6)*1+0])
-c[(LU_IND0+6)*1+0] += d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
 l99856:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9201,7 +8328,7 @@ for(nl = 0; nl <= 49999; nl += 1) {
 {
 int i;
 loop_s2710:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]>b[LU_IND0*1+0]) {
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*d[LU_IND0*1+0];
@@ -9219,7 +8346,7 @@ c[LU_IND0*1+0] += e[LU_IND0*1+0]*e[LU_IND0*1+0];
 }
 l99855:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]>b[(LU_IND0+0)*1+0]) {
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 if (32000>10)
@@ -9247,76 +8374,6 @@ if (x>(real_t) 0.)
 c[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 else
 c[(LU_IND0+1)*1+0] += e[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
-}
-if (a[(LU_IND0+2)*1+0]>b[(LU_IND0+2)*1+0]) {
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-if (32000>10)
-c[(LU_IND0+2)*1+0] += d[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-else
-c[(LU_IND0+2)*1+0] = d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0]+(real_t) 1.;
-}
-else {
-b[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]+e[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-if (x>(real_t) 0.)
-c[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-else
-c[(LU_IND0+2)*1+0] += e[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-}
-if (a[(LU_IND0+3)*1+0]>b[(LU_IND0+3)*1+0]) {
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-if (32000>10)
-c[(LU_IND0+3)*1+0] += d[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-else
-c[(LU_IND0+3)*1+0] = d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0]+(real_t) 1.;
-}
-else {
-b[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]+e[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-if (x>(real_t) 0.)
-c[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-else
-c[(LU_IND0+3)*1+0] += e[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-}
-if (a[(LU_IND0+4)*1+0]>b[(LU_IND0+4)*1+0]) {
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-if (32000>10)
-c[(LU_IND0+4)*1+0] += d[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-else
-c[(LU_IND0+4)*1+0] = d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0]+(real_t) 1.;
-}
-else {
-b[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]+e[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-if (x>(real_t) 0.)
-c[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-else
-c[(LU_IND0+4)*1+0] += e[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-}
-if (a[(LU_IND0+5)*1+0]>b[(LU_IND0+5)*1+0]) {
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-if (32000>10)
-c[(LU_IND0+5)*1+0] += d[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-else
-c[(LU_IND0+5)*1+0] = d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0]+(real_t) 1.;
-}
-else {
-b[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]+e[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-if (x>(real_t) 0.)
-c[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-else
-c[(LU_IND0+5)*1+0] += e[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-}
-if (a[(LU_IND0+6)*1+0]>b[(LU_IND0+6)*1+0]) {
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-if (32000>10)
-c[(LU_IND0+6)*1+0] += d[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-else
-c[(LU_IND0+6)*1+0] = d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0]+(real_t) 1.;
-}
-else {
-b[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]+e[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
-if (x>(real_t) 0.)
-c[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-else
-c[(LU_IND0+6)*1+0] += e[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
 }
 l99854:               ;
 }
@@ -9346,27 +8403,17 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s2711:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (b[LU_IND0*1+0]!=(real_t) 0.0)
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99853:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (b[(LU_IND0+0)*1+0]!=(real_t) 0.0)
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 if (b[(LU_IND0+1)*1+0]!=(real_t) 0.0)
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-if (b[(LU_IND0+2)*1+0]!=(real_t) 0.0)
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-if (b[(LU_IND0+3)*1+0]!=(real_t) 0.0)
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-if (b[(LU_IND0+4)*1+0]!=(real_t) 0.0)
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-if (b[(LU_IND0+5)*1+0]!=(real_t) 0.0)
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-if (b[(LU_IND0+6)*1+0]!=(real_t) 0.0)
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99852:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9395,27 +8442,17 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s2712:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]>b[LU_IND0*1+0])
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99851:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]>b[(LU_IND0+0)*1+0])
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 if (a[(LU_IND0+1)*1+0]>b[(LU_IND0+1)*1+0])
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-if (a[(LU_IND0+2)*1+0]>b[(LU_IND0+2)*1+0])
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-if (a[(LU_IND0+3)*1+0]>b[(LU_IND0+3)*1+0])
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-if (a[(LU_IND0+4)*1+0]>b[(LU_IND0+4)*1+0])
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-if (a[(LU_IND0+5)*1+0]>b[(LU_IND0+5)*1+0])
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-if (a[(LU_IND0+6)*1+0]>b[(LU_IND0+6)*1+0])
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99850:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9446,35 +8483,20 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s281:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 x = a[32000-(LU_IND0*1+0)-1]+b[LU_IND0*1+0]*c[LU_IND0*1+0];
 a[LU_IND0*1+0] = x-((real_t) 1.0);
 b[LU_IND0*1+0] = x;
 l99849:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 x = a[32000-((LU_IND0+0)*1+0)-1]+b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 a[(LU_IND0+0)*1+0] = x-((real_t) 1.0);
 b[(LU_IND0+0)*1+0] = x;
 x = a[32000-((LU_IND0+1)*1+0)-1]+b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
 a[(LU_IND0+1)*1+0] = x-((real_t) 1.0);
 b[(LU_IND0+1)*1+0] = x;
-x = a[32000-((LU_IND0+2)*1+0)-1]+b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-a[(LU_IND0+2)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+2)*1+0] = x;
-x = a[32000-((LU_IND0+3)*1+0)-1]+b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-a[(LU_IND0+3)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+3)*1+0] = x;
-x = a[32000-((LU_IND0+4)*1+0)-1]+b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-a[(LU_IND0+4)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+4)*1+0] = x;
-x = a[32000-((LU_IND0+5)*1+0)-1]+b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-a[(LU_IND0+5)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+5)*1+0] = x;
-x = a[32000-((LU_IND0+6)*1+0)-1]+b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
-a[(LU_IND0+6)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+6)*1+0] = x;
 l99848:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9505,35 +8527,20 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s1281:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 x = b[LU_IND0*1+0]*c[LU_IND0*1+0]+a[LU_IND0*1+0]*d[LU_IND0*1+0]+e[LU_IND0*1+0];
 a[LU_IND0*1+0] = x-((real_t) 1.0);
 b[LU_IND0*1+0] = x;
 l99847:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 x = b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0]+a[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0]+e[(LU_IND0+0)*1+0];
 a[(LU_IND0+0)*1+0] = x-((real_t) 1.0);
 b[(LU_IND0+0)*1+0] = x;
 x = b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0]+a[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0]+e[(LU_IND0+1)*1+0];
 a[(LU_IND0+1)*1+0] = x-((real_t) 1.0);
 b[(LU_IND0+1)*1+0] = x;
-x = b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0]+a[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0]+e[(LU_IND0+2)*1+0];
-a[(LU_IND0+2)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+2)*1+0] = x;
-x = b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0]+a[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0]+e[(LU_IND0+3)*1+0];
-a[(LU_IND0+3)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+3)*1+0] = x;
-x = b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0]+a[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0]+e[(LU_IND0+4)*1+0];
-a[(LU_IND0+4)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+4)*1+0] = x;
-x = b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0]+a[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0]+e[(LU_IND0+5)*1+0];
-a[(LU_IND0+5)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+5)*1+0] = x;
-x = b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0]+a[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0]+e[(LU_IND0+6)*1+0];
-a[(LU_IND0+6)*1+0] = x-((real_t) 1.0);
-b[(LU_IND0+6)*1+0] = x;
 l99846:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9564,27 +8571,17 @@ im1 = 32000-1;
 {
 int i;
 loop_s291:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = (b[LU_IND0*1+0]+b[im1])*(real_t) .5;
 im1 = LU_IND0*1+0;
 l99845:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = (b[(LU_IND0+0)*1+0]+b[im1])*(real_t) .5;
 im1 = (LU_IND0+0)*1+0;
 a[(LU_IND0+1)*1+0] = (b[(LU_IND0+1)*1+0]+b[im1])*(real_t) .5;
 im1 = (LU_IND0+1)*1+0;
-a[(LU_IND0+2)*1+0] = (b[(LU_IND0+2)*1+0]+b[im1])*(real_t) .5;
-im1 = (LU_IND0+2)*1+0;
-a[(LU_IND0+3)*1+0] = (b[(LU_IND0+3)*1+0]+b[im1])*(real_t) .5;
-im1 = (LU_IND0+3)*1+0;
-a[(LU_IND0+4)*1+0] = (b[(LU_IND0+4)*1+0]+b[im1])*(real_t) .5;
-im1 = (LU_IND0+4)*1+0;
-a[(LU_IND0+5)*1+0] = (b[(LU_IND0+5)*1+0]+b[im1])*(real_t) .5;
-im1 = (LU_IND0+5)*1+0;
-a[(LU_IND0+6)*1+0] = (b[(LU_IND0+6)*1+0]+b[im1])*(real_t) .5;
-im1 = (LU_IND0+6)*1+0;
 l99844:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9617,35 +8614,20 @@ im2 = 32000-2;
 {
 int i;
 loop_s292:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = (b[LU_IND0*1+0]+b[im1]+b[im2])*(real_t) .333;
 im2 = im1;
 im1 = LU_IND0*1+0;
 l99843:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = (b[(LU_IND0+0)*1+0]+b[im1]+b[im2])*(real_t) .333;
 im2 = im1;
 im1 = (LU_IND0+0)*1+0;
 a[(LU_IND0+1)*1+0] = (b[(LU_IND0+1)*1+0]+b[im1]+b[im2])*(real_t) .333;
 im2 = im1;
 im1 = (LU_IND0+1)*1+0;
-a[(LU_IND0+2)*1+0] = (b[(LU_IND0+2)*1+0]+b[im1]+b[im2])*(real_t) .333;
-im2 = im1;
-im1 = (LU_IND0+2)*1+0;
-a[(LU_IND0+3)*1+0] = (b[(LU_IND0+3)*1+0]+b[im1]+b[im2])*(real_t) .333;
-im2 = im1;
-im1 = (LU_IND0+3)*1+0;
-a[(LU_IND0+4)*1+0] = (b[(LU_IND0+4)*1+0]+b[im1]+b[im2])*(real_t) .333;
-im2 = im1;
-im1 = (LU_IND0+4)*1+0;
-a[(LU_IND0+5)*1+0] = (b[(LU_IND0+5)*1+0]+b[im1]+b[im2])*(real_t) .333;
-im2 = im1;
-im1 = (LU_IND0+5)*1+0;
-a[(LU_IND0+6)*1+0] = (b[(LU_IND0+6)*1+0]+b[im1]+b[im2])*(real_t) .333;
-im2 = im1;
-im1 = (LU_IND0+6)*1+0;
 l99842:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9674,19 +8656,14 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s293:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = a[0];
 l99841:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = a[0];
 a[(LU_IND0+1)*1+0] = a[0];
-a[(LU_IND0+2)*1+0] = a[0];
-a[(LU_IND0+3)*1+0] = a[0];
-a[(LU_IND0+4)*1+0] = a[0];
-a[(LU_IND0+5)*1+0] = a[0];
-a[(LU_IND0+6)*1+0] = a[0];
 l99840:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9716,19 +8693,14 @@ for(nl = 0; nl <= 999999; nl += 1) {
 {
 int i;
 loop_s2101:            LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[LU_IND0*1+0][LU_IND0*1+0] += bb[LU_IND0*1+0][LU_IND0*1+0]*cc[LU_IND0*1+0][LU_IND0*1+0];
 l99839:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[(LU_IND0+0)*1+0][(LU_IND0+0)*1+0] += bb[(LU_IND0+0)*1+0][(LU_IND0+0)*1+0]*cc[(LU_IND0+0)*1+0][(LU_IND0+0)*1+0];
 aa[(LU_IND0+1)*1+0][(LU_IND0+1)*1+0] += bb[(LU_IND0+1)*1+0][(LU_IND0+1)*1+0]*cc[(LU_IND0+1)*1+0][(LU_IND0+1)*1+0];
-aa[(LU_IND0+2)*1+0][(LU_IND0+2)*1+0] += bb[(LU_IND0+2)*1+0][(LU_IND0+2)*1+0]*cc[(LU_IND0+2)*1+0][(LU_IND0+2)*1+0];
-aa[(LU_IND0+3)*1+0][(LU_IND0+3)*1+0] += bb[(LU_IND0+3)*1+0][(LU_IND0+3)*1+0]*cc[(LU_IND0+3)*1+0][(LU_IND0+3)*1+0];
-aa[(LU_IND0+4)*1+0][(LU_IND0+4)*1+0] += bb[(LU_IND0+4)*1+0][(LU_IND0+4)*1+0]*cc[(LU_IND0+4)*1+0][(LU_IND0+4)*1+0];
-aa[(LU_IND0+5)*1+0][(LU_IND0+5)*1+0] += bb[(LU_IND0+5)*1+0][(LU_IND0+5)*1+0]*cc[(LU_IND0+5)*1+0][(LU_IND0+5)*1+0];
-aa[(LU_IND0+6)*1+0][(LU_IND0+6)*1+0] += bb[(LU_IND0+6)*1+0][(LU_IND0+6)*1+0]*cc[(LU_IND0+6)*1+0][(LU_IND0+6)*1+0];
 l99838:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9760,19 +8732,14 @@ for(i = 0; i <= 255; i += 1) {
 {
 int j;
 loop_s2102:                  LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[LU_IND0*1+0][i] = (real_t) 0.;
 l99837:                     ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[(LU_IND0+0)*1+0][i] = (real_t) 0.;
 aa[(LU_IND0+1)*1+0][i] = (real_t) 0.;
-aa[(LU_IND0+2)*1+0][i] = (real_t) 0.;
-aa[(LU_IND0+3)*1+0][i] = (real_t) 0.;
-aa[(LU_IND0+4)*1+0][i] = (real_t) 0.;
-aa[(LU_IND0+5)*1+0][i] = (real_t) 0.;
-aa[(LU_IND0+6)*1+0][i] = (real_t) 0.;
 l99836:                     ;
 }
 j = 0+MAX0(LU_NUB0, 0)*1;
@@ -9805,19 +8772,14 @@ int j;
 for(j = 1; j <= 255; j += 1) {
 int i;
 loop_s2111:               LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 aa[j][LU_IND0*1+1] = (aa[j][LU_IND0*1+1-1]+aa[j-1][LU_IND0*1+1])/1.9;
 l99835:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 aa[j][(LU_IND0+0)*1+1] = (aa[j][(LU_IND0+0)*1+1-1]+aa[j-1][(LU_IND0+0)*1+1])/1.9;
 aa[j][(LU_IND0+1)*1+1] = (aa[j][(LU_IND0+1)*1+1-1]+aa[j-1][(LU_IND0+1)*1+1])/1.9;
-aa[j][(LU_IND0+2)*1+1] = (aa[j][(LU_IND0+2)*1+1-1]+aa[j-1][(LU_IND0+2)*1+1])/1.9;
-aa[j][(LU_IND0+3)*1+1] = (aa[j][(LU_IND0+3)*1+1-1]+aa[j-1][(LU_IND0+3)*1+1])/1.9;
-aa[j][(LU_IND0+4)*1+1] = (aa[j][(LU_IND0+4)*1+1-1]+aa[j-1][(LU_IND0+4)*1+1])/1.9;
-aa[j][(LU_IND0+5)*1+1] = (aa[j][(LU_IND0+5)*1+1-1]+aa[j-1][(LU_IND0+5)*1+1])/1.9;
-aa[j][(LU_IND0+6)*1+1] = (aa[j][(LU_IND0+6)*1+1-1]+aa[j-1][(LU_IND0+6)*1+1])/1.9;
 l99834:                  ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -9849,19 +8811,14 @@ sum = (real_t) 0.;
 {
 int i;
 loop_s311:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 sum += a[LU_IND0*1+0];
 l99833:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 sum += a[(LU_IND0+0)*1+0];
 sum += a[(LU_IND0+1)*1+0];
-sum += a[(LU_IND0+2)*1+0];
-sum += a[(LU_IND0+3)*1+0];
-sum += a[(LU_IND0+4)*1+0];
-sum += a[(LU_IND0+5)*1+0];
-sum += a[(LU_IND0+6)*1+0];
 l99832:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -9898,7 +8855,7 @@ real_t sum;
 {
 int nl;
 loop_s31111:      LU_NUB0 = 200000000;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 sum = (real_t) 0.;
 sum += test(a);
@@ -9912,57 +8869,7 @@ sum += test(&a[28]);
 dummy(a, b, c, d, e, aa, bb, cc, sum);
 l99831:         ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
-sum = (real_t) 0.;
-sum += test(a);
-sum += test(&a[4]);
-sum += test(&a[8]);
-sum += test(&a[12]);
-sum += test(&a[16]);
-sum += test(&a[20]);
-sum += test(&a[24]);
-sum += test(&a[28]);
-dummy(a, b, c, d, e, aa, bb, cc, sum);
-sum = (real_t) 0.;
-sum += test(a);
-sum += test(&a[4]);
-sum += test(&a[8]);
-sum += test(&a[12]);
-sum += test(&a[16]);
-sum += test(&a[20]);
-sum += test(&a[24]);
-sum += test(&a[28]);
-dummy(a, b, c, d, e, aa, bb, cc, sum);
-sum = (real_t) 0.;
-sum += test(a);
-sum += test(&a[4]);
-sum += test(&a[8]);
-sum += test(&a[12]);
-sum += test(&a[16]);
-sum += test(&a[20]);
-sum += test(&a[24]);
-sum += test(&a[28]);
-dummy(a, b, c, d, e, aa, bb, cc, sum);
-sum = (real_t) 0.;
-sum += test(a);
-sum += test(&a[4]);
-sum += test(&a[8]);
-sum += test(&a[12]);
-sum += test(&a[16]);
-sum += test(&a[20]);
-sum += test(&a[24]);
-sum += test(&a[28]);
-dummy(a, b, c, d, e, aa, bb, cc, sum);
-sum = (real_t) 0.;
-sum += test(a);
-sum += test(&a[4]);
-sum += test(&a[8]);
-sum += test(&a[12]);
-sum += test(&a[16]);
-sum += test(&a[20]);
-sum += test(&a[24]);
-sum += test(&a[28]);
-dummy(a, b, c, d, e, aa, bb, cc, sum);
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 sum = (real_t) 0.;
 sum += test(a);
 sum += test(&a[4]);
@@ -10010,19 +8917,14 @@ prod = (real_t) 1.;
 {
 int i;
 loop_s312:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 prod *= a[LU_IND0*1+0];
 l99829:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 prod *= a[(LU_IND0+0)*1+0];
 prod *= a[(LU_IND0+1)*1+0];
-prod *= a[(LU_IND0+2)*1+0];
-prod *= a[(LU_IND0+3)*1+0];
-prod *= a[(LU_IND0+4)*1+0];
-prod *= a[(LU_IND0+5)*1+0];
-prod *= a[(LU_IND0+6)*1+0];
 l99828:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -10053,19 +8955,14 @@ dot = (real_t) 0.;
 {
 int i;
 loop_s313:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 dot += a[LU_IND0*1+0]*b[LU_IND0*1+0];
 l99827:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 dot += a[(LU_IND0+0)*1+0]*b[(LU_IND0+0)*1+0];
 dot += a[(LU_IND0+1)*1+0]*b[(LU_IND0+1)*1+0];
-dot += a[(LU_IND0+2)*1+0]*b[(LU_IND0+2)*1+0];
-dot += a[(LU_IND0+3)*1+0]*b[(LU_IND0+3)*1+0];
-dot += a[(LU_IND0+4)*1+0]*b[(LU_IND0+4)*1+0];
-dot += a[(LU_IND0+5)*1+0]*b[(LU_IND0+5)*1+0];
-dot += a[(LU_IND0+6)*1+0]*b[(LU_IND0+6)*1+0];
 l99826:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -10096,27 +8993,17 @@ x = a[0];
 {
 int i;
 loop_s314:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]>x)
 x = a[LU_IND0*1+0];
 l99825:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]>x)
 x = a[(LU_IND0+0)*1+0];
 if (a[(LU_IND0+1)*1+0]>x)
 x = a[(LU_IND0+1)*1+0];
-if (a[(LU_IND0+2)*1+0]>x)
-x = a[(LU_IND0+2)*1+0];
-if (a[(LU_IND0+3)*1+0]>x)
-x = a[(LU_IND0+3)*1+0];
-if (a[(LU_IND0+4)*1+0]>x)
-x = a[(LU_IND0+4)*1+0];
-if (a[(LU_IND0+5)*1+0]>x)
-x = a[(LU_IND0+5)*1+0];
-if (a[(LU_IND0+6)*1+0]>x)
-x = a[(LU_IND0+6)*1+0];
 l99824:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -10155,7 +9042,7 @@ index = 0;
 {
 int i;
 loop_s315:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]>x) {
 x = a[LU_IND0*1+0];
@@ -10163,7 +9050,7 @@ index = LU_IND0*1+0;
 }
 l99823:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]>x) {
 x = a[(LU_IND0+0)*1+0];
 index = (LU_IND0+0)*1+0;
@@ -10171,26 +9058,6 @@ index = (LU_IND0+0)*1+0;
 if (a[(LU_IND0+1)*1+0]>x) {
 x = a[(LU_IND0+1)*1+0];
 index = (LU_IND0+1)*1+0;
-}
-if (a[(LU_IND0+2)*1+0]>x) {
-x = a[(LU_IND0+2)*1+0];
-index = (LU_IND0+2)*1+0;
-}
-if (a[(LU_IND0+3)*1+0]>x) {
-x = a[(LU_IND0+3)*1+0];
-index = (LU_IND0+3)*1+0;
-}
-if (a[(LU_IND0+4)*1+0]>x) {
-x = a[(LU_IND0+4)*1+0];
-index = (LU_IND0+4)*1+0;
-}
-if (a[(LU_IND0+5)*1+0]>x) {
-x = a[(LU_IND0+5)*1+0];
-index = (LU_IND0+5)*1+0;
-}
-if (a[(LU_IND0+6)*1+0]>x) {
-x = a[(LU_IND0+6)*1+0];
-index = (LU_IND0+6)*1+0;
 }
 l99822:               ;
 }
@@ -10223,27 +9090,17 @@ x = a[0];
 {
 int i;
 loop_s316:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+1]<x)
 x = a[LU_IND0*1+1];
 l99821:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+1]<x)
 x = a[(LU_IND0+0)*1+1];
 if (a[(LU_IND0+1)*1+1]<x)
 x = a[(LU_IND0+1)*1+1];
-if (a[(LU_IND0+2)*1+1]<x)
-x = a[(LU_IND0+2)*1+1];
-if (a[(LU_IND0+3)*1+1]<x)
-x = a[(LU_IND0+3)*1+1];
-if (a[(LU_IND0+4)*1+1]<x)
-x = a[(LU_IND0+4)*1+1];
-if (a[(LU_IND0+5)*1+1]<x)
-x = a[(LU_IND0+5)*1+1];
-if (a[(LU_IND0+6)*1+1]<x)
-x = a[(LU_IND0+6)*1+1];
 l99820:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -10276,17 +9133,12 @@ q = (real_t) 1.;
 {
 int i;
 loop_s317:            LU_NUB0 = 16000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 q *= (real_t) .99;
 l99819:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
-q *= (real_t) .99;
-q *= (real_t) .99;
-q *= (real_t) .99;
-q *= (real_t) .99;
-q *= (real_t) .99;
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 q *= (real_t) .99;
 q *= (real_t) .99;
 l99818:               ;
@@ -10358,7 +9210,7 @@ sum = 0.;
 {
 int i;
 loop_s319:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = c[LU_IND0*1+0]+d[LU_IND0*1+0];
 sum += a[LU_IND0*1+0];
@@ -10366,7 +9218,7 @@ b[LU_IND0*1+0] = c[LU_IND0*1+0]+e[LU_IND0*1+0];
 sum += b[LU_IND0*1+0];
 l99817:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = c[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0];
 sum += a[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = c[(LU_IND0+0)*1+0]+e[(LU_IND0+0)*1+0];
@@ -10375,26 +9227,6 @@ a[(LU_IND0+1)*1+0] = c[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0];
 sum += a[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = c[(LU_IND0+1)*1+0]+e[(LU_IND0+1)*1+0];
 sum += b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = c[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0];
-sum += a[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = c[(LU_IND0+2)*1+0]+e[(LU_IND0+2)*1+0];
-sum += b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = c[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0];
-sum += a[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = c[(LU_IND0+3)*1+0]+e[(LU_IND0+3)*1+0];
-sum += b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = c[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0];
-sum += a[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = c[(LU_IND0+4)*1+0]+e[(LU_IND0+4)*1+0];
-sum += b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = c[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0];
-sum += a[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = c[(LU_IND0+5)*1+0]+e[(LU_IND0+5)*1+0];
-sum += b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = c[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0];
-sum += a[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = c[(LU_IND0+6)*1+0]+e[(LU_IND0+6)*1+0];
-sum += b[(LU_IND0+6)*1+0];
 l99816:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -10431,7 +9263,7 @@ int i;
 for(i = 0; i <= 255; i += 1) {
 int j;
 loop_s3110:               LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (aa[i][LU_IND0*1+0]>max) {
 max = aa[i][LU_IND0*1+0];
@@ -10440,7 +9272,7 @@ yindex = LU_IND0*1+0;
 }
 l99815:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (aa[i][(LU_IND0+0)*1+0]>max) {
 max = aa[i][(LU_IND0+0)*1+0];
 xindex = i;
@@ -10450,31 +9282,6 @@ if (aa[i][(LU_IND0+1)*1+0]>max) {
 max = aa[i][(LU_IND0+1)*1+0];
 xindex = i;
 yindex = (LU_IND0+1)*1+0;
-}
-if (aa[i][(LU_IND0+2)*1+0]>max) {
-max = aa[i][(LU_IND0+2)*1+0];
-xindex = i;
-yindex = (LU_IND0+2)*1+0;
-}
-if (aa[i][(LU_IND0+3)*1+0]>max) {
-max = aa[i][(LU_IND0+3)*1+0];
-xindex = i;
-yindex = (LU_IND0+3)*1+0;
-}
-if (aa[i][(LU_IND0+4)*1+0]>max) {
-max = aa[i][(LU_IND0+4)*1+0];
-xindex = i;
-yindex = (LU_IND0+4)*1+0;
-}
-if (aa[i][(LU_IND0+5)*1+0]>max) {
-max = aa[i][(LU_IND0+5)*1+0];
-xindex = i;
-yindex = (LU_IND0+5)*1+0;
-}
-if (aa[i][(LU_IND0+6)*1+0]>max) {
-max = aa[i][(LU_IND0+6)*1+0];
-xindex = i;
-yindex = (LU_IND0+6)*1+0;
 }
 l99814:                  ;
 }
@@ -10513,7 +9320,7 @@ int i;
 for(i = 0; i <= 255; i += 1) {
 int j;
 loop_s13110:               LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (aa[i][LU_IND0*1+0]>max) {
 max = aa[i][LU_IND0*1+0];
@@ -10522,7 +9329,7 @@ yindex = LU_IND0*1+0;
 }
 l99813:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (aa[i][(LU_IND0+0)*1+0]>max) {
 max = aa[i][(LU_IND0+0)*1+0];
 xindex = i;
@@ -10532,31 +9339,6 @@ if (aa[i][(LU_IND0+1)*1+0]>max) {
 max = aa[i][(LU_IND0+1)*1+0];
 xindex = i;
 yindex = (LU_IND0+1)*1+0;
-}
-if (aa[i][(LU_IND0+2)*1+0]>max) {
-max = aa[i][(LU_IND0+2)*1+0];
-xindex = i;
-yindex = (LU_IND0+2)*1+0;
-}
-if (aa[i][(LU_IND0+3)*1+0]>max) {
-max = aa[i][(LU_IND0+3)*1+0];
-xindex = i;
-yindex = (LU_IND0+3)*1+0;
-}
-if (aa[i][(LU_IND0+4)*1+0]>max) {
-max = aa[i][(LU_IND0+4)*1+0];
-xindex = i;
-yindex = (LU_IND0+4)*1+0;
-}
-if (aa[i][(LU_IND0+5)*1+0]>max) {
-max = aa[i][(LU_IND0+5)*1+0];
-xindex = i;
-yindex = (LU_IND0+5)*1+0;
-}
-if (aa[i][(LU_IND0+6)*1+0]>max) {
-max = aa[i][(LU_IND0+6)*1+0];
-xindex = i;
-yindex = (LU_IND0+6)*1+0;
 }
 l99812:                  ;
 }
@@ -10590,27 +9372,17 @@ sum = 0.;
 {
 int i;
 loop_s3111:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]>(real_t) 0.)
 sum += a[LU_IND0*1+0];
 l99811:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]>(real_t) 0.)
 sum += a[(LU_IND0+0)*1+0];
 if (a[(LU_IND0+1)*1+0]>(real_t) 0.)
 sum += a[(LU_IND0+1)*1+0];
-if (a[(LU_IND0+2)*1+0]>(real_t) 0.)
-sum += a[(LU_IND0+2)*1+0];
-if (a[(LU_IND0+3)*1+0]>(real_t) 0.)
-sum += a[(LU_IND0+3)*1+0];
-if (a[(LU_IND0+4)*1+0]>(real_t) 0.)
-sum += a[(LU_IND0+4)*1+0];
-if (a[(LU_IND0+5)*1+0]>(real_t) 0.)
-sum += a[(LU_IND0+5)*1+0];
-if (a[(LU_IND0+6)*1+0]>(real_t) 0.)
-sum += a[(LU_IND0+6)*1+0];
 l99810:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -10641,27 +9413,17 @@ sum = (real_t) 0.0;
 {
 int i;
 loop_s3112:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 sum += a[LU_IND0*1+0];
 b[LU_IND0*1+0] = sum;
 l99809:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 sum += a[(LU_IND0+0)*1+0];
 b[(LU_IND0+0)*1+0] = sum;
 sum += a[(LU_IND0+1)*1+0];
 b[(LU_IND0+1)*1+0] = sum;
-sum += a[(LU_IND0+2)*1+0];
-b[(LU_IND0+2)*1+0] = sum;
-sum += a[(LU_IND0+3)*1+0];
-b[(LU_IND0+3)*1+0] = sum;
-sum += a[(LU_IND0+4)*1+0];
-b[(LU_IND0+4)*1+0] = sum;
-sum += a[(LU_IND0+5)*1+0];
-b[(LU_IND0+5)*1+0] = sum;
-sum += a[(LU_IND0+6)*1+0];
-b[(LU_IND0+6)*1+0] = sum;
 l99808:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -10692,27 +9454,17 @@ max = fabsf(a[0]);
 {
 int i;
 loop_s3113:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (fabsf(a[LU_IND0*1+0])>max)
 max = fabsf(a[LU_IND0*1+0]);
 l99807:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (fabsf(a[(LU_IND0+0)*1+0])>max)
 max = fabsf(a[(LU_IND0+0)*1+0]);
 if (fabsf(a[(LU_IND0+1)*1+0])>max)
 max = fabsf(a[(LU_IND0+1)*1+0]);
-if (fabsf(a[(LU_IND0+2)*1+0])>max)
-max = fabsf(a[(LU_IND0+2)*1+0]);
-if (fabsf(a[(LU_IND0+3)*1+0])>max)
-max = fabsf(a[(LU_IND0+3)*1+0]);
-if (fabsf(a[(LU_IND0+4)*1+0])>max)
-max = fabsf(a[(LU_IND0+4)*1+0]);
-if (fabsf(a[(LU_IND0+5)*1+0])>max)
-max = fabsf(a[(LU_IND0+5)*1+0]);
-if (fabsf(a[(LU_IND0+6)*1+0])>max)
-max = fabsf(a[(LU_IND0+6)*1+0]);
 l99806:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -10741,19 +9493,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s321:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] += a[LU_IND0*1+1-1]*b[LU_IND0*1+1];
 l99805:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] += a[(LU_IND0+0)*1+1-1]*b[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] += a[(LU_IND0+1)*1+1-1]*b[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] += a[(LU_IND0+2)*1+1-1]*b[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] += a[(LU_IND0+3)*1+1-1]*b[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] += a[(LU_IND0+4)*1+1-1]*b[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] += a[(LU_IND0+5)*1+1-1]*b[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] += a[(LU_IND0+6)*1+1-1]*b[(LU_IND0+6)*1+1];
 l99804:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -10782,19 +9529,14 @@ for(nl = 0; nl <= 49999; nl += 1) {
 {
 int i;
 loop_s322:            LU_NUB0 = 31998;
-LU_IB0 = 1;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+2] = a[LU_IND0*1+2]+a[LU_IND0*1+2-1]*b[LU_IND0*1+2]+a[LU_IND0*1+2-2]*c[LU_IND0*1+2];
 l99803:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+2] = a[(LU_IND0+0)*1+2]+a[(LU_IND0+0)*1+2-1]*b[(LU_IND0+0)*1+2]+a[(LU_IND0+0)*1+2-2]*c[(LU_IND0+0)*1+2];
 a[(LU_IND0+1)*1+2] = a[(LU_IND0+1)*1+2]+a[(LU_IND0+1)*1+2-1]*b[(LU_IND0+1)*1+2]+a[(LU_IND0+1)*1+2-2]*c[(LU_IND0+1)*1+2];
-a[(LU_IND0+2)*1+2] = a[(LU_IND0+2)*1+2]+a[(LU_IND0+2)*1+2-1]*b[(LU_IND0+2)*1+2]+a[(LU_IND0+2)*1+2-2]*c[(LU_IND0+2)*1+2];
-a[(LU_IND0+3)*1+2] = a[(LU_IND0+3)*1+2]+a[(LU_IND0+3)*1+2-1]*b[(LU_IND0+3)*1+2]+a[(LU_IND0+3)*1+2-2]*c[(LU_IND0+3)*1+2];
-a[(LU_IND0+4)*1+2] = a[(LU_IND0+4)*1+2]+a[(LU_IND0+4)*1+2-1]*b[(LU_IND0+4)*1+2]+a[(LU_IND0+4)*1+2-2]*c[(LU_IND0+4)*1+2];
-a[(LU_IND0+5)*1+2] = a[(LU_IND0+5)*1+2]+a[(LU_IND0+5)*1+2-1]*b[(LU_IND0+5)*1+2]+a[(LU_IND0+5)*1+2-2]*c[(LU_IND0+5)*1+2];
-a[(LU_IND0+6)*1+2] = a[(LU_IND0+6)*1+2]+a[(LU_IND0+6)*1+2-1]*b[(LU_IND0+6)*1+2]+a[(LU_IND0+6)*1+2-2]*c[(LU_IND0+6)*1+2];
 l99802:               ;
 }
 i = 2+MAX0(LU_NUB0, 0)*1;
@@ -10823,27 +9565,17 @@ for(nl = 0; nl <= 49999; nl += 1) {
 {
 int i;
 loop_s323:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+1] = b[LU_IND0*1+1-1]+c[LU_IND0*1+1]*d[LU_IND0*1+1];
 b[LU_IND0*1+1] = a[LU_IND0*1+1]+c[LU_IND0*1+1]*e[LU_IND0*1+1];
 l99801:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+1] = b[(LU_IND0+0)*1+1-1]+c[(LU_IND0+0)*1+1]*d[(LU_IND0+0)*1+1];
 b[(LU_IND0+0)*1+1] = a[(LU_IND0+0)*1+1]+c[(LU_IND0+0)*1+1]*e[(LU_IND0+0)*1+1];
 a[(LU_IND0+1)*1+1] = b[(LU_IND0+1)*1+1-1]+c[(LU_IND0+1)*1+1]*d[(LU_IND0+1)*1+1];
 b[(LU_IND0+1)*1+1] = a[(LU_IND0+1)*1+1]+c[(LU_IND0+1)*1+1]*e[(LU_IND0+1)*1+1];
-a[(LU_IND0+2)*1+1] = b[(LU_IND0+2)*1+1-1]+c[(LU_IND0+2)*1+1]*d[(LU_IND0+2)*1+1];
-b[(LU_IND0+2)*1+1] = a[(LU_IND0+2)*1+1]+c[(LU_IND0+2)*1+1]*e[(LU_IND0+2)*1+1];
-a[(LU_IND0+3)*1+1] = b[(LU_IND0+3)*1+1-1]+c[(LU_IND0+3)*1+1]*d[(LU_IND0+3)*1+1];
-b[(LU_IND0+3)*1+1] = a[(LU_IND0+3)*1+1]+c[(LU_IND0+3)*1+1]*e[(LU_IND0+3)*1+1];
-a[(LU_IND0+4)*1+1] = b[(LU_IND0+4)*1+1-1]+c[(LU_IND0+4)*1+1]*d[(LU_IND0+4)*1+1];
-b[(LU_IND0+4)*1+1] = a[(LU_IND0+4)*1+1]+c[(LU_IND0+4)*1+1]*e[(LU_IND0+4)*1+1];
-a[(LU_IND0+5)*1+1] = b[(LU_IND0+5)*1+1-1]+c[(LU_IND0+5)*1+1]*d[(LU_IND0+5)*1+1];
-b[(LU_IND0+5)*1+1] = a[(LU_IND0+5)*1+1]+c[(LU_IND0+5)*1+1]*e[(LU_IND0+5)*1+1];
-a[(LU_IND0+6)*1+1] = b[(LU_IND0+6)*1+1-1]+c[(LU_IND0+6)*1+1]*d[(LU_IND0+6)*1+1];
-b[(LU_IND0+6)*1+1] = a[(LU_IND0+6)*1+1]+c[(LU_IND0+6)*1+1]*e[(LU_IND0+6)*1+1];
 l99800:               ;
 }
 i = 1+MAX0(LU_NUB0, 0)*1;
@@ -10875,27 +9607,17 @@ j = -1;
 {
 int i;
 loop_s331:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]<(real_t) 0.)
 j = LU_IND0*1+0;
 l99799:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]<(real_t) 0.)
 j = (LU_IND0+0)*1+0;
 if (a[(LU_IND0+1)*1+0]<(real_t) 0.)
 j = (LU_IND0+1)*1+0;
-if (a[(LU_IND0+2)*1+0]<(real_t) 0.)
-j = (LU_IND0+2)*1+0;
-if (a[(LU_IND0+3)*1+0]<(real_t) 0.)
-j = (LU_IND0+3)*1+0;
-if (a[(LU_IND0+4)*1+0]<(real_t) 0.)
-j = (LU_IND0+4)*1+0;
-if (a[(LU_IND0+5)*1+0]<(real_t) 0.)
-j = (LU_IND0+5)*1+0;
-if (a[(LU_IND0+6)*1+0]<(real_t) 0.)
-j = (LU_IND0+6)*1+0;
 l99798:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -10967,7 +9689,7 @@ j = -1;
 {
 int i;
 loop_s341:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (b[LU_IND0*1+0]>(real_t) 0.) {
 j++;
@@ -10975,7 +9697,7 @@ a[j] = b[LU_IND0*1+0];
 }
 l99797:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (b[(LU_IND0+0)*1+0]>(real_t) 0.) {
 j++;
 a[j] = b[(LU_IND0+0)*1+0];
@@ -10983,26 +9705,6 @@ a[j] = b[(LU_IND0+0)*1+0];
 if (b[(LU_IND0+1)*1+0]>(real_t) 0.) {
 j++;
 a[j] = b[(LU_IND0+1)*1+0];
-}
-if (b[(LU_IND0+2)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+2)*1+0];
-}
-if (b[(LU_IND0+3)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+3)*1+0];
-}
-if (b[(LU_IND0+4)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+4)*1+0];
-}
-if (b[(LU_IND0+5)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+5)*1+0];
-}
-if (b[(LU_IND0+6)*1+0]>(real_t) 0.) {
-j++;
-a[j] = b[(LU_IND0+6)*1+0];
 }
 l99796:               ;
 }
@@ -11035,7 +9737,7 @@ j = -1;
 {
 int i;
 loop_s342:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (a[LU_IND0*1+0]>(real_t) 0.) {
 j++;
@@ -11043,7 +9745,7 @@ a[LU_IND0*1+0] = b[j];
 }
 l99795:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (a[(LU_IND0+0)*1+0]>(real_t) 0.) {
 j++;
 a[(LU_IND0+0)*1+0] = b[j];
@@ -11051,26 +9753,6 @@ a[(LU_IND0+0)*1+0] = b[j];
 if (a[(LU_IND0+1)*1+0]>(real_t) 0.) {
 j++;
 a[(LU_IND0+1)*1+0] = b[j];
-}
-if (a[(LU_IND0+2)*1+0]>(real_t) 0.) {
-j++;
-a[(LU_IND0+2)*1+0] = b[j];
-}
-if (a[(LU_IND0+3)*1+0]>(real_t) 0.) {
-j++;
-a[(LU_IND0+3)*1+0] = b[j];
-}
-if (a[(LU_IND0+4)*1+0]>(real_t) 0.) {
-j++;
-a[(LU_IND0+4)*1+0] = b[j];
-}
-if (a[(LU_IND0+5)*1+0]>(real_t) 0.) {
-j++;
-a[(LU_IND0+5)*1+0] = b[j];
-}
-if (a[(LU_IND0+6)*1+0]>(real_t) 0.) {
-j++;
-a[(LU_IND0+6)*1+0] = b[j];
 }
 l99794:               ;
 }
@@ -11105,7 +9787,7 @@ int i;
 for(i = 0; i <= 255; i += 1) {
 int j;
 loop_s343:               LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (bb[LU_IND0*1+0][i]>(real_t) 0.) {
 k++;
@@ -11113,7 +9795,7 @@ flat_2d_array[k] = aa[LU_IND0*1+0][i];
 }
 l99793:                  ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (bb[(LU_IND0+0)*1+0][i]>(real_t) 0.) {
 k++;
 flat_2d_array[k] = aa[(LU_IND0+0)*1+0][i];
@@ -11121,26 +9803,6 @@ flat_2d_array[k] = aa[(LU_IND0+0)*1+0][i];
 if (bb[(LU_IND0+1)*1+0][i]>(real_t) 0.) {
 k++;
 flat_2d_array[k] = aa[(LU_IND0+1)*1+0][i];
-}
-if (bb[(LU_IND0+2)*1+0][i]>(real_t) 0.) {
-k++;
-flat_2d_array[k] = aa[(LU_IND0+2)*1+0][i];
-}
-if (bb[(LU_IND0+3)*1+0][i]>(real_t) 0.) {
-k++;
-flat_2d_array[k] = aa[(LU_IND0+3)*1+0][i];
-}
-if (bb[(LU_IND0+4)*1+0][i]>(real_t) 0.) {
-k++;
-flat_2d_array[k] = aa[(LU_IND0+4)*1+0][i];
-}
-if (bb[(LU_IND0+5)*1+0][i]>(real_t) 0.) {
-k++;
-flat_2d_array[k] = aa[(LU_IND0+5)*1+0][i];
-}
-if (bb[(LU_IND0+6)*1+0][i]>(real_t) 0.) {
-k++;
-flat_2d_array[k] = aa[(LU_IND0+6)*1+0][i];
 }
 l99792:                  ;
 }
@@ -11172,7 +9834,7 @@ for(nl = 0; nl <= 799999; nl += 1) {
 {
 int i;
 loop_s351:            LU_NUB0 = 6400;
-LU_IB0 = 2;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*5+0] += alpha*b[LU_IND0*5+0];
 a[LU_IND0*5+0+1] += alpha*b[LU_IND0*5+0+1];
@@ -11181,7 +9843,7 @@ a[LU_IND0*5+0+3] += alpha*b[LU_IND0*5+0+3];
 a[LU_IND0*5+0+4] += alpha*b[LU_IND0*5+0+4];
 l99791:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*5+0] += alpha*b[(LU_IND0+0)*5+0];
 a[(LU_IND0+0)*5+0+1] += alpha*b[(LU_IND0+0)*5+0+1];
 a[(LU_IND0+0)*5+0+2] += alpha*b[(LU_IND0+0)*5+0+2];
@@ -11192,31 +9854,6 @@ a[(LU_IND0+1)*5+0+1] += alpha*b[(LU_IND0+1)*5+0+1];
 a[(LU_IND0+1)*5+0+2] += alpha*b[(LU_IND0+1)*5+0+2];
 a[(LU_IND0+1)*5+0+3] += alpha*b[(LU_IND0+1)*5+0+3];
 a[(LU_IND0+1)*5+0+4] += alpha*b[(LU_IND0+1)*5+0+4];
-a[(LU_IND0+2)*5+0] += alpha*b[(LU_IND0+2)*5+0];
-a[(LU_IND0+2)*5+0+1] += alpha*b[(LU_IND0+2)*5+0+1];
-a[(LU_IND0+2)*5+0+2] += alpha*b[(LU_IND0+2)*5+0+2];
-a[(LU_IND0+2)*5+0+3] += alpha*b[(LU_IND0+2)*5+0+3];
-a[(LU_IND0+2)*5+0+4] += alpha*b[(LU_IND0+2)*5+0+4];
-a[(LU_IND0+3)*5+0] += alpha*b[(LU_IND0+3)*5+0];
-a[(LU_IND0+3)*5+0+1] += alpha*b[(LU_IND0+3)*5+0+1];
-a[(LU_IND0+3)*5+0+2] += alpha*b[(LU_IND0+3)*5+0+2];
-a[(LU_IND0+3)*5+0+3] += alpha*b[(LU_IND0+3)*5+0+3];
-a[(LU_IND0+3)*5+0+4] += alpha*b[(LU_IND0+3)*5+0+4];
-a[(LU_IND0+4)*5+0] += alpha*b[(LU_IND0+4)*5+0];
-a[(LU_IND0+4)*5+0+1] += alpha*b[(LU_IND0+4)*5+0+1];
-a[(LU_IND0+4)*5+0+2] += alpha*b[(LU_IND0+4)*5+0+2];
-a[(LU_IND0+4)*5+0+3] += alpha*b[(LU_IND0+4)*5+0+3];
-a[(LU_IND0+4)*5+0+4] += alpha*b[(LU_IND0+4)*5+0+4];
-a[(LU_IND0+5)*5+0] += alpha*b[(LU_IND0+5)*5+0];
-a[(LU_IND0+5)*5+0+1] += alpha*b[(LU_IND0+5)*5+0+1];
-a[(LU_IND0+5)*5+0+2] += alpha*b[(LU_IND0+5)*5+0+2];
-a[(LU_IND0+5)*5+0+3] += alpha*b[(LU_IND0+5)*5+0+3];
-a[(LU_IND0+5)*5+0+4] += alpha*b[(LU_IND0+5)*5+0+4];
-a[(LU_IND0+6)*5+0] += alpha*b[(LU_IND0+6)*5+0];
-a[(LU_IND0+6)*5+0+1] += alpha*b[(LU_IND0+6)*5+0+1];
-a[(LU_IND0+6)*5+0+2] += alpha*b[(LU_IND0+6)*5+0+2];
-a[(LU_IND0+6)*5+0+3] += alpha*b[(LU_IND0+6)*5+0+3];
-a[(LU_IND0+6)*5+0+4] += alpha*b[(LU_IND0+6)*5+0+4];
 l99790:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*5;
@@ -11247,7 +9884,7 @@ real_t * restrict C = c;
 {
 int i;
 loop_s1351:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 *A = *B+*C;
 A++;
@@ -11255,27 +9892,7 @@ B++;
 C++;
 l99789:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
-*A = *B+*C;
-A++;
-B++;
-C++;
-*A = *B+*C;
-A++;
-B++;
-C++;
-*A = *B+*C;
-A++;
-B++;
-C++;
-*A = *B+*C;
-A++;
-B++;
-C++;
-*A = *B+*C;
-A++;
-B++;
-C++;
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 *A = *B+*C;
 A++;
 B++;
@@ -11314,19 +9931,14 @@ dot = (real_t) 0.;
 {
 int i;
 loop_s352:            LU_NUB0 = 6400;
-LU_IB0 = 2;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 dot = dot+a[LU_IND0*5+0]*b[LU_IND0*5+0]+a[LU_IND0*5+0+1]*b[LU_IND0*5+0+1]+a[LU_IND0*5+0+2]*b[LU_IND0*5+0+2]+a[LU_IND0*5+0+3]*b[LU_IND0*5+0+3]+a[LU_IND0*5+0+4]*b[LU_IND0*5+0+4];
 l99787:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 dot = dot+a[(LU_IND0+0)*5+0]*b[(LU_IND0+0)*5+0]+a[(LU_IND0+0)*5+0+1]*b[(LU_IND0+0)*5+0+1]+a[(LU_IND0+0)*5+0+2]*b[(LU_IND0+0)*5+0+2]+a[(LU_IND0+0)*5+0+3]*b[(LU_IND0+0)*5+0+3]+a[(LU_IND0+0)*5+0+4]*b[(LU_IND0+0)*5+0+4];
 dot = dot+a[(LU_IND0+1)*5+0]*b[(LU_IND0+1)*5+0]+a[(LU_IND0+1)*5+0+1]*b[(LU_IND0+1)*5+0+1]+a[(LU_IND0+1)*5+0+2]*b[(LU_IND0+1)*5+0+2]+a[(LU_IND0+1)*5+0+3]*b[(LU_IND0+1)*5+0+3]+a[(LU_IND0+1)*5+0+4]*b[(LU_IND0+1)*5+0+4];
-dot = dot+a[(LU_IND0+2)*5+0]*b[(LU_IND0+2)*5+0]+a[(LU_IND0+2)*5+0+1]*b[(LU_IND0+2)*5+0+1]+a[(LU_IND0+2)*5+0+2]*b[(LU_IND0+2)*5+0+2]+a[(LU_IND0+2)*5+0+3]*b[(LU_IND0+2)*5+0+3]+a[(LU_IND0+2)*5+0+4]*b[(LU_IND0+2)*5+0+4];
-dot = dot+a[(LU_IND0+3)*5+0]*b[(LU_IND0+3)*5+0]+a[(LU_IND0+3)*5+0+1]*b[(LU_IND0+3)*5+0+1]+a[(LU_IND0+3)*5+0+2]*b[(LU_IND0+3)*5+0+2]+a[(LU_IND0+3)*5+0+3]*b[(LU_IND0+3)*5+0+3]+a[(LU_IND0+3)*5+0+4]*b[(LU_IND0+3)*5+0+4];
-dot = dot+a[(LU_IND0+4)*5+0]*b[(LU_IND0+4)*5+0]+a[(LU_IND0+4)*5+0+1]*b[(LU_IND0+4)*5+0+1]+a[(LU_IND0+4)*5+0+2]*b[(LU_IND0+4)*5+0+2]+a[(LU_IND0+4)*5+0+3]*b[(LU_IND0+4)*5+0+3]+a[(LU_IND0+4)*5+0+4]*b[(LU_IND0+4)*5+0+4];
-dot = dot+a[(LU_IND0+5)*5+0]*b[(LU_IND0+5)*5+0]+a[(LU_IND0+5)*5+0+1]*b[(LU_IND0+5)*5+0+1]+a[(LU_IND0+5)*5+0+2]*b[(LU_IND0+5)*5+0+2]+a[(LU_IND0+5)*5+0+3]*b[(LU_IND0+5)*5+0+3]+a[(LU_IND0+5)*5+0+4]*b[(LU_IND0+5)*5+0+4];
-dot = dot+a[(LU_IND0+6)*5+0]*b[(LU_IND0+6)*5+0]+a[(LU_IND0+6)*5+0+1]*b[(LU_IND0+6)*5+0+1]+a[(LU_IND0+6)*5+0+2]*b[(LU_IND0+6)*5+0+2]+a[(LU_IND0+6)*5+0+3]*b[(LU_IND0+6)*5+0+3]+a[(LU_IND0+6)*5+0+4]*b[(LU_IND0+6)*5+0+4];
 l99786:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*5;
@@ -11359,7 +9971,7 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s353:            LU_NUB0 = 6400;
-LU_IB0 = 2;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*5+0] += alpha*b[ip[LU_IND0*5+0]];
 a[LU_IND0*5+0+1] += alpha*b[ip[LU_IND0*5+0+1]];
@@ -11368,7 +9980,7 @@ a[LU_IND0*5+0+3] += alpha*b[ip[LU_IND0*5+0+3]];
 a[LU_IND0*5+0+4] += alpha*b[ip[LU_IND0*5+0+4]];
 l99785:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*5+0] += alpha*b[ip[(LU_IND0+0)*5+0]];
 a[(LU_IND0+0)*5+0+1] += alpha*b[ip[(LU_IND0+0)*5+0+1]];
 a[(LU_IND0+0)*5+0+2] += alpha*b[ip[(LU_IND0+0)*5+0+2]];
@@ -11379,31 +9991,6 @@ a[(LU_IND0+1)*5+0+1] += alpha*b[ip[(LU_IND0+1)*5+0+1]];
 a[(LU_IND0+1)*5+0+2] += alpha*b[ip[(LU_IND0+1)*5+0+2]];
 a[(LU_IND0+1)*5+0+3] += alpha*b[ip[(LU_IND0+1)*5+0+3]];
 a[(LU_IND0+1)*5+0+4] += alpha*b[ip[(LU_IND0+1)*5+0+4]];
-a[(LU_IND0+2)*5+0] += alpha*b[ip[(LU_IND0+2)*5+0]];
-a[(LU_IND0+2)*5+0+1] += alpha*b[ip[(LU_IND0+2)*5+0+1]];
-a[(LU_IND0+2)*5+0+2] += alpha*b[ip[(LU_IND0+2)*5+0+2]];
-a[(LU_IND0+2)*5+0+3] += alpha*b[ip[(LU_IND0+2)*5+0+3]];
-a[(LU_IND0+2)*5+0+4] += alpha*b[ip[(LU_IND0+2)*5+0+4]];
-a[(LU_IND0+3)*5+0] += alpha*b[ip[(LU_IND0+3)*5+0]];
-a[(LU_IND0+3)*5+0+1] += alpha*b[ip[(LU_IND0+3)*5+0+1]];
-a[(LU_IND0+3)*5+0+2] += alpha*b[ip[(LU_IND0+3)*5+0+2]];
-a[(LU_IND0+3)*5+0+3] += alpha*b[ip[(LU_IND0+3)*5+0+3]];
-a[(LU_IND0+3)*5+0+4] += alpha*b[ip[(LU_IND0+3)*5+0+4]];
-a[(LU_IND0+4)*5+0] += alpha*b[ip[(LU_IND0+4)*5+0]];
-a[(LU_IND0+4)*5+0+1] += alpha*b[ip[(LU_IND0+4)*5+0+1]];
-a[(LU_IND0+4)*5+0+2] += alpha*b[ip[(LU_IND0+4)*5+0+2]];
-a[(LU_IND0+4)*5+0+3] += alpha*b[ip[(LU_IND0+4)*5+0+3]];
-a[(LU_IND0+4)*5+0+4] += alpha*b[ip[(LU_IND0+4)*5+0+4]];
-a[(LU_IND0+5)*5+0] += alpha*b[ip[(LU_IND0+5)*5+0]];
-a[(LU_IND0+5)*5+0+1] += alpha*b[ip[(LU_IND0+5)*5+0+1]];
-a[(LU_IND0+5)*5+0+2] += alpha*b[ip[(LU_IND0+5)*5+0+2]];
-a[(LU_IND0+5)*5+0+3] += alpha*b[ip[(LU_IND0+5)*5+0+3]];
-a[(LU_IND0+5)*5+0+4] += alpha*b[ip[(LU_IND0+5)*5+0+4]];
-a[(LU_IND0+6)*5+0] += alpha*b[ip[(LU_IND0+6)*5+0]];
-a[(LU_IND0+6)*5+0+1] += alpha*b[ip[(LU_IND0+6)*5+0+1]];
-a[(LU_IND0+6)*5+0+2] += alpha*b[ip[(LU_IND0+6)*5+0+2]];
-a[(LU_IND0+6)*5+0+3] += alpha*b[ip[(LU_IND0+6)*5+0+3]];
-a[(LU_IND0+6)*5+0+4] += alpha*b[ip[(LU_IND0+6)*5+0+4]];
 l99784:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*5;
@@ -11435,19 +10022,14 @@ yy = xx;
 {
 int i;
 loop_s421:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 xx[LU_IND0*1+0] = yy[LU_IND0*1+0+1]+a[LU_IND0*1+0];
 l99783:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 xx[(LU_IND0+0)*1+0] = yy[(LU_IND0+0)*1+0+1]+a[(LU_IND0+0)*1+0];
 xx[(LU_IND0+1)*1+0] = yy[(LU_IND0+1)*1+0+1]+a[(LU_IND0+1)*1+0];
-xx[(LU_IND0+2)*1+0] = yy[(LU_IND0+2)*1+0+1]+a[(LU_IND0+2)*1+0];
-xx[(LU_IND0+3)*1+0] = yy[(LU_IND0+3)*1+0+1]+a[(LU_IND0+3)*1+0];
-xx[(LU_IND0+4)*1+0] = yy[(LU_IND0+4)*1+0+1]+a[(LU_IND0+4)*1+0];
-xx[(LU_IND0+5)*1+0] = yy[(LU_IND0+5)*1+0+1]+a[(LU_IND0+5)*1+0];
-xx[(LU_IND0+6)*1+0] = yy[(LU_IND0+6)*1+0+1]+a[(LU_IND0+6)*1+0];
 l99782:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11478,19 +10060,14 @@ for(nl = 0; nl <= 799999; nl += 1) {
 {
 int i;
 loop_s1421:            LU_NUB0 = 16000;
-LU_IB0 = 5;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 b[LU_IND0*1+0] = xx[LU_IND0*1+0]+a[LU_IND0*1+0];
 l99781:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 b[(LU_IND0+0)*1+0] = xx[(LU_IND0+0)*1+0]+a[(LU_IND0+0)*1+0];
 b[(LU_IND0+1)*1+0] = xx[(LU_IND0+1)*1+0]+a[(LU_IND0+1)*1+0];
-b[(LU_IND0+2)*1+0] = xx[(LU_IND0+2)*1+0]+a[(LU_IND0+2)*1+0];
-b[(LU_IND0+3)*1+0] = xx[(LU_IND0+3)*1+0]+a[(LU_IND0+3)*1+0];
-b[(LU_IND0+4)*1+0] = xx[(LU_IND0+4)*1+0]+a[(LU_IND0+4)*1+0];
-b[(LU_IND0+5)*1+0] = xx[(LU_IND0+5)*1+0]+a[(LU_IND0+5)*1+0];
-b[(LU_IND0+6)*1+0] = xx[(LU_IND0+6)*1+0]+a[(LU_IND0+6)*1+0];
 l99780:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11522,19 +10099,14 @@ for(nl = 0; nl <= 799999; nl += 1) {
 {
 int i;
 loop_s422:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 xx[LU_IND0*1+0] = flat_2d_array[LU_IND0*1+0+8]+a[LU_IND0*1+0];
 l99779:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 xx[(LU_IND0+0)*1+0] = flat_2d_array[(LU_IND0+0)*1+0+8]+a[(LU_IND0+0)*1+0];
 xx[(LU_IND0+1)*1+0] = flat_2d_array[(LU_IND0+1)*1+0+8]+a[(LU_IND0+1)*1+0];
-xx[(LU_IND0+2)*1+0] = flat_2d_array[(LU_IND0+2)*1+0+8]+a[(LU_IND0+2)*1+0];
-xx[(LU_IND0+3)*1+0] = flat_2d_array[(LU_IND0+3)*1+0+8]+a[(LU_IND0+3)*1+0];
-xx[(LU_IND0+4)*1+0] = flat_2d_array[(LU_IND0+4)*1+0+8]+a[(LU_IND0+4)*1+0];
-xx[(LU_IND0+5)*1+0] = flat_2d_array[(LU_IND0+5)*1+0+8]+a[(LU_IND0+5)*1+0];
-xx[(LU_IND0+6)*1+0] = flat_2d_array[(LU_IND0+6)*1+0+8]+a[(LU_IND0+6)*1+0];
 l99778:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11567,19 +10139,14 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s423:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 flat_2d_array[LU_IND0*1+0+1] = xx[LU_IND0*1+0]+a[LU_IND0*1+0];
 l99777:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 flat_2d_array[(LU_IND0+0)*1+0+1] = xx[(LU_IND0+0)*1+0]+a[(LU_IND0+0)*1+0];
 flat_2d_array[(LU_IND0+1)*1+0+1] = xx[(LU_IND0+1)*1+0]+a[(LU_IND0+1)*1+0];
-flat_2d_array[(LU_IND0+2)*1+0+1] = xx[(LU_IND0+2)*1+0]+a[(LU_IND0+2)*1+0];
-flat_2d_array[(LU_IND0+3)*1+0+1] = xx[(LU_IND0+3)*1+0]+a[(LU_IND0+3)*1+0];
-flat_2d_array[(LU_IND0+4)*1+0+1] = xx[(LU_IND0+4)*1+0]+a[(LU_IND0+4)*1+0];
-flat_2d_array[(LU_IND0+5)*1+0+1] = xx[(LU_IND0+5)*1+0]+a[(LU_IND0+5)*1+0];
-flat_2d_array[(LU_IND0+6)*1+0+1] = xx[(LU_IND0+6)*1+0]+a[(LU_IND0+6)*1+0];
 l99776:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11613,19 +10180,14 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s424:            LU_NUB0 = 31999;
-LU_IB0 = 2;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 xx[LU_IND0*1+0+1] = flat_2d_array[LU_IND0*1+0]+a[LU_IND0*1+0];
 l99775:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 xx[(LU_IND0+0)*1+0+1] = flat_2d_array[(LU_IND0+0)*1+0]+a[(LU_IND0+0)*1+0];
 xx[(LU_IND0+1)*1+0+1] = flat_2d_array[(LU_IND0+1)*1+0]+a[(LU_IND0+1)*1+0];
-xx[(LU_IND0+2)*1+0+1] = flat_2d_array[(LU_IND0+2)*1+0]+a[(LU_IND0+2)*1+0];
-xx[(LU_IND0+3)*1+0+1] = flat_2d_array[(LU_IND0+3)*1+0]+a[(LU_IND0+3)*1+0];
-xx[(LU_IND0+4)*1+0+1] = flat_2d_array[(LU_IND0+4)*1+0]+a[(LU_IND0+4)*1+0];
-xx[(LU_IND0+5)*1+0+1] = flat_2d_array[(LU_IND0+5)*1+0]+a[(LU_IND0+5)*1+0];
-xx[(LU_IND0+6)*1+0+1] = flat_2d_array[(LU_IND0+6)*1+0]+a[(LU_IND0+6)*1+0];
 l99774:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11658,19 +10220,14 @@ for(nl = 0; nl <= 999999; nl += 1) {
 {
 int i;
 loop_s431:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = a[LU_IND0*1+0+k]+b[LU_IND0*1+0];
 l99773:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0+k]+b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0+k]+b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0+k]+b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0+k]+b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0+k]+b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0+k]+b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0+k]+b[(LU_IND0+6)*1+0];
 l99772:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11699,7 +10256,7 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s441:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (d[LU_IND0*1+0]<(real_t) 0.)
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*c[LU_IND0*1+0];
@@ -11709,7 +10266,7 @@ else
 a[LU_IND0*1+0] += c[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99771:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (d[(LU_IND0+0)*1+0]<(real_t) 0.)
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 else if (d[(LU_IND0+0)*1+0]==(real_t) 0.)
@@ -11722,36 +10279,6 @@ else if (d[(LU_IND0+1)*1+0]==(real_t) 0.)
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*b[(LU_IND0+1)*1+0];
 else
 a[(LU_IND0+1)*1+0] += c[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-if (d[(LU_IND0+2)*1+0]<(real_t) 0.)
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-else if (d[(LU_IND0+2)*1+0]==(real_t) 0.)
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*b[(LU_IND0+2)*1+0];
-else
-a[(LU_IND0+2)*1+0] += c[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-if (d[(LU_IND0+3)*1+0]<(real_t) 0.)
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-else if (d[(LU_IND0+3)*1+0]==(real_t) 0.)
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*b[(LU_IND0+3)*1+0];
-else
-a[(LU_IND0+3)*1+0] += c[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-if (d[(LU_IND0+4)*1+0]<(real_t) 0.)
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-else if (d[(LU_IND0+4)*1+0]==(real_t) 0.)
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*b[(LU_IND0+4)*1+0];
-else
-a[(LU_IND0+4)*1+0] += c[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-if (d[(LU_IND0+5)*1+0]<(real_t) 0.)
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-else if (d[(LU_IND0+5)*1+0]==(real_t) 0.)
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*b[(LU_IND0+5)*1+0];
-else
-a[(LU_IND0+5)*1+0] += c[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-if (d[(LU_IND0+6)*1+0]<(real_t) 0.)
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
-else if (d[(LU_IND0+6)*1+0]==(real_t) 0.)
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*b[(LU_IND0+6)*1+0];
-else
-a[(LU_IND0+6)*1+0] += c[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99770:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11854,19 +10381,14 @@ for(nl = 0; nl <= 19999; nl += 1) {
 {
 int i;
 loop_s451:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = sinf(b[LU_IND0*1+0])+cosf(c[LU_IND0*1+0]);
 l99769:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = sinf(b[(LU_IND0+0)*1+0])+cosf(c[(LU_IND0+0)*1+0]);
 a[(LU_IND0+1)*1+0] = sinf(b[(LU_IND0+1)*1+0])+cosf(c[(LU_IND0+1)*1+0]);
-a[(LU_IND0+2)*1+0] = sinf(b[(LU_IND0+2)*1+0])+cosf(c[(LU_IND0+2)*1+0]);
-a[(LU_IND0+3)*1+0] = sinf(b[(LU_IND0+3)*1+0])+cosf(c[(LU_IND0+3)*1+0]);
-a[(LU_IND0+4)*1+0] = sinf(b[(LU_IND0+4)*1+0])+cosf(c[(LU_IND0+4)*1+0]);
-a[(LU_IND0+5)*1+0] = sinf(b[(LU_IND0+5)*1+0])+cosf(c[(LU_IND0+5)*1+0]);
-a[(LU_IND0+6)*1+0] = sinf(b[(LU_IND0+6)*1+0])+cosf(c[(LU_IND0+6)*1+0]);
 l99768:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11895,19 +10417,14 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_s452:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[LU_IND0*1+0]+c[LU_IND0*1+0]*(real_t) (LU_IND0*1+0+1);
 l99767:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0]*(real_t) ((LU_IND0+0)*1+0+1);
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0]*(real_t) ((LU_IND0+1)*1+0+1);
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0]*(real_t) ((LU_IND0+2)*1+0+1);
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0]*(real_t) ((LU_IND0+3)*1+0+1);
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0]*(real_t) ((LU_IND0+4)*1+0+1);
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0]*(real_t) ((LU_IND0+5)*1+0+1);
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0]*(real_t) ((LU_IND0+6)*1+0+1);
 l99766:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11938,27 +10455,17 @@ s = 0.;
 {
 int i;
 loop_s453:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 s += (real_t) 2.;
 a[LU_IND0*1+0] = s*b[LU_IND0*1+0];
 l99765:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 s += (real_t) 2.;
 a[(LU_IND0+0)*1+0] = s*b[(LU_IND0+0)*1+0];
 s += (real_t) 2.;
 a[(LU_IND0+1)*1+0] = s*b[(LU_IND0+1)*1+0];
-s += (real_t) 2.;
-a[(LU_IND0+2)*1+0] = s*b[(LU_IND0+2)*1+0];
-s += (real_t) 2.;
-a[(LU_IND0+3)*1+0] = s*b[(LU_IND0+3)*1+0];
-s += (real_t) 2.;
-a[(LU_IND0+4)*1+0] = s*b[(LU_IND0+4)*1+0];
-s += (real_t) 2.;
-a[(LU_IND0+5)*1+0] = s*b[(LU_IND0+5)*1+0];
-s += (real_t) 2.;
-a[(LU_IND0+6)*1+0] = s*b[(LU_IND0+6)*1+0];
 l99764:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -11993,35 +10500,20 @@ for(nl = 0; nl <= 49999; nl += 1) {
 {
 int i;
 loop_s471:            LU_NUB0 = (m-1-0+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 x[LU_IND0*1+0] = b[LU_IND0*1+0]+d[LU_IND0*1+0]*d[LU_IND0*1+0];
 s471s();
 b[LU_IND0*1+0] = c[LU_IND0*1+0]+d[LU_IND0*1+0]*e[LU_IND0*1+0];
 l99763:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 x[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 s471s();
 b[(LU_IND0+0)*1+0] = c[(LU_IND0+0)*1+0]+d[(LU_IND0+0)*1+0]*e[(LU_IND0+0)*1+0];
 x[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
 s471s();
 b[(LU_IND0+1)*1+0] = c[(LU_IND0+1)*1+0]+d[(LU_IND0+1)*1+0]*e[(LU_IND0+1)*1+0];
-x[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-s471s();
-b[(LU_IND0+2)*1+0] = c[(LU_IND0+2)*1+0]+d[(LU_IND0+2)*1+0]*e[(LU_IND0+2)*1+0];
-x[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-s471s();
-b[(LU_IND0+3)*1+0] = c[(LU_IND0+3)*1+0]+d[(LU_IND0+3)*1+0]*e[(LU_IND0+3)*1+0];
-x[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-s471s();
-b[(LU_IND0+4)*1+0] = c[(LU_IND0+4)*1+0]+d[(LU_IND0+4)*1+0]*e[(LU_IND0+4)*1+0];
-x[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-s471s();
-b[(LU_IND0+5)*1+0] = c[(LU_IND0+5)*1+0]+d[(LU_IND0+5)*1+0]*e[(LU_IND0+5)*1+0];
-x[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
-s471s();
-b[(LU_IND0+6)*1+0] = c[(LU_IND0+6)*1+0]+d[(LU_IND0+6)*1+0]*e[(LU_IND0+6)*1+0];
 l99762:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12050,35 +10542,20 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s481:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (d[LU_IND0*1+0]<(real_t) 0.)
 exit(0);
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99761:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (d[(LU_IND0+0)*1+0]<(real_t) 0.)
 exit(0);
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 if (d[(LU_IND0+1)*1+0]<(real_t) 0.)
 exit(0);
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-if (d[(LU_IND0+2)*1+0]<(real_t) 0.)
-exit(0);
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-if (d[(LU_IND0+3)*1+0]<(real_t) 0.)
-exit(0);
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-if (d[(LU_IND0+4)*1+0]<(real_t) 0.)
-exit(0);
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-if (d[(LU_IND0+5)*1+0]<(real_t) 0.)
-exit(0);
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-if (d[(LU_IND0+6)*1+0]<(real_t) 0.)
-exit(0);
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99760:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12141,19 +10618,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s491:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[ip[LU_IND0*1+0]] = b[LU_IND0*1+0]+c[LU_IND0*1+0]*d[LU_IND0*1+0];
 l99759:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[ip[(LU_IND0+0)*1+0]] = b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0]*d[(LU_IND0+0)*1+0];
 a[ip[(LU_IND0+1)*1+0]] = b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0]*d[(LU_IND0+1)*1+0];
-a[ip[(LU_IND0+2)*1+0]] = b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0]*d[(LU_IND0+2)*1+0];
-a[ip[(LU_IND0+3)*1+0]] = b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0]*d[(LU_IND0+3)*1+0];
-a[ip[(LU_IND0+4)*1+0]] = b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0]*d[(LU_IND0+4)*1+0];
-a[ip[(LU_IND0+5)*1+0]] = b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0]*d[(LU_IND0+5)*1+0];
-a[ip[(LU_IND0+6)*1+0]] = b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0]*d[(LU_IND0+6)*1+0];
 l99758:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12190,19 +10662,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s4112:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] += b[ip[LU_IND0*1+0]]*s;
 l99757:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] += b[ip[(LU_IND0+0)*1+0]]*s;
 a[(LU_IND0+1)*1+0] += b[ip[(LU_IND0+1)*1+0]]*s;
-a[(LU_IND0+2)*1+0] += b[ip[(LU_IND0+2)*1+0]]*s;
-a[(LU_IND0+3)*1+0] += b[ip[(LU_IND0+3)*1+0]]*s;
-a[(LU_IND0+4)*1+0] += b[ip[(LU_IND0+4)*1+0]]*s;
-a[(LU_IND0+5)*1+0] += b[ip[(LU_IND0+5)*1+0]]*s;
-a[(LU_IND0+6)*1+0] += b[ip[(LU_IND0+6)*1+0]]*s;
 l99756:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12234,19 +10701,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s4113:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[ip[LU_IND0*1+0]] = b[ip[LU_IND0*1+0]]+c[LU_IND0*1+0];
 l99755:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[ip[(LU_IND0+0)*1+0]] = b[ip[(LU_IND0+0)*1+0]]+c[(LU_IND0+0)*1+0];
 a[ip[(LU_IND0+1)*1+0]] = b[ip[(LU_IND0+1)*1+0]]+c[(LU_IND0+1)*1+0];
-a[ip[(LU_IND0+2)*1+0]] = b[ip[(LU_IND0+2)*1+0]]+c[(LU_IND0+2)*1+0];
-a[ip[(LU_IND0+3)*1+0]] = b[ip[(LU_IND0+3)*1+0]]+c[(LU_IND0+3)*1+0];
-a[ip[(LU_IND0+4)*1+0]] = b[ip[(LU_IND0+4)*1+0]]+c[(LU_IND0+4)*1+0];
-a[ip[(LU_IND0+5)*1+0]] = b[ip[(LU_IND0+5)*1+0]]+c[(LU_IND0+5)*1+0];
-a[ip[(LU_IND0+6)*1+0]] = b[ip[(LU_IND0+6)*1+0]]+c[(LU_IND0+6)*1+0];
 l99754:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12284,34 +10746,19 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s4114:            LU_NUB0 = (31999-(n1-1)+1)/1;
-LU_IB0 = MOD(LU_NUB0, 7);
+LU_IB0 = MOD(LU_NUB0, 2);
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 k = ip[LU_IND0*1+(n1-1)];
 a[LU_IND0*1+(n1-1)] = b[LU_IND0*1+(n1-1)]+c[32000-k+1-2]*d[LU_IND0*1+(n1-1)];
 k += 5;
 l99753:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 k = ip[(LU_IND0+0)*1+(n1-1)];
 a[(LU_IND0+0)*1+(n1-1)] = b[(LU_IND0+0)*1+(n1-1)]+c[32000-k+1-2]*d[(LU_IND0+0)*1+(n1-1)];
 k += 5;
 k = ip[(LU_IND0+1)*1+(n1-1)];
 a[(LU_IND0+1)*1+(n1-1)] = b[(LU_IND0+1)*1+(n1-1)]+c[32000-k+1-2]*d[(LU_IND0+1)*1+(n1-1)];
-k += 5;
-k = ip[(LU_IND0+2)*1+(n1-1)];
-a[(LU_IND0+2)*1+(n1-1)] = b[(LU_IND0+2)*1+(n1-1)]+c[32000-k+1-2]*d[(LU_IND0+2)*1+(n1-1)];
-k += 5;
-k = ip[(LU_IND0+3)*1+(n1-1)];
-a[(LU_IND0+3)*1+(n1-1)] = b[(LU_IND0+3)*1+(n1-1)]+c[32000-k+1-2]*d[(LU_IND0+3)*1+(n1-1)];
-k += 5;
-k = ip[(LU_IND0+4)*1+(n1-1)];
-a[(LU_IND0+4)*1+(n1-1)] = b[(LU_IND0+4)*1+(n1-1)]+c[32000-k+1-2]*d[(LU_IND0+4)*1+(n1-1)];
-k += 5;
-k = ip[(LU_IND0+5)*1+(n1-1)];
-a[(LU_IND0+5)*1+(n1-1)] = b[(LU_IND0+5)*1+(n1-1)]+c[32000-k+1-2]*d[(LU_IND0+5)*1+(n1-1)];
-k += 5;
-k = ip[(LU_IND0+6)*1+(n1-1)];
-a[(LU_IND0+6)*1+(n1-1)] = b[(LU_IND0+6)*1+(n1-1)]+c[32000-k+1-2]*d[(LU_IND0+6)*1+(n1-1)];
 k += 5;
 l99752:               ;
 }
@@ -12346,19 +10793,14 @@ sum = 0.;
 {
 int i;
 loop_s4115:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 sum += a[LU_IND0*1+0]*b[ip[LU_IND0*1+0]];
 l99751:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 sum += a[(LU_IND0+0)*1+0]*b[ip[(LU_IND0+0)*1+0]];
 sum += a[(LU_IND0+1)*1+0]*b[ip[(LU_IND0+1)*1+0]];
-sum += a[(LU_IND0+2)*1+0]*b[ip[(LU_IND0+2)*1+0]];
-sum += a[(LU_IND0+3)*1+0]*b[ip[(LU_IND0+3)*1+0]];
-sum += a[(LU_IND0+4)*1+0]*b[ip[(LU_IND0+4)*1+0]];
-sum += a[(LU_IND0+5)*1+0]*b[ip[(LU_IND0+5)*1+0]];
-sum += a[(LU_IND0+6)*1+0]*b[ip[(LU_IND0+6)*1+0]];
 l99750:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12400,27 +10842,17 @@ sum = 0.;
 {
 int i;
 loop_s4116:            LU_NUB0 = 255;
-LU_IB0 = 3;
+LU_IB0 = 1;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 off = inc+(LU_IND0*1+0);
 sum += a[off]*aa[j-1][ip[LU_IND0*1+0]];
 l99749:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 off = inc+((LU_IND0+0)*1+0);
 sum += a[off]*aa[j-1][ip[(LU_IND0+0)*1+0]];
 off = inc+((LU_IND0+1)*1+0);
 sum += a[off]*aa[j-1][ip[(LU_IND0+1)*1+0]];
-off = inc+((LU_IND0+2)*1+0);
-sum += a[off]*aa[j-1][ip[(LU_IND0+2)*1+0]];
-off = inc+((LU_IND0+3)*1+0);
-sum += a[off]*aa[j-1][ip[(LU_IND0+3)*1+0]];
-off = inc+((LU_IND0+4)*1+0);
-sum += a[off]*aa[j-1][ip[(LU_IND0+4)*1+0]];
-off = inc+((LU_IND0+5)*1+0);
-sum += a[off]*aa[j-1][ip[(LU_IND0+5)*1+0]];
-off = inc+((LU_IND0+6)*1+0);
-sum += a[off]*aa[j-1][ip[(LU_IND0+6)*1+0]];
 l99748:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12449,19 +10881,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s4117:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[LU_IND0*1+0]+c[(LU_IND0*1+0)/2]*d[LU_IND0*1+0];
 l99747:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0]+c[((LU_IND0+0)*1+0)/2]*d[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0]+c[((LU_IND0+1)*1+0)/2]*d[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0]+c[((LU_IND0+2)*1+0)/2]*d[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0]+c[((LU_IND0+3)*1+0)/2]*d[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0]+c[((LU_IND0+4)*1+0)/2]*d[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0]+c[((LU_IND0+5)*1+0)/2]*d[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0]+c[((LU_IND0+6)*1+0)/2]*d[(LU_IND0+6)*1+0];
 l99746:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12494,19 +10921,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_s4121:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] += f(b[LU_IND0*1+0], c[LU_IND0*1+0]);
 l99745:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] += f(b[(LU_IND0+0)*1+0], c[(LU_IND0+0)*1+0]);
 a[(LU_IND0+1)*1+0] += f(b[(LU_IND0+1)*1+0], c[(LU_IND0+1)*1+0]);
-a[(LU_IND0+2)*1+0] += f(b[(LU_IND0+2)*1+0], c[(LU_IND0+2)*1+0]);
-a[(LU_IND0+3)*1+0] += f(b[(LU_IND0+3)*1+0], c[(LU_IND0+3)*1+0]);
-a[(LU_IND0+4)*1+0] += f(b[(LU_IND0+4)*1+0], c[(LU_IND0+4)*1+0]);
-a[(LU_IND0+5)*1+0] += f(b[(LU_IND0+5)*1+0], c[(LU_IND0+5)*1+0]);
-a[(LU_IND0+6)*1+0] += f(b[(LU_IND0+6)*1+0], c[(LU_IND0+6)*1+0]);
 l99744:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12535,19 +10957,14 @@ for(nl = 0; nl <= 999999; nl += 1) {
 {
 int i;
 loop_va:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[LU_IND0*1+0];
 l99743:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0];
 l99742:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12579,19 +10996,14 @@ for(nl = 0; nl <= 199999; nl += 1) {
 {
 int i;
 loop_vag:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = b[ip[LU_IND0*1+0]];
 l99741:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = b[ip[(LU_IND0+0)*1+0]];
 a[(LU_IND0+1)*1+0] = b[ip[(LU_IND0+1)*1+0]];
-a[(LU_IND0+2)*1+0] = b[ip[(LU_IND0+2)*1+0]];
-a[(LU_IND0+3)*1+0] = b[ip[(LU_IND0+3)*1+0]];
-a[(LU_IND0+4)*1+0] = b[ip[(LU_IND0+4)*1+0]];
-a[(LU_IND0+5)*1+0] = b[ip[(LU_IND0+5)*1+0]];
-a[(LU_IND0+6)*1+0] = b[ip[(LU_IND0+6)*1+0]];
 l99740:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12623,19 +11035,14 @@ for(nl = 0; nl <= 199999; nl += 1) {
 {
 int i;
 loop_vas:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[ip[LU_IND0*1+0]] = b[LU_IND0*1+0];
 l99739:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[ip[(LU_IND0+0)*1+0]] = b[(LU_IND0+0)*1+0];
 a[ip[(LU_IND0+1)*1+0]] = b[(LU_IND0+1)*1+0];
-a[ip[(LU_IND0+2)*1+0]] = b[(LU_IND0+2)*1+0];
-a[ip[(LU_IND0+3)*1+0]] = b[(LU_IND0+3)*1+0];
-a[ip[(LU_IND0+4)*1+0]] = b[(LU_IND0+4)*1+0];
-a[ip[(LU_IND0+5)*1+0]] = b[(LU_IND0+5)*1+0];
-a[ip[(LU_IND0+6)*1+0]] = b[(LU_IND0+6)*1+0];
 l99738:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12664,27 +11071,17 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_vif:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 if (b[LU_IND0*1+0]>(real_t) 0.)
 a[LU_IND0*1+0] = b[LU_IND0*1+0];
 l99737:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 if (b[(LU_IND0+0)*1+0]>(real_t) 0.)
 a[(LU_IND0+0)*1+0] = b[(LU_IND0+0)*1+0];
 if (b[(LU_IND0+1)*1+0]>(real_t) 0.)
 a[(LU_IND0+1)*1+0] = b[(LU_IND0+1)*1+0];
-if (b[(LU_IND0+2)*1+0]>(real_t) 0.)
-a[(LU_IND0+2)*1+0] = b[(LU_IND0+2)*1+0];
-if (b[(LU_IND0+3)*1+0]>(real_t) 0.)
-a[(LU_IND0+3)*1+0] = b[(LU_IND0+3)*1+0];
-if (b[(LU_IND0+4)*1+0]>(real_t) 0.)
-a[(LU_IND0+4)*1+0] = b[(LU_IND0+4)*1+0];
-if (b[(LU_IND0+5)*1+0]>(real_t) 0.)
-a[(LU_IND0+5)*1+0] = b[(LU_IND0+5)*1+0];
-if (b[(LU_IND0+6)*1+0]>(real_t) 0.)
-a[(LU_IND0+6)*1+0] = b[(LU_IND0+6)*1+0];
 l99736:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12713,19 +11110,14 @@ for(nl = 0; nl <= 999999; nl += 1) {
 {
 int i;
 loop_vpv:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] += b[LU_IND0*1+0];
 l99735:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0];
 l99734:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12754,19 +11146,14 @@ for(nl = 0; nl <= 999999; nl += 1) {
 {
 int i;
 loop_vtv:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] *= b[LU_IND0*1+0];
 l99733:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] *= b[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] *= b[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] *= b[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] *= b[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] *= b[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] *= b[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] *= b[(LU_IND0+6)*1+0];
 l99732:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12795,19 +11182,14 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_vpvtv:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99731:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99730:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12838,19 +11220,14 @@ for(nl = 0; nl <= 99999; nl += 1) {
 {
 int i;
 loop_vpvts:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] += b[LU_IND0*1+0]*s;
 l99729:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]*s;
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]*s;
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]*s;
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]*s;
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]*s;
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]*s;
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]*s;
 l99728:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12879,19 +11256,14 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_vpvpv:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] += b[LU_IND0*1+0]+c[LU_IND0*1+0];
 l99727:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] += b[(LU_IND0+0)*1+0]+c[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] += b[(LU_IND0+1)*1+0]+c[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] += b[(LU_IND0+2)*1+0]+c[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] += b[(LU_IND0+3)*1+0]+c[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] += b[(LU_IND0+4)*1+0]+c[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] += b[(LU_IND0+5)*1+0]+c[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] += b[(LU_IND0+6)*1+0]+c[(LU_IND0+6)*1+0];
 l99726:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12920,19 +11292,14 @@ for(nl = 0; nl <= 399999; nl += 1) {
 {
 int i;
 loop_vtvtv:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a[LU_IND0*1+0] = a[LU_IND0*1+0]*b[LU_IND0*1+0]*c[LU_IND0*1+0];
 l99725:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a[(LU_IND0+0)*1+0] = a[(LU_IND0+0)*1+0]*b[(LU_IND0+0)*1+0]*c[(LU_IND0+0)*1+0];
 a[(LU_IND0+1)*1+0] = a[(LU_IND0+1)*1+0]*b[(LU_IND0+1)*1+0]*c[(LU_IND0+1)*1+0];
-a[(LU_IND0+2)*1+0] = a[(LU_IND0+2)*1+0]*b[(LU_IND0+2)*1+0]*c[(LU_IND0+2)*1+0];
-a[(LU_IND0+3)*1+0] = a[(LU_IND0+3)*1+0]*b[(LU_IND0+3)*1+0]*c[(LU_IND0+3)*1+0];
-a[(LU_IND0+4)*1+0] = a[(LU_IND0+4)*1+0]*b[(LU_IND0+4)*1+0]*c[(LU_IND0+4)*1+0];
-a[(LU_IND0+5)*1+0] = a[(LU_IND0+5)*1+0]*b[(LU_IND0+5)*1+0]*c[(LU_IND0+5)*1+0];
-a[(LU_IND0+6)*1+0] = a[(LU_IND0+6)*1+0]*b[(LU_IND0+6)*1+0]*c[(LU_IND0+6)*1+0];
 l99724:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -12963,19 +11330,14 @@ sum = 0.;
 {
 int i;
 loop_vsumr:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 sum += a[LU_IND0*1+0];
 l99723:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 sum += a[(LU_IND0+0)*1+0];
 sum += a[(LU_IND0+1)*1+0];
-sum += a[(LU_IND0+2)*1+0];
-sum += a[(LU_IND0+3)*1+0];
-sum += a[(LU_IND0+4)*1+0];
-sum += a[(LU_IND0+5)*1+0];
-sum += a[(LU_IND0+6)*1+0];
 l99722:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -13006,19 +11368,14 @@ dot = 0.;
 {
 int i;
 loop_vdotr:            LU_NUB0 = 32000;
-LU_IB0 = 3;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 dot += a[LU_IND0*1+0]*b[LU_IND0*1+0];
 l99721:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 dot += a[(LU_IND0+0)*1+0]*b[(LU_IND0+0)*1+0];
 dot += a[(LU_IND0+1)*1+0]*b[(LU_IND0+1)*1+0];
-dot += a[(LU_IND0+2)*1+0]*b[(LU_IND0+2)*1+0];
-dot += a[(LU_IND0+3)*1+0]*b[(LU_IND0+3)*1+0];
-dot += a[(LU_IND0+4)*1+0]*b[(LU_IND0+4)*1+0];
-dot += a[(LU_IND0+5)*1+0]*b[(LU_IND0+5)*1+0];
-dot += a[(LU_IND0+6)*1+0]*b[(LU_IND0+6)*1+0];
 l99720:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;
@@ -13049,7 +11406,7 @@ for(nl = 0; nl <= 999999; nl += 1) {
 {
 int i;
 loop_vbor:            LU_NUB0 = 256;
-LU_IB0 = 4;
+LU_IB0 = 0;
 for(LU_IND0 = 0; LU_IND0 <= LU_IB0-1; LU_IND0 += 1) {
 a1 = a[LU_IND0*1+0];
 b1 = b[LU_IND0*1+0];
@@ -13064,7 +11421,7 @@ d1 = d1*e1*f1;
 x[LU_IND0*1+0] = a1*b1*c1*d1;
 l99719:               ;
 }
-for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 7) {
+for(LU_IND0 = LU_IB0; LU_IND0 <= LU_NUB0-1; LU_IND0 += 2) {
 a1 = a[(LU_IND0+0)*1+0];
 b1 = b[(LU_IND0+0)*1+0];
 c1 = c[(LU_IND0+0)*1+0];
@@ -13087,61 +11444,6 @@ b1 = b1*c1*d1+b1*c1*e1+b1*c1*f1+b1*d1*e1+b1*d1*f1+b1*e1*f1;
 c1 = c1*d1*e1+c1*d1*f1+c1*e1*f1;
 d1 = d1*e1*f1;
 x[(LU_IND0+1)*1+0] = a1*b1*c1*d1;
-a1 = a[(LU_IND0+2)*1+0];
-b1 = b[(LU_IND0+2)*1+0];
-c1 = c[(LU_IND0+2)*1+0];
-d1 = d[(LU_IND0+2)*1+0];
-e1 = e[(LU_IND0+2)*1+0];
-f1 = aa[0][(LU_IND0+2)*1+0];
-a1 = a1*b1*c1+a1*b1*d1+a1*b1*e1+a1*b1*f1+a1*c1*d1+a1*c1*e1+a1*c1*f1+a1*d1*e1+a1*d1*f1+a1*e1*f1;
-b1 = b1*c1*d1+b1*c1*e1+b1*c1*f1+b1*d1*e1+b1*d1*f1+b1*e1*f1;
-c1 = c1*d1*e1+c1*d1*f1+c1*e1*f1;
-d1 = d1*e1*f1;
-x[(LU_IND0+2)*1+0] = a1*b1*c1*d1;
-a1 = a[(LU_IND0+3)*1+0];
-b1 = b[(LU_IND0+3)*1+0];
-c1 = c[(LU_IND0+3)*1+0];
-d1 = d[(LU_IND0+3)*1+0];
-e1 = e[(LU_IND0+3)*1+0];
-f1 = aa[0][(LU_IND0+3)*1+0];
-a1 = a1*b1*c1+a1*b1*d1+a1*b1*e1+a1*b1*f1+a1*c1*d1+a1*c1*e1+a1*c1*f1+a1*d1*e1+a1*d1*f1+a1*e1*f1;
-b1 = b1*c1*d1+b1*c1*e1+b1*c1*f1+b1*d1*e1+b1*d1*f1+b1*e1*f1;
-c1 = c1*d1*e1+c1*d1*f1+c1*e1*f1;
-d1 = d1*e1*f1;
-x[(LU_IND0+3)*1+0] = a1*b1*c1*d1;
-a1 = a[(LU_IND0+4)*1+0];
-b1 = b[(LU_IND0+4)*1+0];
-c1 = c[(LU_IND0+4)*1+0];
-d1 = d[(LU_IND0+4)*1+0];
-e1 = e[(LU_IND0+4)*1+0];
-f1 = aa[0][(LU_IND0+4)*1+0];
-a1 = a1*b1*c1+a1*b1*d1+a1*b1*e1+a1*b1*f1+a1*c1*d1+a1*c1*e1+a1*c1*f1+a1*d1*e1+a1*d1*f1+a1*e1*f1;
-b1 = b1*c1*d1+b1*c1*e1+b1*c1*f1+b1*d1*e1+b1*d1*f1+b1*e1*f1;
-c1 = c1*d1*e1+c1*d1*f1+c1*e1*f1;
-d1 = d1*e1*f1;
-x[(LU_IND0+4)*1+0] = a1*b1*c1*d1;
-a1 = a[(LU_IND0+5)*1+0];
-b1 = b[(LU_IND0+5)*1+0];
-c1 = c[(LU_IND0+5)*1+0];
-d1 = d[(LU_IND0+5)*1+0];
-e1 = e[(LU_IND0+5)*1+0];
-f1 = aa[0][(LU_IND0+5)*1+0];
-a1 = a1*b1*c1+a1*b1*d1+a1*b1*e1+a1*b1*f1+a1*c1*d1+a1*c1*e1+a1*c1*f1+a1*d1*e1+a1*d1*f1+a1*e1*f1;
-b1 = b1*c1*d1+b1*c1*e1+b1*c1*f1+b1*d1*e1+b1*d1*f1+b1*e1*f1;
-c1 = c1*d1*e1+c1*d1*f1+c1*e1*f1;
-d1 = d1*e1*f1;
-x[(LU_IND0+5)*1+0] = a1*b1*c1*d1;
-a1 = a[(LU_IND0+6)*1+0];
-b1 = b[(LU_IND0+6)*1+0];
-c1 = c[(LU_IND0+6)*1+0];
-d1 = d[(LU_IND0+6)*1+0];
-e1 = e[(LU_IND0+6)*1+0];
-f1 = aa[0][(LU_IND0+6)*1+0];
-a1 = a1*b1*c1+a1*b1*d1+a1*b1*e1+a1*b1*f1+a1*c1*d1+a1*c1*e1+a1*c1*f1+a1*d1*e1+a1*d1*f1+a1*e1*f1;
-b1 = b1*c1*d1+b1*c1*e1+b1*c1*f1+b1*d1*e1+b1*d1*f1+b1*e1*f1;
-c1 = c1*d1*e1+c1*d1*f1+c1*e1*f1;
-d1 = d1*e1*f1;
-x[(LU_IND0+6)*1+0] = a1*b1*c1*d1;
 l99718:               ;
 }
 i = 0+MAX0(LU_NUB0, 0)*1;

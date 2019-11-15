@@ -8,11 +8,12 @@ max_unrolling = 31
 optimization = '-O0'
 number_of_times = 2
 
-TSVC_PATH = os.path.join(PROJECT_PATH, 'TSVC')
-MEASUREMENTS = os.path.join(TSVC_PATH, 'Measurements')
-BENCHMARK = os.path.join(TSVC_PATH, 'Benchmark', 'src')
-FUNCTIONS = os.path.join(BENCHMARK, 'functions.txt')
-TRANSFORMED = os.path.join(BENCHMARK, 'tsvc.database', 'Src')
+
+tsvc_path = os.path.join(PROJECT_PATH, 'TSVC')
+tsvc_measurement_path = os.path.join(tsvc_path, 'Measurements')
+tsvc_benchmark_path = os.path.join(tsvc_path, 'Benchmark', 'src')
+tsvc_functions_path = os.path.join(tsvc_benchmark_path, 'functions.txt')
+tsvc_transformed_path = os.path.join(tsvc_benchmark_path, 'tsvc.database', 'Src')
 
 
 
