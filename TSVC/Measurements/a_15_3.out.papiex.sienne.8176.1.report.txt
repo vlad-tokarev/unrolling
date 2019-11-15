@@ -1,0 +1,902 @@
+papiex version                : 1.0.3
+papiex build                  : Aug 30 2019/14:43:52
+Executable                    : /home/chermen/PycharmProjects/unrolling/TSVC/Measurements/a_15_3.out
+Processor                     : Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+Clockrate (MHz)               : 4600.000000
+Hostname                      : sienne
+Options                       : MULTIPLEX,MEMORY,PAPI_TOT_INS,PAPI_LST_INS,PAPI_BR_INS,PAPI_LD_INS,PAPI_SR_INS,PAPI_TOT_CYC,PAPI_RES_STL,PAPI_L1_DCM,PAPI_L1_ICM,PAPI_TLB_DM,PAPI_TLB_IM,PAPI_L2_DCM,PAPI_L2_ICM,PAPI_STL_ICY,PAPI_FUL_ICY,PAPI_BR_CN,PAPI_BR_MSP,PAPI_L2_DCA,PAPI_L2_ICA,NO_MPI_PROF,NO_IO_PROF,NO_THREADSYNC_PROF,NEXTGEN
+Domain                        : User
+Process id                    : 8176
+Session id                    : 26828
+Parent process id             : 8175
+Num. of threads               : 1
+Start                         : Thu Nov 14 23:00:15 2019
+Finish                        : Thu Nov 14 23:06:55 2019
+Num. of tasks                 : 1
+Process (PID 8176) derived data:
+
+IPC ..........................................  2.13456e+00
+Load Store Ratio .............................  4.47360e+00
+Instructions Per Dcache Miss .................  1.52193e+02
+
+Time:
+Wallclock seconds ............................  3.99687e+02
+No Issue Stall seconds .......................  6.13533e+01
+Resource Stall seconds .......................  4.15026e+01
+
+Cycles:
+Cycles In Domain .............................  1.81017e+12
+Real Cycles ..................................  1.27581e+12
+Running Time In Domain % .....................  1.00000e+02
+Virtual Cycles ...............................  1.83855e+12
+
+Instructions:
+Total Instructions ...........................  3.86393e+12
+Memory Instructions % ........................  3.67469e+01
+Memory Instructions % ........................  3.67469e+01
+Branch Instructions % ........................  1.00622e+00
+
+Memory:
+Load Store Ratio .............................  4.47360e+00
+L1 Data Misses Per 1000 Load Stores ..........  1.78807e+01
+L1 Data Misses Per 1000 Load Stores ..........  1.78807e+01
+L1 Instruction Misses Per 1000 Instructions ..  1.78257e-03
+L2 Data Misses Per 1000 L2 Load Stores .......  6.42092e+03
+L2 Instruction Misses Per 1000 L2 Instructions   7.45107e+02
+Data TLB Misses Per 1000 Load Stores .........  4.60482e-04
+Instruction TLB Misses Per 1000 Instructions .  1.00316e-04
+
+Stalls:
+Resource Stall Cycles % ......................  1.05466e+01
+
+No Issue Cycle % .............................  1.55911e+01
+Full Issue Cycle % ...........................  4.42402e+01
+Branch Misprediction % .......................  9.26368e-02
+
+Arch Parameters:
+
+-------------------------------------------------------------------------------
+Default spec file ($Id: papi 359 2012-01-06 09:21:17Z tushar $)
+
+Metric Descriptions:
+Unless mentioned otherwise, counts are accumulated across sub-processes/threads
+
+MFLOPS wallclock              : Millions of floating point ops per 
+                                *wallclock* second
+                                PAPI_FP_OPS/WALL_CLOCK_USEC
+MFLOPS                        : Millions of FP ops per second
+                                PAPI_FP_OPS / Real_usecs
+IPC                           : Instructions retired per cycle
+                                PAPI_TOT_INS / PAPI_TOT_CYC
+Flops Per Load_Store          : PAPI_FP_OPS / PAPI_LST_INS
+Flops Per L1 Data Cache Miss  : PAPI_FP_OPS / PAPI_L1_DCM
+Load Store Ratio              : Ratio of loads to stores.
+                                PAPI_LD_INS / PAPI_SR_INS
+Instructions Per Dcache Miss  : PAPI_TOT_INS / PAPI_L1_DCM
+
+Wallclock seconds             : Unhalted wallclock time. Never counted twice.
+                                WALL_CLOCK_USEC / 1000000
+IO seconds                    : Time spent in seconds doing I/O.
+                                This includes any time in I/O, including time
+                                outside domain, when the process is waiting
+                                for I/O to complete.
+                                IO cycles / (Clock Hz)
+No Issue Stall seconds        : Time in domain with no instruction issue.
+                                This would not include cycles outside domain
+                                such as system time or I/O time or time process
+                                was not scheduled to run.
+                                PAPI_STL_ICY / (Clock Hz)
+Resource Stall seconds        : Time in seconds stalled on any resource.
+                                Resource can be an integer or FP register
+                                or reservation station. It would not include
+                                stalls waiting for memory operands.
+                                PAPI_RES_STL / (Clock Hz)
+FP Stall seconds              : Floating-point stall seconds.
+                                PAPI_FP_OPS / (Clock Hz)
+Memory Stall seconds          : Time in seconds waiting for memory operations.
+                                PAPI_MEM_SCY / (Clock Hz)
+Max L1 Miss L2 Hit Stall sec  : Maximum time in stalls on L1 miss/L2 hits.
+                                This is an estimate calculated using L1 and L2
+                                cache hits and the L2 access latency. The actual
+                                latency may have been masked by hit-under-miss
+                                or instruction scheduling.
+                                (PAPI_LI_DCM-PAPI_L2_DCM)*L2_LATENCY/(Clock Hz)
+Max L2 Miss L3 Hit Stall sec  : Maximum time in stalls on L2 miss/L3 hits.
+                                This is an estimate calculated using L2 and L3
+                                cache hits and the L3 access latency. The actual
+                                latency may have been masked by hit-under-miss
+                                or instruction scheduling.
+                                (PAPI_L2_DCM-PAPI_L3_DCM)*L3_LATENCY/(Clock Hz)
+Max Memory Access Stall_sec   : Maximum time in stalls waiting on memory
+                                This is an estimate calculated using L3 cache
+                                misses and the L3 access latency. The actual
+                                latency may have been masked by hit-under-miss
+                                or instruction scheduling.
+                                PAPI_L3_DCM * MEM_LATENCY / (Clock Hz)
+
+Cycles In Domain              : Total processor cycles in the PAPI domain 
+                                PAPI_TOT_CYC. Note, this cycle counter is
+                                more granular and accurate than Real or Virtual
+                                cycles counter. This may lead to situations where
+                                this value is measured as higher than even Real
+                                cycles.
+Real Cycles                   : Always counted, unhalted.
+Running Time In Domain %      : Percent of processor time spent in the domain
+                                100 * PAPI_TOT_CYC / Real cycles
+Virtual Cycles                : Counted only when executing on the processor. 
+IO Cycles %                   : Percent of cycles spent in I/O
+                                100 * IO cycles / Real cycles
+MPI Cycles %                  : Percent of cycles spent in MPI
+                                100 * MPI cycles / Real cycles
+MPI Sync Cycles %             : Percent of cycles spent in MPI sync ops
+                                100 * MPI Sync cycles / Real cycles
+Thread Sync Cycles %          : Percent of cycles spent in thread synchronization
+                                100 * Thr Sync cycles / Real cycles
+
+Total Instructions            : Completed instructions
+                                PAPI_TOT_INS
+Memory Instructions %         : Percent of instructions that are memory
+                              : 100 * PAPI_LST_INS / PAPI_TOT_INS
+                                or 100 * (PAPI_LD_INS + PAPI_SR_INS) / PAPI_TOT_INS
+FP Instructions %             : Percent of instructions that are floating point
+                                100 * PAPI_FP_INS / PAPI_TOT_INS
+FP Instructions % approx      : Approximate FP instruction percent, using
+                                FP ops instead of instructions
+                                100 * PAPI_FP_OPS / PAPI_TOT_INS
+Branch Instructions %         : Percent of instructions that are branches
+                                100 * PAPI_BR_INS / PAPI_TOT_INS
+Integer Instructions %        : Percent of instructions that are of integer type
+                                100 * PAPI_INT_INS / PAPI_TOT_INS
+
+Load Store Ratio              : Ratio of loads to stores
+                                PAPI_LD_INS / PAPI_SR_INS
+L1 Data Misses Per 1000 LD/ST : L1 data misses per thousand L1 data references
+                                1000 * PAPI_L1_DCM / $PAPI_LST_INS
+                                or 1000 * PAPI_L1_DCM / PAPI_L1_DCA
+L1 Instruction Misses Per 1000: L1 I-cache misses per thousand instructions
+                                1000 * PAPI_L1_ICM / PAPI_TOT_INS
+L2 Data Misses Per 1000       : L2 data cache misses per thousand L2 data references
+                                1000 * PAPI_L2_DCM / PAPI_L2_DCA
+L2 Instruction Misses Per 1000: L2 instruction cache misses per thousand L2
+                                I-cache references
+                                1000 * PAPI_L2_ICM / PAPI_L2_ICA
+Data TLB Misses Per 1000 LD/ST: D-TLB misses per thousand load stores
+                                1000 * PAPI_TLB_DM / PAPI_LST_INS
+Ins. TLB Misses Per 1000 ins. : I-TLB misses per thousand instructions
+                                1000 * PAPI_TLB_IM / PAPI_TOT_INS
+L1 Bandwidth MBytes per second: Effective cumulative L1 bandwidth achieved
+                                (PAPI_LD_INS + $PAPI_SR_INS) * WORD_SIZE
+                                / Wallclock usecs
+
+Resource Stall Cycles %       : Percent of total cycles stalled for any resource
+                                100 * PAPI_RES_STL / PAPI_TOT_CYC
+Memory Stall Cycles %         : Percent of total cycles stalled for memory ops
+                                100 * PAPI_MEM_SCY / PAPI_TOT_CYC
+FP Stall Cycles %             : Percent of total cycles stalled for FP ops
+                                100 * PAPI_FP_STAL / PAPI_TOT_CYC
+
+No Issue Cycle %              : Percent of cycles with no issue
+                                100 * PAPI_STL_ICY / PAPI_TOT_CYC
+Full Issue Cycle %            : Percent of cycles with full issue
+                                100 * PAPI_FUL_ICY / PAPI_TOT_CYC
+FPU Idle Cycle %              : Percent of cycles where the FP unit was idle
+                                100 * PAPI_FPU_IDL / PAPI_TOT_CYC
+LSU Idle Cycle %              : Percent of cycles the load-store unit was idle
+                                100 * PAPI_LSU_IDL / PAPI_TOT_CYC
+Branch Misprediction %        : Percent of mispredicted branches
+                                100 * PAPI_BR_MSP / PAPI_BR_INS
+-------------------------------------------------------------------------------
+Process (PID 8176) counts data:
+Memory heap (at exit) KB .....................  3.53600e+03
+Memory library (at exit) KB ..................  6.15200e+03
+Memory locked (at exit) KB ...................  0.00000e+00
+Memory resident max KB .......................  7.97600e+03
+Memory shared (at exit) KB ...................  4.13200e+03
+Memory stack (at exit) KB ....................  4.56000e+02
+Memory text (at exit) KB .....................  4.56000e+02
+PAPI_BR_CN ...................................  3.89735e+10
+PAPI_BR_INS ..................................  3.88796e+10
+PAPI_BR_MSP ..................................  3.60168e+07
+PAPI_FUL_ICY .................................  8.00824e+11
+PAPI_L1_DCM ..................................  2.53884e+10
+PAPI_L1_ICM ..................................  6.88774e+06
+PAPI_L2_DCA ..................................  5.38205e+09
+PAPI_L2_DCM ..................................  3.45577e+10
+PAPI_L2_ICA ..................................  6.88774e+06
+PAPI_L2_ICM ..................................  5.13210e+06
+PAPI_LD_INS ..................................  1.16047e+12
+PAPI_LST_INS .................................  1.41988e+12
+PAPI_RES_STL .................................  1.90912e+11
+PAPI_SR_INS ..................................  2.59404e+11
+PAPI_STL_ICY .................................  2.82225e+11
+PAPI_TLB_DM ..................................  6.53827e+05
+PAPI_TLB_IM ..................................  3.87614e+05
+PAPI_TOT_CYC .................................  1.81017e+12
+PAPI_TOT_INS .................................  3.86393e+12
+Real cycles ..................................  1.27581e+12
+Real usecs ...................................  3.99686e+08
+Virtual cycles ...............................  1.83855e+12
+Virtual usecs ................................  3.99684e+08
+Wallclock usecs ..............................  3.99687e+08
+[s13110] Measurements ........................  1.00000e+00
+[s13110] PAPI_BR_CN ..........................  2.79651e+09
+[s13110] PAPI_BR_INS .........................  2.80409e+09
+[s13110] PAPI_BR_MSP .........................  1.01351e+07
+[s13110] PAPI_FUL_ICY ........................  5.56005e+09
+[s13110] PAPI_L1_DCM .........................  1.61097e+08
+[s13110] PAPI_L1_ICM .........................  2.12890e+04
+[s13110] PAPI_L2_DCA .........................  2.28968e+06
+[s13110] PAPI_L2_DCM .........................  1.23425e+08
+[s13110] PAPI_L2_ICA .........................  2.12890e+04
+[s13110] PAPI_L2_ICM .........................  2.01070e+04
+[s13110] PAPI_LD_INS .........................  1.06098e+10
+[s13110] PAPI_LST_INS ........................  1.08526e+10
+[s13110] PAPI_RES_STL ........................  3.01915e+07
+[s13110] PAPI_SR_INS .........................  2.42833e+08
+[s13110] PAPI_STL_ICY ........................  1.22281e+07
+[s13110] PAPI_TLB_DM .........................  0.00000e+00
+[s13110] PAPI_TLB_IM .........................  3.30000e+02
+[s13110] PAPI_TOT_CYC ........................  8.84688e+09
+[s13110] PAPI_TOT_INS ........................  3.19811e+10
+[s13110] Real cycles .........................  6.23036e+09
+[s1351] Measurements .........................  1.00000e+00
+[s1351] PAPI_BR_CN ...........................  1.71310e+09
+[s1351] PAPI_BR_INS ..........................  1.71146e+09
+[s1351] PAPI_BR_MSP ..........................  2.32371e+06
+[s1351] PAPI_FUL_ICY .........................  5.99156e+10
+[s1351] PAPI_L1_DCM ..........................  4.80306e+09
+[s1351] PAPI_L1_ICM ..........................  2.78288e+05
+[s1351] PAPI_L2_DCA ..........................  1.69035e+09
+[s1351] PAPI_L2_DCM ..........................  9.19641e+09
+[s1351] PAPI_L2_ICA ..........................  2.78288e+05
+[s1351] PAPI_L2_ICM ..........................  2.38645e+05
+[s1351] PAPI_LD_INS ..........................  2.09408e+11
+[s1351] PAPI_LST_INS .........................  3.13262e+11
+[s1351] PAPI_RES_STL .........................  7.28293e+10
+[s1351] PAPI_SR_INS ..........................  1.03854e+11
+[s1351] PAPI_STL_ICY .........................  4.41230e+07
+[s1351] PAPI_TLB_DM ..........................  3.15556e+05
+[s1351] PAPI_TLB_IM ..........................  1.94510e+04
+[s1351] PAPI_TOT_CYC .........................  1.78592e+11
+[s1351] PAPI_TOT_INS .........................  2.64611e+11
+[s1351] Real cycles ..........................  1.25897e+11
+[s1421] Measurements .........................  1.00000e+00
+[s1421] PAPI_BR_CN ...........................  8.65201e+08
+[s1421] PAPI_BR_INS ..........................  8.65965e+08
+[s1421] PAPI_BR_MSP ..........................  1.14557e+06
+[s1421] PAPI_FUL_ICY .........................  4.53936e+10
+[s1421] PAPI_L1_DCM ..........................  2.39659e+09
+[s1421] PAPI_L1_ICM ..........................  6.03210e+04
+[s1421] PAPI_L2_DCA ..........................  8.31014e+08
+[s1421] PAPI_L2_DCM ..........................  1.44836e+09
+[s1421] PAPI_L2_ICA ..........................  6.03210e+04
+[s1421] PAPI_L2_ICM ..........................  4.73230e+04
+[s1421] PAPI_LD_INS ..........................  7.69065e+10
+[s1421] PAPI_LST_INS .........................  8.99954e+10
+[s1421] PAPI_RES_STL .........................  9.65311e+07
+[s1421] PAPI_SR_INS ..........................  1.30889e+10
+[s1421] PAPI_STL_ICY .........................  1.55903e+07
+[s1421] PAPI_TLB_DM ..........................  1.37700e+03
+[s1421] PAPI_TLB_IM ..........................  4.88850e+04
+[s1421] PAPI_TOT_CYC .........................  6.46753e+10
+[s1421] PAPI_TOT_INS .........................  2.58287e+11
+[s1421] Real cycles ..........................  4.55154e+10
+[s3110] Measurements .........................  1.00000e+00
+[s3110] PAPI_BR_CN ...........................  2.72812e+09
+[s3110] PAPI_BR_INS ..........................  2.81211e+09
+[s3110] PAPI_BR_MSP ..........................  9.98946e+06
+[s3110] PAPI_FUL_ICY .........................  6.25448e+09
+[s3110] PAPI_L1_DCM ..........................  1.61417e+08
+[s3110] PAPI_L1_ICM ..........................  1.99940e+04
+[s3110] PAPI_L2_DCA ..........................  2.31951e+06
+[s3110] PAPI_L2_DCM ..........................  1.33857e+08
+[s3110] PAPI_L2_ICA ..........................  1.99940e+04
+[s3110] PAPI_L2_ICM ..........................  2.41050e+04
+[s3110] PAPI_LD_INS ..........................  1.09959e+10
+[s3110] PAPI_LST_INS .........................  1.11479e+10
+[s3110] PAPI_RES_STL .........................  2.98635e+07
+[s3110] PAPI_SR_INS ..........................  1.51984e+08
+[s3110] PAPI_STL_ICY .........................  6.05160e+08
+[s3110] PAPI_TLB_DM ..........................  0.00000e+00
+[s3110] PAPI_TLB_IM ..........................  6.10000e+01
+[s3110] PAPI_TOT_CYC .........................  8.93541e+09
+[s3110] PAPI_TOT_INS .........................  3.18744e+10
+[s3110] Real cycles ..........................  6.23079e+09
+[s3111] Measurements .........................  1.00000e+00
+[s3111] PAPI_BR_CN ...........................  1.69680e+09
+[s3111] PAPI_BR_INS ..........................  1.70505e+09
+[s3111] PAPI_BR_MSP ..........................  5.24020e+04
+[s3111] PAPI_FUL_ICY .........................  4.31087e+09
+[s3111] PAPI_L1_DCM ..........................  9.50435e+07
+[s3111] PAPI_L1_ICM ..........................  1.54420e+04
+[s3111] PAPI_L2_DCA ..........................  1.63973e+07
+[s3111] PAPI_L2_DCM ..........................  1.63980e+07
+[s3111] PAPI_L2_ICA ..........................  1.54420e+04
+[s3111] PAPI_L2_ICM ..........................  1.06800e+03
+[s3111] PAPI_LD_INS ..........................  8.65871e+09
+[s3111] PAPI_LST_INS .........................  1.04437e+10
+[s3111] PAPI_RES_STL .........................  5.87870e+09
+[s3111] PAPI_SR_INS ..........................  1.78498e+09
+[s3111] PAPI_TLB_DM ..........................  0.00000e+00
+[s3111] PAPI_TOT_CYC .........................  1.60901e+10
+[s3111] PAPI_TOT_INS .........................  2.91178e+10
+[s3111] Real cycles ..........................  1.01466e+10
+[s3112] Measurements .........................  1.00000e+00
+[s3112] PAPI_BR_CN ...........................  2.30836e+08
+[s3112] PAPI_BR_INS ..........................  1.93655e+08
+[s3112] PAPI_BR_MSP ..........................  3.28078e+05
+[s3112] PAPI_FUL_ICY .........................  8.72756e+09
+[s3112] PAPI_L1_DCM ..........................  4.00611e+08
+[s3112] PAPI_L1_ICM ..........................  8.04360e+04
+[s3112] PAPI_L2_DCA ..........................  2.01989e+08
+[s3112] PAPI_L2_DCM ..........................  5.01217e+08
+[s3112] PAPI_L2_ICA ..........................  8.04360e+04
+[s3112] PAPI_L2_ICM ..........................  7.45990e+04
+[s3112] PAPI_LD_INS ..........................  1.62188e+10
+[s3112] PAPI_LST_INS .........................  2.27425e+10
+[s3112] PAPI_RES_STL .........................  1.40261e+10
+[s3112] PAPI_SR_INS ..........................  6.52365e+09
+[s3112] PAPI_STL_ICY .........................  6.00744e+08
+[s3112] PAPI_TLB_DM ..........................  2.01900e+03
+[s3112] PAPI_TLB_IM ..........................  2.24180e+04
+[s3112] PAPI_TOT_CYC .........................  2.73579e+10
+[s3112] PAPI_TOT_INS .........................  5.17905e+10
+[s3112] Real cycles ..........................  2.04363e+10
+[s3113] Measurements .........................  1.00000e+00
+[s3113] PAPI_BR_CN ...........................  1.36457e+10
+[s3113] PAPI_BR_INS ..........................  1.36208e+10
+[s3113] PAPI_BR_MSP ..........................  8.95600e+05
+[s3113] PAPI_FUL_ICY .........................  2.42930e+10
+[s3113] PAPI_L1_DCM ..........................  7.97799e+08
+[s3113] PAPI_L1_ICM ..........................  4.56240e+04
+[s3113] PAPI_L2_DCA ..........................  1.43958e+07
+[s3113] PAPI_L2_DCM ..........................  1.99340e+08
+[s3113] PAPI_L2_ICA ..........................  4.56240e+04
+[s3113] PAPI_L2_ICM ..........................  1.69110e+04
+[s3113] PAPI_LD_INS ..........................  5.41948e+10
+[s3113] PAPI_LST_INS .........................  5.51699e+10
+[s3113] PAPI_RES_STL .........................  1.50421e+07
+[s3113] PAPI_SR_INS ..........................  9.75109e+08
+[s3113] PAPI_TLB_DM ..........................  1.38309e+05
+[s3113] PAPI_TLB_IM ..........................  3.96000e+02
+[s3113] PAPI_TOT_CYC .........................  3.78775e+10
+[s3113] PAPI_TOT_INS .........................  1.31583e+11
+[s3113] Real cycles ..........................  2.54140e+10
+[s317] Measurements ..........................  1.00000e+00
+[s317] PAPI_BR_CN ............................  5.39336e+08
+[s317] PAPI_BR_INS ...........................  5.41273e+08
+[s317] PAPI_BR_MSP ...........................  1.08693e+06
+[s317] PAPI_FUL_ICY ..........................  1.24979e+11
+[s317] PAPI_L1_DCM ...........................  2.00070e+04
+[s317] PAPI_L1_ICM ...........................  7.42430e+05
+[s317] PAPI_L2_DCA ...........................  7.53996e+05
+[s317] PAPI_L2_DCM ...........................  1.24492e+05
+[s317] PAPI_L2_ICA ...........................  7.42430e+05
+[s317] PAPI_L2_ICM ...........................  8.55610e+04
+[s317] PAPI_LD_INS ...........................  1.76253e+10
+[s317] PAPI_LST_INS ..........................  2.61739e+10
+[s317] PAPI_RES_STL ..........................  3.87480e+10
+[s317] PAPI_SR_INS ...........................  8.54862e+09
+[s317] PAPI_STL_ICY ..........................  2.81301e+11
+[s317] PAPI_TLB_DM ...........................  1.41000e+02
+[s317] PAPI_TLB_IM ...........................  2.54000e+03
+[s317] PAPI_TOT_CYC ..........................  5.61733e+11
+[s317] PAPI_TOT_INS ..........................  3.47218e+10
+[s317] Real cycles ...........................  3.95834e+11
+[s319] Measurements ..........................  1.00000e+00
+[s319] PAPI_BR_CN ............................  4.29479e+08
+[s319] PAPI_BR_INS ...........................  4.30179e+08
+[s319] PAPI_BR_MSP ...........................  4.04401e+05
+[s319] PAPI_FUL_ICY ..........................  5.83032e+10
+[s319] PAPI_L1_DCM ...........................  1.99702e+09
+[s319] PAPI_L1_ICM ...........................  3.83324e+05
+[s319] PAPI_L2_DCA ...........................  8.38612e+07
+[s319] PAPI_L2_DCM ...........................  4.42958e+09
+[s319] PAPI_L2_ICA ...........................  3.83324e+05
+[s319] PAPI_L2_ICM ...........................  3.81921e+05
+[s319] PAPI_LD_INS ...........................  1.03623e+11
+[s319] PAPI_LST_INS ..........................  1.29637e+11
+[s319] PAPI_RES_STL ..........................  1.99287e+10
+[s319] PAPI_SR_INS ...........................  2.60144e+10
+[s319] PAPI_STL_ICY ..........................  4.18162e+07
+[s319] PAPI_TLB_DM ...........................  2.90000e+01
+[s319] PAPI_TLB_IM ...........................  8.63160e+04
+[s319] PAPI_TOT_CYC ..........................  1.16512e+11
+[s319] PAPI_TOT_INS ..........................  3.57012e+11
+[s319] Real cycles ...........................  8.22649e+10
+[s321] Measurements ..........................  1.00000e+00
+[s321] PAPI_BR_CN ............................  2.59544e+08
+[s321] PAPI_BR_INS ...........................  1.56034e+08
+[s321] PAPI_BR_MSP ...........................  2.25590e+05
+[s321] PAPI_FUL_ICY ..........................  1.35854e+10
+[s321] PAPI_L1_DCM ...........................  4.00841e+08
+[s321] PAPI_L1_ICM ...........................  8.71880e+04
+[s321] PAPI_L2_DCA ...........................  1.95125e+08
+[s321] PAPI_L2_DCM ...........................  4.88918e+08
+[s321] PAPI_L2_ICA ...........................  8.71880e+04
+[s321] PAPI_L2_ICM ...........................  9.05720e+04
+[s321] PAPI_LD_INS ...........................  2.29835e+10
+[s321] PAPI_LST_INS ..........................  2.63966e+10
+[s321] PAPI_RES_STL ..........................  1.73681e+10
+[s321] PAPI_SR_INS ...........................  3.41306e+09
+[s321] PAPI_STL_ICY ..........................  5.99740e+08
+[s321] PAPI_TLB_DM ...........................  2.60000e+02
+[s321] PAPI_TLB_IM ...........................  1.04560e+04
+[s321] PAPI_TOT_CYC ..........................  3.95770e+10
+[s321] PAPI_TOT_INS ..........................  8.37172e+10
+[s321] Real cycles ...........................  2.92604e+10
+[s322] Measurements ..........................  1.00000e+00
+[s322] PAPI_BR_CN ............................  1.07086e+08
+[s322] PAPI_BR_INS ...........................  1.07068e+08
+[s322] PAPI_BR_MSP ...........................  1.44333e+05
+[s322] PAPI_FUL_ICY ..........................  1.03365e+10
+[s322] PAPI_L1_DCM ...........................  3.00000e+08
+[s322] PAPI_L1_ICM ...........................  1.05973e+05
+[s322] PAPI_L2_DCA ...........................  3.15392e+06
+[s322] PAPI_L2_DCM ...........................  5.86142e+08
+[s322] PAPI_L2_ICA ...........................  1.05973e+05
+[s322] PAPI_L2_ICM ...........................  1.00047e+05
+[s322] PAPI_LD_INS ...........................  1.79483e+10
+[s322] PAPI_LST_INS ..........................  1.95290e+10
+[s322] PAPI_RES_STL ..........................  9.39959e+09
+[s322] PAPI_SR_INS ...........................  1.58070e+09
+[s322] PAPI_STL_ICY ..........................  4.22764e+06
+[s322] PAPI_TLB_DM ...........................  1.75100e+04
+[s322] PAPI_TLB_IM ...........................  2.70000e+02
+[s322] PAPI_TOT_CYC ..........................  2.72018e+10
+[s322] PAPI_TOT_INS ..........................  6.45093e+10
+[s322] Real cycles ...........................  1.91325e+10
+[s323] Measurements ..........................  1.00000e+00
+[s323] PAPI_BR_CN ............................  1.07115e+08
+[s323] PAPI_BR_INS ...........................  1.07028e+08
+[s323] PAPI_BR_MSP ...........................  1.42372e+05
+[s323] PAPI_FUL_ICY ..........................  1.37525e+10
+[s323] PAPI_L1_DCM ...........................  5.00178e+08
+[s323] PAPI_L1_ICM ...........................  1.13859e+05
+[s323] PAPI_L2_DCA ...........................  2.74786e+08
+[s323] PAPI_L2_DCM ...........................  1.09298e+09
+[s323] PAPI_L2_ICA ...........................  1.13859e+05
+[s323] PAPI_L2_ICM ...........................  1.16356e+05
+[s323] PAPI_LD_INS ...........................  2.27475e+10
+[s323] PAPI_LST_INS ..........................  2.60493e+10
+[s323] PAPI_RES_STL ..........................  6.24751e+09
+[s323] PAPI_SR_INS ...........................  3.30186e+09
+[s323] PAPI_STL_ICY ..........................  5.26680e+06
+[s323] PAPI_TLB_DM ...........................  4.50000e+02
+[s323] PAPI_TLB_IM ...........................  5.44000e+02
+[s323] PAPI_TOT_CYC ..........................  2.89265e+10
+[s323] PAPI_TOT_INS ..........................  8.37159e+10
+[s323] Real cycles ...........................  2.03647e+10
+[s331] Measurements ..........................  1.00000e+00
+[s331] PAPI_BR_CN ............................  3.44965e+09
+[s331] PAPI_BR_INS ...........................  3.43331e+09
+[s331] PAPI_BR_MSP ...........................  2.18111e+05
+[s331] PAPI_FUL_ICY ..........................  4.98762e+09
+[s331] PAPI_L1_DCM ...........................  2.04882e+08
+[s331] PAPI_L1_ICM ...........................  1.79410e+04
+[s331] PAPI_L2_DCA ...........................  2.46495e+06
+[s331] PAPI_L2_DCM ...........................  5.25119e+07
+[s331] PAPI_L2_ICA ...........................  1.79410e+04
+[s331] PAPI_L2_ICM ...........................  9.94700e+03
+[s331] PAPI_LD_INS ...........................  6.34176e+09
+[s331] PAPI_LST_INS ..........................  6.55961e+09
+[s331] PAPI_RES_STL ..........................  1.13188e+07
+[s331] PAPI_SR_INS ...........................  2.17855e+08
+[s331] PAPI_STL_ICY ..........................  5.33815e+06
+[s331] PAPI_TLB_DM ...........................  3.40000e+02
+[s331] PAPI_TLB_IM ...........................  1.24000e+02
+[s331] PAPI_TOT_CYC ..........................  7.49204e+09
+[s331] PAPI_TOT_INS ..........................  2.99918e+10
+[s331] Real cycles ...........................  5.27713e+09
+[s341] Measurements ..........................  1.00000e+00
+[s341] PAPI_BR_CN ............................  3.40617e+09
+[s341] PAPI_BR_INS ...........................  3.40120e+09
+[s341] PAPI_BR_MSP ...........................  3.69782e+05
+[s341] PAPI_FUL_ICY ..........................  1.25195e+10
+[s341] PAPI_L1_DCM ...........................  3.91903e+08
+[s341] PAPI_L1_ICM ...........................  3.04450e+04
+[s341] PAPI_L2_DCA ...........................  2.02194e+08
+[s341] PAPI_L2_DCM ...........................  4.89662e+08
+[s341] PAPI_L2_ICA ...........................  3.04450e+04
+[s341] PAPI_L2_ICM ...........................  2.17640e+04
+[s341] PAPI_LD_INS ...........................  1.97497e+10
+[s341] PAPI_LST_INS ..........................  2.63327e+10
+[s341] PAPI_RES_STL ..........................  6.37284e+08
+[s341] PAPI_SR_INS ...........................  6.58309e+09
+[s341] PAPI_STL_ICY ..........................  9.34197e+06
+[s341] PAPI_TLB_DM ...........................  7.48410e+04
+[s341] PAPI_TLB_IM ...........................  1.00000e+02
+[s341] PAPI_TOT_CYC ..........................  1.87032e+10
+[s341] PAPI_TOT_INS ..........................  6.76885e+10
+[s341] Real cycles ...........................  1.31278e+10
+[s342] Measurements ..........................  1.00000e+00
+[s342] PAPI_BR_CN ............................  3.40187e+09
+[s342] PAPI_BR_INS ...........................  3.39183e+09
+[s342] PAPI_BR_MSP ...........................  3.84594e+05
+[s342] PAPI_FUL_ICY ..........................  1.28613e+10
+[s342] PAPI_L1_DCM ...........................  3.99923e+08
+[s342] PAPI_L1_ICM ...........................  7.53520e+04
+[s342] PAPI_L2_DCA ...........................  5.78413e+06
+[s342] PAPI_L2_DCM ...........................  4.70942e+08
+[s342] PAPI_L2_ICA ...........................  7.53520e+04
+[s342] PAPI_L2_ICM ...........................  3.49320e+04
+[s342] PAPI_LD_INS ...........................  2.05865e+10
+[s342] PAPI_LST_INS ..........................  2.73336e+10
+[s342] PAPI_RES_STL ..........................  2.52588e+09
+[s342] PAPI_SR_INS ...........................  6.74708e+09
+[s342] PAPI_STL_ICY ..........................  9.14314e+06
+[s342] PAPI_TLB_DM ...........................  3.12700e+04
+[s342] PAPI_TLB_IM ...........................  1.03520e+04
+[s342] PAPI_TOT_CYC ..........................  2.06751e+10
+[s342] PAPI_TOT_INS ..........................  6.75905e+10
+[s342] Real cycles ...........................  1.46114e+10
+[s343] Measurements ..........................  1.00000e+00
+[s343] PAPI_BR_CN ............................  2.80936e+08
+[s343] PAPI_BR_INS ...........................  2.82567e+08
+[s343] PAPI_BR_MSP ...........................  9.91163e+05
+[s343] PAPI_FUL_ICY ..........................  1.34749e+09
+[s343] PAPI_L1_DCM ...........................  5.29146e+08
+[s343] PAPI_L1_ICM ...........................  6.22800e+03
+[s343] PAPI_L2_DCA ...........................  5.36721e+08
+[s343] PAPI_L2_DCM ...........................  1.33302e+09
+[s343] PAPI_L2_ICA ...........................  6.22800e+03
+[s343] PAPI_L2_ICM ...........................  5.37700e+03
+[s343] PAPI_LD_INS ...........................  2.14575e+09
+[s343] PAPI_LST_INS ..........................  2.51491e+09
+[s343] PAPI_RES_STL ..........................  2.01768e+09
+[s343] PAPI_SR_INS ...........................  3.69155e+08
+[s343] PAPI_STL_ICY ..........................  2.73415e+06
+[s343] PAPI_TLB_DM ...........................  3.84000e+02
+[s343] PAPI_TLB_IM ...........................  3.64000e+02
+[s343] PAPI_TOT_CYC ..........................  4.13682e+09
+[s343] PAPI_TOT_INS ..........................  7.62364e+09
+[s343] Real cycles ...........................  2.86202e+09
+[s351] Measurements ..........................  1.00000e+00
+[s351] PAPI_BR_CN ............................  3.51337e+08
+[s351] PAPI_BR_INS ...........................  3.53510e+08
+[s351] PAPI_BR_MSP ...........................  1.67213e+06
+[s351] PAPI_FUL_ICY ..........................  1.38925e+11
+[s351] PAPI_L1_DCM ...........................  3.22328e+09
+[s351] PAPI_L1_ICM ...........................  2.78639e+06
+[s351] PAPI_L2_DCA ...........................  4.15252e+08
+[s351] PAPI_L2_DCM ...........................  3.95176e+09
+[s351] PAPI_L2_ICA ...........................  2.78639e+06
+[s351] PAPI_L2_ICM ...........................  2.06015e+06
+[s351] PAPI_LD_INS ...........................  1.53328e+11
+[s351] PAPI_LST_INS ..........................  1.79214e+11
+[s351] PAPI_RES_STL ..........................  1.53794e+08
+[s351] PAPI_SR_INS ...........................  2.58862e+10
+[s351] PAPI_STL_ICY ..........................  3.47430e+07
+[s351] PAPI_TLB_DM ...........................  7.13000e+02
+[s351] PAPI_TLB_IM ...........................  6.51200e+03
+[s351] PAPI_TOT_CYC ..........................  2.40670e+11
+[s351] PAPI_TOT_INS ..........................  8.00355e+11
+[s351] Real cycles ...........................  1.69538e+11
+[s352] Measurements ..........................  1.00000e+00
+[s352] PAPI_BR_CN ............................  3.50997e+08
+[s352] PAPI_BR_INS ...........................  3.53669e+08
+[s352] PAPI_BR_MSP ...........................  2.57116e+06
+[s352] PAPI_FUL_ICY ..........................  1.01593e+11
+[s352] PAPI_L1_DCM ...........................  3.17691e+09
+[s352] PAPI_L1_ICM ...........................  1.12123e+06
+[s352] PAPI_L2_DCA ...........................  5.05896e+08
+[s352] PAPI_L2_DCM ...........................  3.96001e+09
+[s352] PAPI_L2_ICA ...........................  1.12123e+06
+[s352] PAPI_L2_ICM ...........................  1.07469e+06
+[s352] PAPI_LD_INS ...........................  1.10364e+11
+[s352] PAPI_LST_INS ..........................  1.15831e+11
+[s352] PAPI_RES_STL ..........................  1.12848e+08
+[s352] PAPI_SR_INS ...........................  5.46758e+09
+[s352] PAPI_STL_ICY ..........................  3.82871e+07
+[s352] PAPI_TLB_DM ...........................  7.04790e+04
+[s352] PAPI_TLB_IM ...........................  8.53770e+04
+[s352] PAPI_TOT_CYC ..........................  1.66674e+11
+[s352] PAPI_TOT_INS ..........................  5.61225e+11
+[s352] Real cycles ...........................  1.17467e+11
+[s353] Measurements ..........................  1.00000e+00
+[s353] PAPI_BR_CN ............................  4.37796e+07
+[s353] PAPI_BR_INS ...........................  4.40718e+07
+[s353] PAPI_BR_MSP ...........................  2.32389e+05
+[s353] PAPI_FUL_ICY ..........................  2.02799e+10
+[s353] PAPI_L1_DCM ...........................  5.99100e+08
+[s353] PAPI_L1_ICM ...........................  4.81863e+05
+[s353] PAPI_L2_DCA ...........................  3.26492e+08
+[s353] PAPI_L2_DCM ...........................  1.14466e+09
+[s353] PAPI_L2_ICA ...........................  4.81863e+05
+[s353] PAPI_L2_ICM ...........................  4.79012e+05
+[s353] PAPI_LD_INS ...........................  2.56676e+10
+[s353] PAPI_LST_INS ..........................  2.94364e+10
+[s353] PAPI_RES_STL ..........................  2.30969e+08
+[s353] PAPI_SR_INS ...........................  3.76873e+09
+[s353] PAPI_TLB_DM ...........................  1.70000e+01
+[s353] PAPI_TLB_IM ...........................  1.81580e+04
+[s353] PAPI_TOT_CYC ..........................  3.47716e+10
+[s353] PAPI_TOT_INS ..........................  1.16375e+11
+[s353] Real cycles ...........................  2.45734e+10
+[s421] Measurements ..........................  1.00000e+00
+[s421] PAPI_BR_CN ............................  8.56579e+08
+[s421] PAPI_BR_INS ...........................  8.54693e+08
+[s421] PAPI_BR_MSP ...........................  1.16612e+06
+[s421] PAPI_FUL_ICY ..........................  4.71799e+10
+[s421] PAPI_L1_DCM ...........................  1.60050e+09
+[s421] PAPI_L1_ICM ...........................  1.45997e+05
+[s421] PAPI_L2_DCA ...........................  2.81167e+07
+[s421] PAPI_L2_DCM ...........................  1.64704e+09
+[s421] PAPI_L2_ICA ...........................  1.45997e+05
+[s421] PAPI_L2_ICM ...........................  1.47694e+05
+[s421] PAPI_LD_INS ...........................  9.20557e+10
+[s421] PAPI_LST_INS ..........................  1.05701e+11
+[s421] PAPI_RES_STL ..........................  1.01039e+08
+[s421] PAPI_SR_INS ...........................  1.36454e+10
+[s421] PAPI_STL_ICY ..........................  6.15033e+08
+[s421] PAPI_TLB_DM ...........................  0.00000e+00
+[s421] PAPI_TLB_IM ...........................  7.50150e+04
+[s421] PAPI_TOT_CYC ..........................  7.12085e+10
+[s421] PAPI_TOT_INS ..........................  2.83017e+11
+[s421] Real cycles ...........................  5.02042e+10
+[s422] Measurements ..........................  1.00000e+00
+[s422] PAPI_BR_CN ............................  1.71328e+09
+[s422] PAPI_BR_INS ...........................  1.70968e+09
+[s422] PAPI_BR_MSP ...........................  1.53767e+06
+[s422] PAPI_FUL_ICY ..........................  8.57186e+10
+[s422] PAPI_L1_DCM ...........................  3.24905e+09
+[s422] PAPI_L1_ICM ...........................  2.62965e+05
+[s422] PAPI_L2_DCA ...........................  4.26930e+07
+[s422] PAPI_L2_DCM ...........................  3.29138e+09
+[s422] PAPI_L2_ICA ...........................  2.62965e+05
+[s422] PAPI_L2_ICM ...........................  9.62540e+04
+[s422] PAPI_LD_INS ...........................  1.58310e+11
+[s422] PAPI_LST_INS ..........................  1.85548e+11
+[s422] PAPI_RES_STL ..........................  5.23698e+08
+[s422] PAPI_SR_INS ...........................  2.72380e+10
+[s422] PAPI_STL_ICY ..........................  3.04607e+07
+[s422] PAPI_TLB_DM ...........................  1.40000e+01
+[s422] PAPI_TLB_IM ...........................  0.00000e+00
+[s422] PAPI_TOT_CYC ..........................  1.29511e+11
+[s422] PAPI_TOT_INS ..........................  5.07137e+11
+[s422] Real cycles ...........................  9.14149e+10
+
+Caliper Labels:
+  [10]  s323
+  [8]   s321
+  [7]   s3113
+  [16]  s1351
+  [13]  s342
+  [14]  s343
+  [5]   s3111
+  [2]   s319
+  [1]   s317
+  [9]   s322
+  [6]   s3112
+  [21]  s422
+  [4]   s13110
+  [3]   s3110
+  [15]  s351
+  [18]  s353
+  [17]  s352
+  [11]  s331
+  [19]  s421
+  [12]  s341
+  [20]  s1421
+
+Event Descriptions:
+PAPI_TOT_INS                  : Instructions completed
+PAPI_LST_INS                  : Load/store instructions completed
+PAPI_BR_INS                   : Branch instructions
+PAPI_LD_INS                   : Load instructions
+PAPI_SR_INS                   : Store instructions
+PAPI_TOT_CYC                  : Total cycles
+PAPI_RES_STL                  : Cycles stalled on any resource
+PAPI_L1_DCM                   : Level 1 data cache misses
+PAPI_L1_ICM                   : Level 1 instruction cache misses
+PAPI_TLB_DM                   : Data translation lookaside buffer misses
+PAPI_TLB_IM                   : Instruction translation lookaside buffer misses
+PAPI_L2_DCM                   : Level 2 data cache misses
+PAPI_L2_ICM                   : Level 2 instruction cache misses
+PAPI_STL_ICY                  : Cycles with no instruction issue
+PAPI_FUL_ICY                  : Cycles with maximum instruction issue
+PAPI_BR_CN                    : Conditional branch instructions
+PAPI_BR_MSP                   : Conditional branch instructions mispredicted
+PAPI_L2_DCA                   : Level 2 data cache accesses
+PAPI_L2_ICA                   : Level 2 instruction cache accesses
+
+Derived Metric Descriptions:
+
+MFLOPS_wallclock = PAPI_FP_OPS/Wallclock_usecs
+MFLOPS = PAPI_FP_OPS / Real_usecs
+IPC = PAPI_TOT_INS / PAPI_TOT_CYC
+Flops_Per_Load_Store = PAPI_FP_OPS / PAPI_LST_INS
+Flops_Per_L1_Data_Cache_Miss = PAPI_FP_OPS / PAPI_L1_DCM
+Load_Store_Ratio = PAPI_LD_INS / PAPI_SR_INS
+Instructions_Per_Dcache_Miss = PAPI_TOT_INS / PAPI_L1_DCM
+
+Time
+Wallclock_seconds = Wallclock_usecs / 1000000
+IO_seconds = IO_cycles / (clockmhz * 1000000)
+No_Issue_Stall_seconds = PAPI_STL_ICY / (clockmhz * 1000000)
+Resource_Stall_seconds = PAPI_RES_STL / (clockmhz * 1000000)
+FP_Stall_seconds = PAPI_FP_OPS / (clockmhz * 1000000)
+Memory_Stall_seconds = PAPI_MEM_SCY / (clockmhz * 1000000)
+Max_L1_Miss_L2_Hit_Stall_seconds = (PAPI_LI_DCM - PAPI_L2_DCM) * L2_LATENCY / (clockmhz * 1000000)
+Max_L2_Miss_L3_Hit_Stall_seconds = (PAPI_L2_DCM - PAPI_L3_DCM) * L3_LATENCY / (clockmhz * 1000000)
+Max_Memory_Access_Stall_seconds = PAPI_L3_DCM* MEM_LATENCY / (clockmhz * 1000000)
+
+Cycles
+Cycles_In_Domain = PAPI_TOT_CYC
+Real_Cycles = Real_cycles
+Running_Time_In_Domain_Percent = 100 * PAPI_TOT_CYC / Real_cycles
+Virtual_Cycles = Virtual_cycles
+IO_Cycles_Percent = 100 * IO_cycles / Real_cycles
+MPI_Cycles_Percent = 100 * MPI_cycles / Real_cycles
+MPI_Sync_Cycles_Percent = 100 * MPI_Sync_cycles / Real_cycles
+Thread_Sync_Cycles_Percent = 100 * Thr_Sync_cycles / Real_cycles
+
+Instructions
+Total_Instructions = PAPI_TOT_INS
+Memory_Instructions_Percent = 100 * PAPI_LST_INS / PAPI_TOT_INS
+Memory_Instructions_Percent = 100 * (PAPI_LD_INS + PAPI_SR_INS) / PAPI_TOT_INS unless (defined(Memory_Instructions_Percent))
+FP_Instructions_Percent = 100 * PAPI_FP_INS / PAPI_TOT_INS
+FP_Instructions_Percent_approx = 100 * PAPI_FP_OPS / PAPI_TOT_INS unless (defined(FP_Instructions_Percent))
+Branch_Instructions_Percent = 100 * PAPI_BR_INS / PAPI_TOT_INS
+Integer_Instructions_Percent = 100 * PAPI_INT_INS / PAPI_TOT_INS
+
+Memory
+Load_Store_Ratio = PAPI_LD_INS / PAPI_SR_INS
+L1_Data_Misses_Per_1000_Load_Stores = 1000 * PAPI_L1_DCM / PAPI_LST_INS
+L1_Data_Misses_Per_1000_Load_Stores = 1000 * PAPI_L1_DCM / PAPI_L1_DCA unless (defined(L1_Data_Misses_Per_1000_Load_Stores))
+L1_Instruction_Misses_Per_1000_Instructions = 1000 * PAPI_L1_ICM / PAPI_TOT_INS
+L2_Data_Misses_Per_1000_L2_Load_Stores = 1000 * PAPI_L2_DCM / PAPI_L2_DCA
+L2_Instruction_Misses_Per_1000_L2_Instructions = 1000 * PAPI_L2_ICM / PAPI_L2_ICA
+Data_TLB_Misses_Per_1000_Load_Stores = 1000 * PAPI_TLB_DM / PAPI_LST_INS
+Instruction_TLB_Misses_Per_1000_Instructions = 1000 * PAPI_TLB_IM / PAPI_TOT_INS
+L1_Bandwidth_MBytes_per_second = (PAPI_LD_INS + PAPI_SR_INS) * WORD_SIZE / Wallclock_usecs
+
+Stalls
+Resource_Stall_Cycles_Percent = 100 * PAPI_RES_STL / PAPI_TOT_CYC
+Memory_Stall_Cycles_Percent = 100 * PAPI_MEM_SCY / PAPI_TOT_CYC
+FP_Stall_Cycles_Percent = 100 * PAPI_FP_STAL / PAPI_TOT_CYC
+
+No_Issue_Cycle_Percent = 100 * PAPI_STL_ICY / PAPI_TOT_CYC
+Full_Issue_Cycle_Percent = 100 * PAPI_FUL_ICY / PAPI_TOT_CYC
+FPU_Idle_Cycle_Percent = 100 * PAPI_FPU_IDL / PAPI_TOT_CYC
+LSU_Idle_Cycle_Percent = 100 * PAPI_LSU_IDL / PAPI_TOT_CYC
+Branch_Misprediction_Percent = 100 * PAPI_BR_MSP / PAPI_BR_INS
+
+Arch Parameters
+L2_LATENCY_IN_CYCLES = L2_LATENCY
+L3_LATENCY_IN_CYCLES = L3_LATENCY
+MEMORY_LATENCY_IN_CYCLES = MEM_LATENCY
+WORD_SIZE_IN_BYTES = WORD_SIZE
+
+-------------------------------------------------------------------------------
+Default spec file (Id papi 359 2012-01-06 092117Z tushar )
+
+Metric Descriptions
+Unless mentioned otherwise, counts are accumulated across sub-processes/threads
+
+MFLOPS wallclock               Millions of floating point ops per 
+                                *wallclock* second
+                                PAPI_FP_OPS/WALL_CLOCK_USEC
+MFLOPS                         Millions of FP ops per second
+                                PAPI_FP_OPS / Real_usecs
+IPC                            Instructions retired per cycle
+                                PAPI_TOT_INS / PAPI_TOT_CYC
+Flops Per Load_Store           PAPI_FP_OPS / PAPI_LST_INS
+Flops Per L1 Data Cache Miss   PAPI_FP_OPS / PAPI_L1_DCM
+Load Store Ratio               Ratio of loads to stores.
+                                PAPI_LD_INS / PAPI_SR_INS
+Instructions Per Dcache Miss   PAPI_TOT_INS / PAPI_L1_DCM
+
+Wallclock seconds              Unhalted wallclock time. Never counted twice.
+                                WALL_CLOCK_USEC / 1000000
+IO seconds                     Time spent in seconds doing I/O.
+                                This includes any time in I/O, including time
+                                outside domain, when the process is waiting
+                                for I/O to complete.
+                                IO cycles / (Clock Hz)
+No Issue Stall seconds         Time in domain with no instruction issue.
+                                This would not include cycles outside domain
+                                such as system time or I/O time or time process
+                                was not scheduled to run.
+                                PAPI_STL_ICY / (Clock Hz)
+Resource Stall seconds         Time in seconds stalled on any resource.
+                                Resource can be an integer or FP register
+                                or reservation station. It would not include
+                                stalls waiting for memory operands.
+                                PAPI_RES_STL / (Clock Hz)
+FP Stall seconds               Floating-point stall seconds.
+                                PAPI_FP_OPS / (Clock Hz)
+Memory Stall seconds           Time in seconds waiting for memory operations.
+                                PAPI_MEM_SCY / (Clock Hz)
+Max L1 Miss L2 Hit Stall sec   Maximum time in stalls on L1 miss/L2 hits.
+                                This is an estimate calculated using L1 and L2
+                                cache hits and the L2 access latency. The actual
+                                latency may have been masked by hit-under-miss
+                                or instruction scheduling.
+                                (PAPI_LI_DCM-PAPI_L2_DCM)*L2_LATENCY/(Clock Hz)
+Max L2 Miss L3 Hit Stall sec   Maximum time in stalls on L2 miss/L3 hits.
+                                This is an estimate calculated using L2 and L3
+                                cache hits and the L3 access latency. The actual
+                                latency may have been masked by hit-under-miss
+                                or instruction scheduling.
+                                (PAPI_L2_DCM-PAPI_L3_DCM)*L3_LATENCY/(Clock Hz)
+Max Memory Access Stall_sec    Maximum time in stalls waiting on memory
+                                This is an estimate calculated using L3 cache
+                                misses and the L3 access latency. The actual
+                                latency may have been masked by hit-under-miss
+                                or instruction scheduling.
+                                PAPI_L3_DCM * MEM_LATENCY / (Clock Hz)
+
+Cycles In Domain               Total processor cycles in the PAPI domain 
+                                PAPI_TOT_CYC. Note, this cycle counter is
+                                more granular and accurate than Real or Virtual
+                                cycles counter. This may lead to situations where
+                                this value is measured as higher than even Real
+                                cycles.
+Real Cycles                    Always counted, unhalted.
+Running Time In Domain %       Percent of processor time spent in the domain
+                                100 * PAPI_TOT_CYC / Real cycles
+Virtual Cycles                 Counted only when executing on the processor. 
+IO Cycles %                    Percent of cycles spent in I/O
+                                100 * IO cycles / Real cycles
+MPI Cycles %                   Percent of cycles spent in MPI
+                                100 * MPI cycles / Real cycles
+MPI Sync Cycles %              Percent of cycles spent in MPI sync ops
+                                100 * MPI Sync cycles / Real cycles
+Thread Sync Cycles %           Percent of cycles spent in thread synchronization
+                                100 * Thr Sync cycles / Real cycles
+
+Total Instructions             Completed instructions
+                                PAPI_TOT_INS
+Memory Instructions %          Percent of instructions that are memory
+                               100 * PAPI_LST_INS / PAPI_TOT_INS
+                                or 100 * (PAPI_LD_INS + PAPI_SR_INS) / PAPI_TOT_INS
+FP Instructions %              Percent of instructions that are floating point
+                                100 * PAPI_FP_INS / PAPI_TOT_INS
+FP Instructions % approx       Approximate FP instruction percent, using
+                                FP ops instead of instructions
+                                100 * PAPI_FP_OPS / PAPI_TOT_INS
+Branch Instructions %          Percent of instructions that are branches
+                                100 * PAPI_BR_INS / PAPI_TOT_INS
+Integer Instructions %         Percent of instructions that are of integer type
+                                100 * PAPI_INT_INS / PAPI_TOT_INS
+
+Load Store Ratio               Ratio of loads to stores
+                                PAPI_LD_INS / PAPI_SR_INS
+L1 Data Misses Per 1000 LD/ST  L1 data misses per thousand L1 data references
+                                1000 * PAPI_L1_DCM / PAPI_LST_INS
+                                or 1000 * PAPI_L1_DCM / PAPI_L1_DCA
+L1 Instruction Misses Per 1000 L1 I-cache misses per thousand instructions
+                                1000 * PAPI_L1_ICM / PAPI_TOT_INS
+L2 Data Misses Per 1000        L2 data cache misses per thousand L2 data references
+                                1000 * PAPI_L2_DCM / PAPI_L2_DCA
+L2 Instruction Misses Per 1000 L2 instruction cache misses per thousand L2
+                                I-cache references
+                                1000 * PAPI_L2_ICM / PAPI_L2_ICA
+Data TLB Misses Per 1000 LD/ST D-TLB misses per thousand load stores
+                                1000 * PAPI_TLB_DM / PAPI_LST_INS
+Ins. TLB Misses Per 1000 ins.  I-TLB misses per thousand instructions
+                                1000 * PAPI_TLB_IM / PAPI_TOT_INS
+L1 Bandwidth MBytes per second Effective cumulative L1 bandwidth achieved
+                                (PAPI_LD_INS + PAPI_SR_INS) * WORD_SIZE
+                                / Wallclock usecs
+
+Resource Stall Cycles %        Percent of total cycles stalled for any resource
+                                100 * PAPI_RES_STL / PAPI_TOT_CYC
+Memory Stall Cycles %          Percent of total cycles stalled for memory ops
+                                100 * PAPI_MEM_SCY / PAPI_TOT_CYC
+FP Stall Cycles %              Percent of total cycles stalled for FP ops
+                                100 * PAPI_FP_STAL / PAPI_TOT_CYC
+
+No Issue Cycle %               Percent of cycles with no issue
+                                100 * PAPI_STL_ICY / PAPI_TOT_CYC
+Full Issue Cycle %             Percent of cycles with full issue
+                                100 * PAPI_FUL_ICY / PAPI_TOT_CYC
+FPU Idle Cycle %               Percent of cycles where the FP unit was idle
+                                100 * PAPI_FPU_IDL / PAPI_TOT_CYC
+LSU Idle Cycle %               Percent of cycles the load-store unit was idle
+                                100 * PAPI_LSU_IDL / PAPI_TOT_CYC
+Branch Misprediction %         Percent of mispredicted branches
+                                100 * PAPI_BR_MSP / PAPI_BR_INS
+-------------------------------------------------------------------------------
+
